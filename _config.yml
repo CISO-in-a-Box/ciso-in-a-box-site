@@ -1,0 +1,75 @@
+###########################################################
+### CISOinaBox Jekyll Configuration
+
+title: CISO-in-a-Box 🛡️
+author: CISOinaBox Contributors
+email: contributors@ciso-in-a-box.org
+description: >- # this means to ignore newlines until "baseurl:"
+  A comprehensive guide to cybersecurity and risk management for organizations
+  looking to improve their security posture, aspiring CISOs, and security professionals.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://ciso-in-a-box.github.io/" # the base hostname & protocol for your site
+
+# Navigation Bar
+navbar-links:
+  CISOinaBox:
+    - Overview: "/"
+    - Getting Started: "/getting-started"
+    - "Getting Started": "/getting-started"
+    - "**Understanding Enterprise Risk Manageme": "/understanding-business-risk"
+    - "Cyber Attacks and Defense: Threat Intell": "/understanding-the-adversary"
+    - "Mapping Your Attack Surface": "/mapping-attack-surface"
+    - "Overview of CIS18 Critical Security Cont": "/cis18-and-basic-security-controls"
+    - "Security Engineering and Architecture": "/security-architecture-and-engineering"
+    - "---": ""
+    - "Product and Software Security": "/product-and-software-security"
+    - "Secure Business Process Optimization": "/secure-business-process-design"
+    - "Identity and Access Management (IAM) Ove": "/identity-and-access-management"
+    - "**CISO Security Management Strategy Guid": "/security-management"
+    - "**Security Leadership Strategy Guide for": "/security-leadership"
+    - "Governance, Risk & Compliance (GRC) Stra": "/governance-risk-and-compliance"
+    - "---": ""
+    - "Security Awareness: Building a Human Fir": "/security-awareness"
+    - "**Cybersecurity Operations (SecOps) Prog": "/security-operations---soc"
+    - "**Cyber Incident Response Strategy Guide": "/response---ir"
+    - "Business Continuity Planning - BCP": "/business-continuity-planning---bcp"
+    - "Disaster Recovery - DR": "/disaster-recovery---dr"
+    - "Vulnerability Management and Risk": "/vulnerability-management-and-risk"
+    - "---": ""
+    - "Frameworks and Standards": "/frameworks-and-standards"
+    - "Cybersecurity and IT Career Pathways": "/careers---the-road-to-ciso"
+    - "Cyber Insurance": "/cyber-insurance"
+    - "Resources": "/resources"
+
+  Resources:
+    - Contributing: "/contributing"
+    - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
+
+# Build settings
+remote_theme: daattali/beautiful-jekyll
+plugins:
+  - jekyll-remote-theme
+  - jekyll-include-cache
+
+# General settings
+timezone: "America/Phoenix"
+highlighter: rouge
+markdown: kramdown
+
+# Colours / background image
+navbar-col: "#0e0e0e"
+navbar-text-col: "#FFFFFF"
+navbar-border-col: "#0e0e0e"
+page-col: "#FFFFFF"
+text-col: "#0e0e0e"
+link-col: "#fcc624"
+hover-col: "#fcc624"
+footer-col: "#0e0e0e"
+footer-text-col: "#FFFFFF"
+footer-link-col: "#fcc624"
+footer-hover-col: "#fcc624"
+
+# Social links
+social-network-links:
+  github: CroodSolutions
+  # Add other social links as needed

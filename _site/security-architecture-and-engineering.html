@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+
+  
+
+  
+
+  <title>Security Engineering and Architecture</title>
+
+  
+  
+  <meta name="author" content="CISOinaBox Contributors">
+  
+
+  <meta name="description" content="# Security Engineering and Architecture ## The Evolving Role of Security Architecture In today&apos;s hyper-connected world, the role of security architecture has fundamentally shifted. We&apos;ve moved beyond the traditional &quot;castle-and-moat&quot; approach, where a strong perimeter was the primary defense. With the rise of cloud computing, remote work, and sophisticated threats,...">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="CISO-in-a-Box 🛡️">
+  <meta property="og:title" content="Security Engineering and Architecture">
+  <meta property="og:description" content="# Security Engineering and Architecture ## The Evolving Role of Security Architecture In today&apos;s hyper-connected world, the role of security architecture has fundamentally shifted. We&apos;ve moved beyond the traditional &quot;castle-and-moat&quot; approach, where a strong perimeter was the primary defense. With the rise of cloud computing, remote work, and sophisticated threats,...">
+
+  
+
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://0.0.0.0:4000/security-architecture-and-engineering">
+  <link rel="canonical" href="http://0.0.0.0:4000/security-architecture-and-engineering">
+  
+
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:site" content="@">
+  <meta name="twitter:creator" content="@">
+
+  <meta property="twitter:title" content="Security Engineering and Architecture">
+  <meta property="twitter:description" content="# Security Engineering and Architecture ## The Evolving Role of Security Architecture In today&apos;s hyper-connected world, the role of security architecture has fundamentally shifted. We&apos;ve moved beyond the traditional &quot;castle-and-moat&quot; approach, where a strong perimeter was the primary defense. With the rise of cloud computing, remote work, and sophisticated threats,...">
+
+  
+
+  
+
+
+  
+
+  
+  
+
+  
+
+</head>
+
+
+<body>
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://0.0.0.0:4000/">CISO-in-a-Box 🛡️</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CISOinaBox</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/">Overview</a>
+                  <a class="dropdown-item" href="/getting-started">Getting Started</a>
+                  <a class="dropdown-item" href="/getting-started">Getting Started</a>
+                  <a class="dropdown-item" href="/understanding-business-risk">**Understanding Enterprise Risk Manageme</a>
+                  <a class="dropdown-item" href="/understanding-the-adversary">Cyber Attacks and Defense: Threat Intell</a>
+                  <a class="dropdown-item" href="/mapping-attack-surface">Mapping Your Attack Surface</a>
+                  <a class="dropdown-item" href="/cis18-and-basic-security-controls">Overview of CIS18 Critical Security Cont</a>
+                  <a class="dropdown-item" href="/security-architecture-and-engineering">Security Engineering and Architecture</a>
+                  <a class="dropdown-item" href="">---</a>
+                  <a class="dropdown-item" href="/product-and-software-security">Product and Software Security</a>
+                  <a class="dropdown-item" href="/secure-business-process-design">Secure Business Process Optimization</a>
+                  <a class="dropdown-item" href="/identity-and-access-management">Identity and Access Management (IAM) Ove</a>
+                  <a class="dropdown-item" href="/security-management">**CISO Security Management Strategy Guid</a>
+                  <a class="dropdown-item" href="/security-leadership">**Security Leadership Strategy Guide for</a>
+                  <a class="dropdown-item" href="/governance-risk-and-compliance">Governance, Risk & Compliance (GRC) Stra</a>
+                  <a class="dropdown-item" href="">---</a>
+                  <a class="dropdown-item" href="/security-awareness">Security Awareness: Building a Human Fir</a>
+                  <a class="dropdown-item" href="/security-operations---soc">**Cybersecurity Operations (SecOps) Prog</a>
+                  <a class="dropdown-item" href="/response---ir">**Cyber Incident Response Strategy Guide</a>
+                  <a class="dropdown-item" href="/business-continuity-planning---bcp">Business Continuity Planning - BCP</a>
+                  <a class="dropdown-item" href="/disaster-recovery---dr">Disaster Recovery - DR</a>
+                  <a class="dropdown-item" href="/vulnerability-management-and-risk">Vulnerability Management and Risk</a>
+                  <a class="dropdown-item" href="">---</a>
+                  <a class="dropdown-item" href="/frameworks-and-standards">Frameworks and Standards</a>
+                  <a class="dropdown-item" href="/careers---the-road-to-ciso">Cybersecurity and IT Career Pathways</a>
+                  <a class="dropdown-item" href="/cyber-insurance">Cyber Insurance</a>
+                  <a class="dropdown-item" href="/resources">Resources</a>
+            </div>
+          </li>
+        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/contributing">Contributing</a>
+                  <a class="dropdown-item" href="https://github.com/CroodSolutions/CISOinaBox">GitHub Repo</a>
+            </div>
+          </li>
+        </ul>
+  </div>
+
+  
+
+  
+
+</nav>
+
+
+
+
+
+  
+
+
+
+<header class="header-section ">
+<div class="intro-header ">
+  
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="page-heading">
+          <h1>Security Engineering and Architecture</h1>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+
+
+</header>
+
+
+<main class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+      
+
+      <h1 id="security-engineering-and-architecture">Security Engineering and Architecture</h1>
+
+<h2 id="the-evolving-role-of-security-architecture">The Evolving Role of Security Architecture</h2>
+
+<p>In today’s hyper-connected world, the role of security architecture has fundamentally shifted. We’ve moved beyond the traditional “castle-and-moat” approach, where a strong perimeter was the primary defense. With the rise of cloud computing, remote work, and sophisticated threats, security architecture is now a distributed and dynamic discipline. It’s about building security into the fabric of the IT ecosystem, from the cloud to the endpoint, with a focus on identity, data, and resilience. This modern approach is essential for any CISO looking to build a security program that can withstand the challenges of today’s threat landscape.</p>
+
+<h2 id="core-principles-of-secure-architecture-design">Core Principles of Secure Architecture Design</h2>
+
+<p>A strong security architecture is built on a foundation of core principles. These principles guide decision-making and ensure that security is a consistent and integral part of the IT environment.</p>
+
+<h3 id="zero-trust-architecture-zta">Zero Trust Architecture (ZTA)</h3>
+
+<p>Zero Trust is a strategic approach to security that is centered on the concept of “never trust, always verify.” It assumes that a breach is inevitable and that the internal network is no more secure than the external network. The core tenets of ZTA include:</p>
+
+<ul>
+  <li><strong>Assume Breach:</strong> Don’t automatically trust any user or device, regardless of their location.</li>
+  <li><strong>Verify Explicitly:</strong> Authenticate and authorize every access request based on all available data points, including user identity, location, device health, and the resource being accessed.</li>
+  <li><strong>Least Privilege Access:</strong> Grant users and devices only the access they need to perform their roles, and for the shortest time necessary.</li>
+</ul>
+
+<h3 id="defense-in-depth">Defense in Depth</h3>
+
+<p>Defense in depth is a layered approach to security that involves implementing multiple security controls throughout the IT environment. The goal is to create a series of overlapping defenses so that if one control fails, another is in place to thwart an attack. These layers can include:</p>
+
+<ul>
+  <li><strong>Network Controls:</strong> Firewalls, intrusion detection and prevention systems (IDPS), and network segmentation.</li>
+  <li><strong>Endpoint Controls:</strong> Antivirus, endpoint detection and response (EDR), and host-based firewalls.</li>
+  <li><strong>Application Controls:</strong> Web application firewalls (WAFs), secure coding practices, and vulnerability scanning.</li>
+  <li><strong>Data Controls:</strong> Encryption, data loss prevention (DLP), and access controls.</li>
+</ul>
+
+<h3 id="secure-by-design--default">Secure by Design &amp; Default</h3>
+
+<p>Secure by Design means that security is considered from the very beginning of the development lifecycle of a system or application. It’s about building security in, rather than trying to bolt it on at the end. Secure by Default means that systems are configured with the most secure settings out of the box, and it’s up to the user to disable them if necessary.</p>
+
+<h3 id="resilience-and-recoverability">Resilience and Recoverability</h3>
+
+<p>A secure architecture should not only be able to prevent attacks but also to withstand them and enable a quick recovery. This means designing systems with redundancy, fault tolerance, and the ability to be quickly restored from backups. This principle is closely tied to Business Continuity Planning (BCP) and Disaster Recovery (DR), which are covered in more detail in their respective sections.</p>
+<h2 id="practical-architectural-patterns-and-examples">Practical Architectural Patterns and Examples</h2>
+
+<p>Understanding the principles of secure architecture is important, but it’s also essential to see how they are applied in practice. Here are some common architectural patterns and examples that can be used to build a more secure IT environment.</p>
+
+<h3 id="network-segmentation">Network Segmentation</h3>
+
+<p>Network segmentation is the practice of dividing a network into smaller, isolated segments. This can be done to improve security, performance, and manageability. From a security perspective, segmentation helps to contain the blast radius of an attack. If one segment is compromised, the attacker will have a much harder time moving laterally to other parts of the network.</p>
+
+<ul>
+  <li><strong>Micro-segmentation:</strong> This is a more granular form of network segmentation that involves dividing the network into even smaller segments, often down to the individual workload or application. This can be a very effective way to prevent lateral movement, but it can also be more complex to manage.</li>
+  <li><strong>Firewalls and Gateways:</strong> Firewalls are used to control traffic between network segments. They can be configured to allow or deny traffic based on a variety of criteria, such as source and destination IP address, port number, and protocol.</li>
+</ul>
+
+<h3 id="cloud-security-architecture">Cloud Security Architecture</h3>
+
+<p>The cloud has introduced a new set of security challenges, but it has also provided a new set of tools and capabilities for building secure architectures. The following are some key concepts to keep in mind when designing a secure cloud architecture:</p>
+
+<ul>
+  <li><strong>Shared Responsibility Model:</strong> In the cloud, security is a shared responsibility between the cloud provider and the customer. The provider is responsible for the security <em>of</em> the cloud, while the customer is responsible for security <em>in</em> the cloud. It’s important to understand where the provider’s responsibility ends and yours begins.</li>
+  <li><strong>Identity and Access Management (IAM):</strong> IAM is a critical component of cloud security. It’s used to control who has access to what resources, and what they can do with those resources. Cloud providers offer a variety of IAM services that can be used to implement the principle of least privilege.</li>
+  <li><strong>Cloud-Native Security Tools:</strong> Cloud providers offer a variety of security tools that are specifically designed for their platforms. These tools can include things like security groups (which act as virtual firewalls), web application firewalls (WAFs), and key management services.</li>
+</ul>
+
+<h3 id="data-centric-security">Data-Centric Security</h3>
+
+<p>Data-centric security is an approach to security that focuses on protecting the data itself, rather than the perimeter or the network. This is a particularly important concept in the cloud, where data can be stored in a variety of locations and accessed from a variety of devices. Key components of a data-centric security architecture include:</p>
+
+<ul>
+  <li><strong>Data Classification:</strong> This is the process of categorizing data based on its sensitivity. This allows you to apply the appropriate level of security controls to each category of data.</li>
+  <li><strong>Encryption:</strong> Encryption is used to protect data at rest, in transit, and in use. This can be done using a variety of encryption technologies, such as full-disk encryption, database encryption, and file-level encryption.</li>
+  <li><strong>Data Loss Prevention (DLP):</strong> DLP is a set of technologies and processes that are used to prevent sensitive data from leaving the organization. This can be done by monitoring email, web traffic, and other channels for sensitive data.</li>
+</ul>
+
+<h2 id="the-role-of-the-security-architect">The Role of the Security Architect</h2>
+
+<p>The security architect is a critical role in any organization that is serious about security. The security architect is responsible for designing and building the organization’s security architecture. This includes a wide range of responsibilities, such as:</p>
+
+<ul>
+  <li><strong>Creating Security Standards:</strong> The security architect is responsible for creating and maintaining the organization’s security standards. These standards define the security requirements for all new systems and applications.</li>
+  <li><strong>Reviewing New Technologies:</strong> The security architect is responsible for reviewing new technologies to ensure that they meet the organization’s security requirements.</li>
+  <li><strong>Working with Development and Operations Teams:</strong> The security architect works closely with the development and operations teams to ensure that security is built into the entire IT lifecycle.</li>
+</ul>
+
+<h2 id="measuring-the-success-of-security-architecture">Measuring the Success of Security Architecture</h2>
+
+<p>It’s important to be able to measure the success of your security architecture. This will help you to justify your security investments and to identify areas where you need to improve. Some key metrics that you can use to measure the success of your security architecture include:</p>
+
+<ul>
+  <li><strong>Reduction in the “blast radius” of incidents:</strong> This measures the extent to which your security architecture is able to contain the impact of a security incident.</li>
+  <li><strong>Percentage of systems that adhere to security baselines:</strong> This measures the extent to which your systems are configured in accordance with your security standards.</li>
+  <li><strong>Time to detect and respond to threats:</strong> This measures the effectiveness of your security monitoring and incident response capabilities.</li>
+</ul>
+
+<h2 id="cis-critical-security-controls-a-strong-foundation">CIS Critical Security Controls: A Strong Foundation</h2>
+<p>The <strong>CIS Critical Security Controls (CIS 18)</strong> are a globally recognized set of best practices for cybersecurity. They serve as a <strong>prioritized roadmap</strong> for organizations to improve their security posture. These controls were developed by experts across industries and are continuously updated to address the latest threats. CIS 18 helps even smaller organizations <strong>“define the foundation of their defenses”</strong> by focusing limited resources on high-impact security actions first. The controls are practical and modular – covering basics like asset inventory, secure configuration, access management, and incident response. They embody <em>defense-in-depth</em> by recommending multiple layers of protection. In essence, CIS 18 provides the <em>blueprint</em> for a defensible architecture: if you implement these controls, you are addressing the most common avenues attackers use.</p>
+
+<p>Some examples of CIS 18 controls include: maintaining an <strong>inventory of hardware and software</strong> assets (knowing what you have so you can secure it), enforcing <strong>secure configurations</strong> on systems (to close common holes), managing <strong>user accounts and privileges</strong> (to enforce least privilege), <strong>continuous vulnerability management</strong> (regular patching to remove weaknesses), robust <strong>logging and monitoring</strong>, <strong>email/web protections</strong>, <strong>malware defenses</strong>, <strong>network security</strong> (devices, segmentation, and traffic filtering), <strong>security awareness training</strong>, and <strong>incident response planning</strong>. Together, these controls create a layered defense that can <strong>prevent or mitigate the majority of common attacks</strong>.</p>
+
+<h2 id="the-mitreattck-framework-mapping-real-world-threats">The MITRE ATT\&amp;CK Framework: Mapping Real-World Threats</h2>
+
+<p><strong>MITRE ATT\&amp;CK</strong> is a public knowledge base of adversary tactics, techniques, and procedures (TTPs) observed in real attacks. In simple terms, ATT\&amp;CK breaks down <em>how attackers operate</em> – from initial foothold all the way through their goals (like data theft or disruption). It is organized by stages of an attack (called tactics, e.g., Initial Access, Lateral Movement, Credential Access) and specific techniques under each (e.g., phishing, using stolen credentials, moving within the network). This framework is extremely valuable for defenders because it translates the vast world of cyber threats into a structured <strong>“attacker playbook.”</strong> By studying ATT\&amp;CK, security teams (even small ones) can anticipate the moves hackers are likely to make. In fact, understanding attacker techniques is considered the <em>bedrock of a strong defense posture</em>. The ATT\&amp;CK database also catalogs known <strong>mitigations</strong> for many techniques, essentially linking to defensive measures.</p>
+
+<p>For resource-constrained organizations like SMBs or local governments, MITRE ATT\&amp;CK can be a <strong>force multiplier</strong>. It allows a small IT team to leverage global threat intelligence and focus on the threats <em>most relevant</em> to them. Instead of guessing how you might be attacked, you can use ATT\&amp;CK as a map: for example, know that <strong>phishing (ATT\&amp;CK technique T1566)</strong> is a top initial access method, or that attackers often attempt <strong>lateral movement</strong> using tools like remote desktop. By using ATT\&amp;CK, defenders can ask <em>“Can we detect or stop this technique if it happens to us?”</em> and then strengthen their controls accordingly. Importantly, ATT\&amp;CK isn’t a replacement for security frameworks like NIST CSF or CIS 18, but rather a <strong>complementary tool</strong> that enriches your defense strategy with real-world attacker insight.</p>
+
+<h2 id="aligning-cis18-with-attck-from-principles-to-practice">Aligning CIS 18 with ATT\&amp;CK: From Principles to Practice</h2>
+
+<p>CIS 18 and MITRE ATT\&amp;CK approach cybersecurity from two sides: CIS 18 gives <strong>actionable security controls</strong> to build into your architecture, while ATT\&amp;CK describes <strong>attacker behaviors</strong> you need to guard against. By combining them, IT managers can ensure their defenses are <em>both</em> <strong>strategically sound and threat-informed</strong>. In fact, mapping the CIS controls to ATT\&amp;CK tactics is a powerful way to check that each likely attack technique is being addressed by one or more layers of defense. This alignment helps prioritize which controls to implement next based on gaps against known threats. It essentially makes your security engineering <strong>threat-driven</strong> – focusing on controls that counter the tactics adversaries actually use.</p>
+
+<p>For example, CIS Control 1 (Inventory Management) and Control 2 (Software Inventory) help you know all devices and applications in your environment – a basic step that attackers themselves try to achieve when they infiltrate (ATT\&amp;CK <strong>Discovery</strong> techniques). By maintaining an accurate inventory, you make it harder for an intruder to hide unauthorized systems or software on your network. In general, every CIS control ties to multiple ATT\&amp;CK techniques. As one security blog noted, <em>“Mapping MITRE ATT\&amp;CK to CIS controls is important for establishing an organizational security strategy and prioritizing controls implementation.”</em> In practice, this means using CIS 18’s best practices to <strong>block, detect, or mitigate</strong> the malicious behaviors documented in ATT\&amp;CK.</p>
+
+<h3 id="example-threats-and-defensive-practices">Example Threats and Defensive Practices</h3>
+
+<p>Let’s look at a few common threats (as described by MITRE ATT\&amp;CK) and see how applying CIS 18 security engineering principles helps address them:</p>
+
+<ul>
+  <li>
+    <p><strong>Phishing (ATT\&amp;CK Initial Access – <em>Technique T1566</em>)</strong> – Phishing emails are one of the most common entry points for attackers. A layered CIS-based defense can significantly reduce this risk. <strong>Email and browser protections (CIS Control 9)</strong> filter out malicious messages and links before they reach users. <strong>Security awareness training (CIS Control 14)</strong> educates employees to recognize and report suspicious emails – critical since roughly <em>82% of breaches involve some human error or social engineering</em>. Additionally, enforcing <strong>Multi-Factor Authentication (MFA)</strong> (part of strong identity and access management in CIS Controls 5 and 6) means that even if credentials are phished, the attacker cannot easily reuse them to log in. These measures collectively <em>block</em> many phishing attempts and <em>mitigate</em> the impact of any that do get through.</p>
+  </li>
+  <li>
+    <p><strong>Lateral Movement (ATT\&amp;CK tactic: Lateral Movement)</strong> – Once attackers gain a foothold in one system, they often try to move sideways through the network to reach more valuable targets. <strong>Network segmentation and secure network management (CIS Control 12)</strong> limit this by preventing a compromised machine from freely communicating with others it shouldn’t. Regularly reviewing network device configurations, access control lists, and traffic flows helps to <strong>contain attackers to a small segment</strong> if they do get in. At the same time, strict <strong>account management and least privilege (CIS Controls 5 &amp; 6)</strong> ensure users (and malware that hijacks their accounts) only have access to what’s necessary, reducing opportunities for an attacker to pivot. <strong>Monitoring and anomaly detection (CIS Control 13)</strong> will catch unusual internal traffic or login behavior, so attempts at lateral movement trigger alerts for the security team to investigate. In short, good network architecture and access controls <em>block many lateral movement paths</em>, while monitoring helps <em>detect</em> and allow quick response to any suspicious spread.</p>
+  </li>
+  <li>
+    <p><strong>Credential Theft (ATT\&amp;CK tactic: Credential Access)</strong> – Attackers frequently try to steal passwords or keys to escalate their access. <strong>Protecting against credential theft</strong> starts with <strong>limiting administrative privileges and accounts (CIS Control 5)</strong> – fewer admins and careful account hygiene mean fewer high-value credentials for an attacker to steal. <strong>Endpoint security and malware defenses (CIS Control 10)</strong> are also vital: tools like anti-malware or EDR can detect common credential-dumping software or malicious scripts before they succeed. Additionally, <strong>audit logging (CIS Control 8)</strong> records authentication events; combined with monitoring, this can spot telltale signs of credential abuse (for example, an admin account suddenly accessing systems at odd hours). Again, <strong>MFA</strong> provides a safety net – even if passwords are compromised, stolen credentials alone won’t grant access without the second factor. Through these controls, engineering a system with strong identity security and host protections will <em>mitigate or detect</em> most credential theft techniques that attackers use.</p>
+  </li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>For an SMB, mid-market company, or local government, leveraging CIS 18 and MITRE ATT\&amp;CK together can transform your security from reactive firefighting to <strong>strategic defense</strong>. CIS 18 gives you a solid security architecture – the fundamental practices every organization should have – while MITRE ATT\&amp;CK ensures your defenses are <strong>aligned to real-world threats</strong>. By applying security engineering principles grounded in CIS 18 and continuously cross-checking them against the ATT\&amp;CK framework, you create an environment where attacks are anticipated and controls are in place to block or swiftly detect them. This empowers smaller security teams to be proactive and smart with their resources. In summary, <strong>CIS 18 provides the “what” of good security (the controls to implement), and MITRE ATT\&amp;CK provides the “why” (the adversary behaviors those controls address)</strong>. Using both, IT managers can design layered defenses that are far more effective and resilient, making their organizations a harder target for cyber adversaries. The result is a more <strong>strategic and confident defense posture</strong> – one where you’re not just hoping to survive the next attack, but are actively prepared to thwart it.</p>
+
+<h2 id="references">References</h2>
+
+
+
+      
+
+      
+
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      
+<ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="https://github.com/CroodSolutions" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li></ul>
+
+
+      
+      <p class="copyright text-muted">
+      
+        CISOinaBox Contributors
+        &nbsp;&bull;&nbsp;
+      
+      2025
+
+      
+
+      
+
+      
+
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+
+</body>
+</html>
