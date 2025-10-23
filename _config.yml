@@ -12,37 +12,34 @@ url: "https://ciso-in-a-box.github.io" # the base hostname & protocol for your s
 
 # Navigation Bar
 navbar-links:
-  CISOinaBox:
-    - Overview: "/"
-    - Getting Started: "/getting-started"
+  "Getting Started":
     - "Getting Started": "/getting-started"
-    - "**Understanding Enterprise Risk Manageme": "/understanding-business-risk"
-    - "Cyber Attacks and Defense: Threat Intell": "/understanding-the-adversary"
-    - "Mapping Your Attack Surface": "/mapping-attack-surface"
-    - "Overview of CIS18 Critical Security Cont": "/cis18-and-basic-security-controls"
-    - "Security Engineering and Architecture": "/security-architecture-and-engineering"
-    - "---": ""
+  "Risk & Threat Management":
+    - "Understanding Enterprise Risk Management (ERM) for CISOs": "/understanding-enterprise-risk-management-erm-for-cisos"
+    - "Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense": "/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense"
+    - "Mapping Your Attack Surface": "/mapping-your-attack-surface"
+  "Security Controls":
+    - "Overview of CIS18 Critical Security Controls": "/overview-of-cis18-critical-security-controls"
+    - "Security Architecture and Engineering": "/security-architecture-and-engineering"
     - "Product and Software Security": "/product-and-software-security"
-    - "Secure Business Process Optimization": "/secure-business-process-design"
-    - "Identity and Access Management (IAM) Ove": "/identity-and-access-management"
-    - "**CISO Security Management Strategy Guid": "/security-management"
-    - "**Security Leadership Strategy Guide for": "/security-leadership"
-    - "Governance, Risk & Compliance (GRC) Stra": "/governance-risk-and-compliance"
-    - "---": ""
-    - "Security Awareness: Building a Human Fir": "/security-awareness"
-    - "**Cybersecurity Operations (SecOps) Prog": "/security-operations---soc"
-    - "**Cyber Incident Response Strategy Guide": "/response---ir"
-    - "Business Continuity Planning - BCP": "/business-continuity-planning---bcp"
-    - "Disaster Recovery - DR": "/disaster-recovery---dr"
+    - "Secure Business Process Optimization": "/secure-business-process-optimization"
+  "Security Program":
+    - "Identity and Access Management (IAM) Overview": "/identity-and-access-management-iam-overview"
+    - "CISO Security Management Strategy Guide": "/ciso-security-management-strategy-guide"
+    - "Security Leadership Strategy Guide for CISOs": "/security-leadership-strategy-guide-for-cisos"
+    - "Security Awareness: Building a Human Firewall": "/security-awareness-building-a-human-firewall"
+    - "Cybersecurity Operations (SecOps) Program Maturity Guide": "/cybersecurity-operations-secops-program-maturity-guide"
+    - "Cyber Incident Response Strategy Guide for CISOs": "/cyber-incident-response-strategy-guide-for-cisos"
+    - "Cybersecurity and IT Career Pathways": "/cybersecurity-and-it-career-pathways"
+  "Compliance & Resilience":
+    - "Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs": "/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs"
+    - "Business Continuity Planning   BCP": "/business-continuity-planning---bcp"
+    - "Disaster Recovery   DR": "/disaster-recovery---dr"
     - "Vulnerability Management and Risk": "/vulnerability-management-and-risk"
-    - "---": ""
     - "Frameworks and Standards": "/frameworks-and-standards"
-    - "Cybersecurity and IT Career Pathways": "/careers---the-road-to-ciso"
     - "Cyber Insurance": "/cyber-insurance"
     - "Resources": "/resources"
-
-  Resources:
-    - Contributing: "/contributing"
+  External Resources:
     - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
 
 # Build settings
@@ -69,12 +66,12 @@ navbar-text-col: "#FFFFFF"
 navbar-border-col: "#0e0e0e"
 page-col: "#FFFFFF"
 text-col: "#0e0e0e"
-link-col: "#fcc624"
-hover-col: "#fcc624"
+link-col: "#289dff"
+hover-col: "#289dff"
 footer-col: "#0e0e0e"
 footer-text-col: "#FFFFFF"
-footer-link-col: "#fcc624"
-footer-hover-col: "#fcc624"
+footer-link-col: "#289dff"
+footer-hover-col: "#289dff"
 
 # Social links
 social-network-links:
