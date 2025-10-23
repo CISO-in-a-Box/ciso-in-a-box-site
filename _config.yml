@@ -7,8 +7,8 @@ email: contributors@ciso-in-a-box.org
 description: >- # this means to ignore newlines until "baseurl:"
   A comprehensive guide to cybersecurity and risk management for organizations
   looking to improve their security posture, aspiring CISOs, and security professionals.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ciso-in-a-box.github.io/ciso-in-a-box-site/" # the base hostname & protocol for your site
+baseurl: "/ciso-in-a-box-site" # the subpath of your site, e.g. /blog
+url: "https://ciso-in-a-box.github.io" # the base hostname & protocol for your site
 
 # Navigation Bar
 navbar-links:
@@ -46,13 +46,17 @@ navbar-links:
     - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
 
 # Build settings
-remote_theme: daattali/beautiful-jekyll@6.0.1
+remote_theme: daattali/beautiful-jekyll@v6.0.1
 plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+
+# Force Font Awesome 6.5.2
+font-awesome:
+  version: "6.5.2"
 
 # General settings
 timezone: "America/Phoenix"
