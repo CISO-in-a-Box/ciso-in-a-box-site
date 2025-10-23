@@ -1,7 +1,9 @@
 ---
 layout: page
-title: "Security Engineering and Architecture"
+title: "Security Architecture and Engineering"
 permalink: /security-architecture-and-engineering
+nav_category: "Security Controls"
+section_number: 6
 ---
 
 # Security Engineering and Architecture 

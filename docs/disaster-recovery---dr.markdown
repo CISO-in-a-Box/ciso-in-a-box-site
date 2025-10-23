@@ -1,7 +1,9 @@
 ---
 layout: page
-title: "Disaster Recovery - DR"
+title: "Disaster Recovery   DR"
 permalink: /disaster-recovery---dr
+nav_category: "Compliance & Resilience"
+section_number: 17
 ---
 
 Disaster Recovery Strategy Guide for CISOs

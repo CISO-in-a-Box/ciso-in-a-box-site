@@ -2,6 +2,8 @@
 layout: page
 title: "Frameworks and Standards"
 permalink: /frameworks-and-standards
+nav_category: "Compliance & Resilience"
+section_number: 19
 ---
 
 **Cybersecurity Strategy Guide for CISOs**
