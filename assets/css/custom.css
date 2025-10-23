@@ -1,0 +1,31 @@
+---
+---
+
+/* Fix navbar visibility issue - force light text on dark background */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+  color: #FFFFFF !important;
+}
+
+/* Ensure proper dropdown styling */
+.navbar-custom .dropdown-menu {
+  background-color: #0e0e0e !important;
+}
+
+.navbar-custom .dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #333333 !important;
+  color: #FFFFFF !important;
+}
+
+/* Fix body padding for fixed navbar */
+body {
+  padding-top: 56px !important;
+}
+
+/* Force Font Awesome 6.5.2 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");

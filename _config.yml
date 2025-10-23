@@ -58,6 +58,10 @@ plugins:
 font-awesome:
   version: "6.5.2"
 
+# Custom CSS for navbar fix
+ext-css:
+  - "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+
 # General settings
 timezone: "America/Phoenix"
 highlighter: rouge
