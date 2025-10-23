@@ -124,3 +124,67 @@ If all attempts fail:
 4. **Document each attempt** for future reference
 
 The working site provides a perfect template - goal is to match its configuration exactly while preserving CISOinaBox content and branding.
+
+---
+
+## ✅ SOLUTION SUCCESSFULLY APPLIED
+
+### Problem Identified and Solved
+- **Root Cause**: Navigation bar text invisible due to `navbar-light` class on dark background (`#0e0e0e`)
+- **Font Awesome Version**: Working site uses 6.5.2, our site was using 5.12.1
+- **JavaScript Issue**: Theme auto-detection works locally but fails on GitHub Pages
+
+### Final Solution Implemented
+
+#### 1. **Beautiful Jekyll Theme Version Fixed**
+- Fix: `remote_theme: daattali/beautiful-jekyll@6.0.1`
+- Issue resolved: GitHub Pages 404 error when trying to download non-existent `@v6.0.1`
+
+#### 2. **CSS Override Strategy Applied**
+- Created: `assets/css/custom.css` with targeted fixes
+- Configured: `site-css:` in `_config.yml` to load after theme CSS
+- Applied: Font Awesome 6.5.2 override and navbar styling
+
+### CSS Implementation Details
+```css
+/* Force Font Awesome 6.5.2 override version 5.12.1 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
+/* Fix navbar visibility issue - force light text on dark background */
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link,
+.navbar-custom .navbar-toggler-icon {
+  color: #FFFFFF !important;
+}
+
+/* Ensure proper dropdown styling */
+.navbar-custom .dropdown-menu {
+  background-color: #0e0e0e !important;
+}
+
+.navbar-custom .dropdown-item {
+  color: #FFFFFF !important;
+}
+
+.navbar-custom .dropdown-item:hover {
+  background-color: #333333 !important;
+  color: #FFFFFF !important;
+}
+
+/* Fix body padding for fixed navbar */
+body {
+  padding-top: 56px !important;
+}
+```
+
+### Validation Results
+- ✅ **Site builds successfully** with Beautiful Jekyll 6.0.1
+- ✅ **Custom CSS loads** properly from `/assets/css/custom.css`
+- ✅ **Font Awesome 6.5.2** successfully overrides 5.12.1
+- ✅ **Navigation visible** with white text on dark background
+- ✅ **Dropdown menus functional** and properly styled
+
+### Live Site Status
+**URL**: https://ciso-in-a-box.github.io/ciso-in-a-box-site/
+
+The navigation bar visibility issue has been completely resolved with minimal changes to the original repository structure.
