@@ -2,6 +2,7 @@
 layout: home
 title: "CISO-in-a-Box: Your Complete Cybersecurity Guide"
 permalink: /
+head-extra: custom.html
 ---
 
 # CISO-in-a-Box 🛡️
