@@ -1,6 +1,9 @@
 ---
 ---
 
+/* Force Font Awesome 6.5.2 override version 5.12.1 */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
+
 /* Fix navbar visibility issue - force light text on dark background */
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link,
@@ -26,6 +29,3 @@
 body {
   padding-top: 56px !important;
 }
-
-/* Force Font Awesome 6.5.2 */
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css");
