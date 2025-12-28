@@ -32,9 +32,9 @@ This repository is intended to provide a basic overview of key knowledge area of
 
 Here are a couple of other resources you can leverage:
 
- - https://www.accidentalciso.net/
- - https://christiant.io//
- - A basic overview video for SMB: https://www.youtube.com/watch?v=bp-dSKiBLIo
+ - [Accidental CISO](https://www.accidentalciso.net/)
+ - [Christian T.'s Blog](https://christiant.io/)
+ - [A basic overview video for SMB](https://www.youtube.com/watch?v=bp-dSKiBLIo)
 
 ![image](https://github.com/user-attachments/assets/07cf6e82-e84e-4bc7-b29f-d9f88e0ead14)
 

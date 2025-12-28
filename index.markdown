@@ -1,99 +1,161 @@
 ---
 layout: home
-title: "CISO-in-a-Box: Your Complete Cybersecurity Guide"
+title: "CISO-in-a-Box"
+subtitle: "Your Complete Cybersecurity Guide"
 permalink: /
 head-extra: 
   - custom.html
 ---
 
-# CISO-in-a-Box 🛡️
+<div class="hero-section">
+  <h1 class="hero-title">The Open Source CISO Guide 🛡️</h1>
+  <p class="hero-subtitle">
+    From "Day 1" to program maturity. A community-driven framework for building, managing, and scaling modern cybersecurity programs.
+  </p>
+  <div style="margin-top: 30px;">
+    <a href="{{ '/getting-started/' | relative_url }}" class="btn btn-primary btn-lg" style="border-radius: 50px; padding: 12px 30px;">Start the Journey</a>
+    <a href="https://github.com/CroodSolutions/CISOinaBox" class="btn btn-outline-dark btn-lg" style="border-radius: 50px; padding: 12px 30px; margin-left: 10px;">
+      <i class="fab fa-github"></i> View Source
+    </a>
+  </div>
+</div>
 
-[![GitHub contributors](https://img.shields.io/github/contributors/CroodSolutions/CISOinaBox)](https://github.com/CroodSolutions/CISOinaBox/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/CroodSolutions/CISOinaBox)](https://github.com/CroodSolutions/CISOinaBox/commits/main)
-[![GitHub issues](https://img.shields.io/github/issues/CroodSolutions/CISOinaBox)](https://github.com/CroodSolutions/CISOinaBox/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/CroodSolutions/CISOinaBox)](https://github.com/CroodSolutions/CISOinaBox/pulls)
+<div class="section-header">
+  <h2 class="section-title">Choose Your Path</h2>
+  <p class="section-desc">Tailored guides depending on where you are in your journey.</p>
+</div>
 
-## Don't Panic! 🚨
+<div class="pathways-grid">
+  <!-- Path 1: The New CISO -->
+  <div class="pathway-card">
+    <div class="pathway-icon">
+      <i class="fas fa-flag"></i>
+    </div>
+    <div class="pathway-title">The New CISO</div>
+    <div class="pathway-desc">
+      Just landed the role? Start here to navigate your first 90 days, build relationships, and set the strategy.
+    </div>
+    <ul class="topic-list">
+      <li>Getting Started (First 90 Days)</li>
+      <li>Security Leadership Strategy</li>
+      <li>Enterprise Risk Management</li>
+    </ul>
+    <a href="{{ '/getting-started/' | relative_url }}" class="pathway-btn">Start Leading &rarr;</a>
+  </div>
 
-Security does not have to be a difficult or intimidating topic. Whether you're a small to medium-sized organization looking to improve your security, a current CISO seeking to enhance your practices, or someone aspiring to become a CISO, this project is designed to guide you through the essential knowledge areas of cybersecurity and risk management.
+  <!-- Path 2: The Program Builder -->
+  <div class="pathway-card" style="border-top-color: #7952b3;">
+    <div class="pathway-icon" style="color: #7952b3;">
+      <i class="fas fa-tools"></i>
+    </div>
+    <div class="pathway-title">The Program Builder</div>
+    <div class="pathway-desc">
+      Focus on architecture, engineering, and operations. Build the systems that defend the business.
+    </div>
+    <ul class="topic-list">
+      <li>Security Architecture</li>
+      <li>SecOps & Incident Response</li>
+      <li>Vulnerability Management</li>
+    </ul>
+    <a href="{{ '/security-architecture-and-engineering/' | relative_url }}" class="pathway-btn" style="color: #7952b3; border-color: #7952b3;">Build Security &rarr;</a>
+  </div>
 
-## About This Project 🎯
+  <!-- Path 3: The Strategist -->
+  <div class="pathway-card" style="border-top-color: #ffc107;">
+    <div class="pathway-icon" style="color: #ffc107;">
+      <i class="fas fa-chess"></i>
+    </div>
+    <div class="pathway-title">The Strategist</div>
+    <div class="pathway-desc">
+      Align security with business goals. Master GRC, compliance, insurance, and resilience.
+    </div>
+    <ul class="topic-list">
+      <li>Governance, Risk & Compliance</li>
+      <li>Business Continuity (BCP)</li>
+      <li>Cyber Insurance</li>
+    </ul>
+    <a href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}" class="pathway-btn" style="color: #ffc107; border-color: #ffc107;">Align Strategy &rarr;</a>
+  </div>
+</div>
 
-This project is intended to organize the ideas, processes, and supporting templates and tools required to succeed as a new CISO. While it will have humble beginnings, we hope it will grow and evolve with engagement from the community over time.
+<div class="section-header">
+  <h2 class="section-title">Core Knowledge Modules</h2>
+  <p class="section-desc">Comprehensive guides covering every domain of information security.</p>
+</div>
 
-The views expressed as part of this project are the views of the individual contributors and do not reflect the views of our employer(s) or any affiliated organization(s).
+<div class="modules-grid">
+  <a href="{{ '/overview-of-cis18-critical-security-controls/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-shield-alt"></i></div>
+    <div class="module-info">
+      <h4>CIS18 Controls</h4>
+      <span>Critical Framework</span>
+    </div>
+  </a>
+  
+  <a href="{{ '/mapping-your-attack-surface/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-map-marked-alt"></i></div>
+    <div class="module-info">
+      <h4>Attack Surface</h4>
+      <span>Know your perimeter</span>
+    </div>
+  </a>
+  
+  <a href="{{ '/identity-and-access-management-iam-overview/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-id-card"></i></div>
+    <div class="module-info">
+      <h4>IAM Overview</h4>
+      <span>Identity is the perimeter</span>
+    </div>
+  </a>
+  
+  <a href="{{ '/product-and-software-security/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-code"></i></div>
+    <div class="module-info">
+      <h4>AppSec</h4>
+      <span>Secure Development</span>
+    </div>
+  </a>
+  
+  <a href="{{ '/security-awareness-building-a-human-firewall/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-users"></i></div>
+    <div class="module-info">
+      <h4>Security Awareness</h4>
+      <span>Human Firewall</span>
+    </div>
+  </a>
+  
+  <a href="{{ '/frameworks-and-standards/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-book"></i></div>
+    <div class="module-info">
+      <h4>Standards</h4>
+      <span>ISO, NIST, SOC2</span>
+    </div>
+  </a>
 
-## Quick Start for SMBs 🚀
+  <a href="{{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-user-secret"></i></div>
+    <div class="module-info">
+      <h4>Threat Intel</h4>
+      <span>Know your adversary</span>
+    </div>
+  </a>
 
-If you are a small to medium-sized organization looking to improve your security, start with these basic steps:
+  <a href="{{ '/resources/' | relative_url }}" class="module-card">
+    <div class="module-icon"><i class="fas fa-box-open"></i></div>
+    <div class="module-info">
+      <h4>Resources</h4>
+      <span>Tools & Templates</span>
+    </div>
+  </a>
+</div>
 
-- Make sure you have antivirus setup on all machines / properly enabled.
-- Use MFA everywhere you can.
-- Select strong and unique passwords (sometimes a password manager can help).
-- Set all your systems and software to auto-update or implement a process to manage updates and patches.
-- Talk to your employees about phishing and malware (basic awareness).
-- Take a closer look at what is internet facing, and get help if you have things that concern you in this regard.
-- If possible, have someone take a look at your cloud email (O365 or Gmail) settings and any firewalls or Wi-Fi configurations you may have.
-- Be sure to back up your data and make sure you have backups in a secure, different location from your business.
-
-## Project Structure 📁
-
-This repository is organized into 22 comprehensive sections, each focusing on a key knowledge area of cybersecurity and risk management:
-
-1. [Getting Started](01%20-%20Getting%20Started/)
-2. [Understanding Business Risk](02%20-%20Understanding%20Business%20Risk/)
-3. [Understanding the Adversary](03%20-%20Understanding%20the%20Adversary/)
-4. [Mapping Attack Surface](04%20-%20Mapping%20Attack%20Surface/)
-5. [CIS18 and Basic Security Controls](05%20-%20CIS18%20and%20Basic%20Security%20Controls/)
-6. [Security Architecture and Engineering](06%20-%20Security%20Architecture%20and%20Engineering/)
-7. [Product and Software Security](07%20-%20Product%20and%20Software%20Security/)
-8. [Secure Business Process Design](08%20-%20Secure%20Business%20Process%20Design/)
-9. [Identity and Access Management](09%20-%20Identity%20and%20Access%20Management/)
-10. [Security Management](10%20-%20Security%20Management/)
-11. [Security Leadership](11%20-%20Security%20Leadership/)
-12. [Governance Risk and Compliance](12%20-%20Governance%20Risk%20and%20Compliance/)
-13. [Security Awareness](13%20-%20Security%20Awareness/)
-14. [Security Operations - SOC](14%20-%20Security%20Operations%20-%20SOC/)
-15. [Response - IR](15%20-%20Response%20-%20IR/)
-16. [Business Continuity Planning - BCP](16%20-%20Business%20Continuity%20Planning%20-%20BCP/)
-17. [Disaster Recovery - DR](17%20-%20Disaster%20Recovery%20-%20DR/)
-18. [Vulnerability Management and Risk](18%20-%20Vulnerability%20Management%20and%20Risk/)
-19. [Frameworks and Standards](19%20-%20Frameworks%20and%20Standards/)
-20. [Careers - The Road to CISO](20%20-%20Careers%20-%20The%20Road%20to%20CISO/)
-21. [Cyber Insurance](21%20-%20Cyber%20Insurance/)
-22. [Resources](22%20-%20Resources/)
-
-Each section contains detailed guidance, best practices, and supporting materials to help you understand and implement cybersecurity measures effectively.
-
-## Contributing 🤝
-
-We welcome contributions from the community! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
-
-## Resources 📚
-
-Here are some additional resources you can leverage:
-
-- [Accidental CISO](https://www.accidentalciso.net/)
-- [Christian T.'s Blog](https://christiant.io/)
-- [SMB Security Overview Video](https://www.youtube.com/watch?v=bp-dSKiBLIo)
-
-## Community and Support 💬
-
-- Join our discussions in the [Issues section](https://github.com/CroodSolutions/CISOinaBox/issues)
-- Submit feature requests or bug reports
-- Connect with other contributors and users
-- Share your experiences and insights
-
-## License 📄
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments 🙏
-
-- Thanks to all contributors who have helped shape this project
-- Inspired by the need for accessible cybersecurity guidance for organizations of all sizes
-- Grateful for the wealth of knowledge shared by security professionals worldwide
-
----
-
-*Secure through knowledge, vigilant through sharing, stronger together—this is the essence of modern cyber defense.*
+<div class="community-section">
+  <h3>Built by the Community, For the Community 🤝</h3>
+  <p>
+    This project is open source. We believe in sharing knowledge to make the digital world safer.
+    <br>Whether you're an expert or just starting, your contribution matters.
+  </p>
+  <a href="https://github.com/CroodSolutions/CISOinaBox/blob/main/CONTRIBUTING.md" class="community-btn">
+    <i class="fas fa-code-branch"></i> Contribute Now
+  </a>
+</div>
