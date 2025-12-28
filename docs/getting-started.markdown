@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Getting Started"
-permalink: /getting-started
+permalink: /getting-started/
 nav_category: "Getting Started"
 section_number: 1
 ---

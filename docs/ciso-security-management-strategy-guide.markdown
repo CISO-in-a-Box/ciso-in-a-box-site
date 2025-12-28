@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "CISO Security Management Strategy Guide"
-permalink: /ciso-security-management-strategy-guide
+permalink: /ciso-security-management-strategy-guide/
 nav_category: "Security Program"
 section_number: 10
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Product and Software Security"
-permalink: /product-and-software-security
+permalink: /product-and-software-security/
 nav_category: "Security Controls"
 section_number: 7
 ---

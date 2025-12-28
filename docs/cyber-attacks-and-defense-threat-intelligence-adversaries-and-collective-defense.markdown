@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense"
-permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense
+permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/
 nav_category: "Risk & Threat Management"
 section_number: 3
 ---

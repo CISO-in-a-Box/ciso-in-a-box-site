@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cybersecurity Operations (SecOps) Program Maturity Guide"
-permalink: /cybersecurity-operations-secops-program-maturity-guide
+permalink: /cybersecurity-operations-secops-program-maturity-guide/
 nav_category: "Security Program"
 section_number: 14
 ---

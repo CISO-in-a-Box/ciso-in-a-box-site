@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cybersecurity and IT Career Pathways"
-permalink: /cybersecurity-and-it-career-pathways
+permalink: /cybersecurity-and-it-career-pathways/
 nav_category: "Security Program"
 section_number: 20
 ---

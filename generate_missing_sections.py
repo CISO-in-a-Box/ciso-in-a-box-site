@@ -90,7 +90,7 @@ for section in missing_sections:
     front_matter = f"""---
 layout: page
 title: "{section['title']}"
-permalink: /{section['slug']}
+permalink: /{section['slug']}/
 nav_category: "{section['category']}"
 section_number: {section['number']}
 ---

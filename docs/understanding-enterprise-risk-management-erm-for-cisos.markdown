@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Understanding Enterprise Risk Management (ERM) for CISOs"
-permalink: /understanding-enterprise-risk-management-erm-for-cisos
+permalink: /understanding-enterprise-risk-management-erm-for-cisos/
 nav_category: "Risk & Threat Management"
 section_number: 2
 ---

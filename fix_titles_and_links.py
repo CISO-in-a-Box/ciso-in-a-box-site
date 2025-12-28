@@ -192,11 +192,11 @@ for cat_name, cat_info in categories.items():
         nav_yaml += f'  "{cat_name}":\n'
         
         for section in cat_info['sections']:
-            nav_yaml += f'    - "{section["title"]}": "/{section["slug"]}"\n'
+            nav_yaml += f'    - "{section["title"]}": "/{section["slug"]}/"\n'
 
 # Add resources
 nav_yaml += '''  Resources:
-    - Contributing: "/contributing"  
+    - Contributing: "/contributing/"  
     - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
 '''
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Cyber Incident Response Strategy Guide for CISOs"
-permalink: /cyber-incident-response-strategy-guide-for-cisos
+permalink: /cyber-incident-response-strategy-guide-for-cisos/
 nav_category: "Security Program"
 section_number: 15
 ---

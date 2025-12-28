@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Business Continuity Planning   BCP"
-permalink: /business-continuity-planning---bcp
+permalink: /business-continuity-planning---bcp/
 nav_category: "Compliance & Resilience"
 section_number: 16
 ---

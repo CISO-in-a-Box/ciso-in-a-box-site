@@ -25,7 +25,7 @@ for md_file in docs_dir.glob("*.markdown"):
         if line.startswith('title: '):
             title = line.replace('title: "', '').replace('"', '').strip()
         elif line.startswith('permalink: /'):
-            slug = line.replace('permalink: /', '').strip()
+            slug = line.replace('permalink: /', '').strip().rstrip('/')
         elif line.startswith('nav_category: '):
             category = line.replace('nav_category: "', '').replace('"', '').strip()
     
@@ -75,7 +75,7 @@ for cat_name, cat_sections in categories.items():
         cat_sections.sort(key=lambda x: x['title'])
         
         for section in cat_sections:
-            nav_yaml += f'    - "{section["title"]}": "/{section["slug"]}"\n'
+            nav_yaml += f'    - "{section["title"]}": "/{section["slug"]}/"\n'
 
 # Add resources
 nav_yaml += '''  External Resources:

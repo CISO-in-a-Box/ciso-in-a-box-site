@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Resources"
-permalink: /resources
+permalink: /resources/
 nav_category: "Compliance & Resilience"
 section_number: 22
 ---

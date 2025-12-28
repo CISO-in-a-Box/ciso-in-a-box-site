@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Security Awareness: Building a Human Firewall"
-permalink: /security-awareness-building-a-human-firewall
+permalink: /security-awareness-building-a-human-firewall/
 nav_category: "Security Program"
 section_number: 13
 ---

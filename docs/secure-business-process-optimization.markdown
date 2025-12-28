@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Secure Business Process Optimization"
-permalink: /secure-business-process-optimization
+permalink: /secure-business-process-optimization/
 nav_category: "Security Controls"
 section_number: 8
 ---

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Overview of CIS18 Critical Security Controls"
-permalink: /overview-of-cis18-critical-security-controls
+permalink: /overview-of-cis18-critical-security-controls/
 nav_category: "Security Controls"
 section_number: 5
 ---

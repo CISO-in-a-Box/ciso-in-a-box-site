@@ -256,7 +256,7 @@ class ImprovedCISOToJekyllConverter:
         front_matter = f"""---
 layout: page
 title: "{section_info['title']}"
-permalink: /{section_info['slug']}
+permalink: /{section_info['slug']}/
 nav_category: "{section_info['category']}"
 section_number: {section_info['number']}
 ---
@@ -287,11 +287,11 @@ section_number: {section_info['number']}
             for section in category_info['sections']:
                 title = section['title']
                 slug = section['slug']
-                nav_config += f'    - "{title}": "/{slug}"\n'
+                nav_config += f'    - "{title}": "/{slug}/"\n'
         
         # Add resources section
         nav_config += '''  Resources:
-    - Contributing: "/contributing"
+    - Contributing: "/contributing/"
     - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
 '''
         
@@ -320,7 +320,7 @@ section_number: {section_info['number']}
                 for pattern in patterns:
                     content = re.sub(
                         pattern,
-                        f'[\\1]/{other_section["slug"]}',
+                        f'[\\1]/{other_section["slug"]}/',
                         content
                     )
             

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Security Architecture and Engineering"
-permalink: /security-architecture-and-engineering
+permalink: /security-architecture-and-engineering/
 nav_category: "Security Controls"
 section_number: 6
 ---

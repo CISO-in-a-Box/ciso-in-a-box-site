@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs"
-permalink: /governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs
+permalink: /governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/
 nav_category: "Compliance & Resilience"
 section_number: 12
 ---

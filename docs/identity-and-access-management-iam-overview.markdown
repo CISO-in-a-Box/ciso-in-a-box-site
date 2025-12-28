@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Identity and Access Management (IAM) Overview"
-permalink: /identity-and-access-management-iam-overview
+permalink: /identity-and-access-management-iam-overview/
 nav_category: "Security Program"
 section_number: 9
 ---

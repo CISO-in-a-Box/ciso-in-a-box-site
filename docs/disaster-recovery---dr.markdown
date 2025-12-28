@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Disaster Recovery   DR"
-permalink: /disaster-recovery---dr
+permalink: /disaster-recovery---dr/
 nav_category: "Compliance & Resilience"
 section_number: 17
 ---

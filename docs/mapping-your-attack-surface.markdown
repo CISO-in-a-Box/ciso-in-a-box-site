@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Mapping Your Attack Surface"
-permalink: /mapping-your-attack-surface
+permalink: /mapping-your-attack-surface/
 nav_category: "Risk & Threat Management"
 section_number: 4
 ---

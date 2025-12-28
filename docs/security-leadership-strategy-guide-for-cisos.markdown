@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Security Leadership Strategy Guide for CISOs"
-permalink: /security-leadership-strategy-guide-for-cisos
+permalink: /security-leadership-strategy-guide-for-cisos/
 nav_category: "Security Program"
 section_number: 11
 ---
