@@ -39,8 +39,6 @@ navbar-links:
     - "Frameworks and Standards": "/frameworks-and-standards/"
     - "Cyber Insurance": "/cyber-insurance/"
     - "Resources": "/resources/"
-  External Resources:
-    - GitHub Repo: "https://github.com/CroodSolutions/CISOinaBox"
 
 # Build settings
 remote_theme: daattali/beautiful-jekyll@6.0.1
