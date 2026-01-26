@@ -7,7 +7,7 @@ email: contributors@ciso-in-a-box.org
 description: >- # this means to ignore newlines until "baseurl:"
   A comprehensive guide to cybersecurity and risk management for organizations
   looking to improve their security posture, aspiring CISOs, and security professionals.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/ciso-in-a-box-site" # the subpath of your site, e.g. /blog
 url: "https://ciso-in-a-box.github.io" # the base hostname & protocol for your site
 
 # Navigation Bar
