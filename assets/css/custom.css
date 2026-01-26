@@ -107,9 +107,16 @@ h3 {
 
 .pathways-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   margin-bottom: 60px;
+}
+
+/* Ensure the third card spans full width if it's the only one on its row (2-column layout) */
+@media (min-width: 700px) and (max-width: 1060px) {
+  .pathway-card:nth-child(3) {
+    grid-column: 1 / -1;
+  }
 }
 
 .pathway-card {
