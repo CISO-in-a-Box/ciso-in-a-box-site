@@ -145,6 +145,6 @@ flowchart TD
 ## References
 
 
-Previous: [Product and Software Security](/product-and-software-security/)
+Previous: [Product and Software Security]({{ '/product-and-software-security/' | relative_url }})
 
-Next: [Identity and Access Management](/identity-and-access-management-iam-overview/)
+Next: [Identity and Access Management]({{ '/identity-and-access-management-iam-overview/' | relative_url }})

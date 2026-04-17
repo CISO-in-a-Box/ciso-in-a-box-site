@@ -6,7 +6,7 @@ share-description: 'Note that this guide was made with the help of Anthropic Opu
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 Note that this guide was made with the help of Anthropic Opus 4.6, pointed to community resources as well as videos and presentations by the authors of the **CISOinaBox** project.  
 
@@ -521,7 +521,7 @@ When mapped to a real attack flow — say, a phishing email leading to credentia
 - **CIS Community Defense Model v2.0:** [cisecurity.org/insights/white-papers](https://www.cisecurity.org/insights/white-papers)
 - **MITRE ATT&CK Enterprise Matrix:** [attack.mitre.org](https://attack.mitre.org)
 - **CISA Best Practices for MITRE ATT&CK Mapping:** [cisa.gov](https://www.cisa.gov/sites/default/files/2023-01/Best%20Practices%20for%20MITRE%20ATTCK%20Mapping.pdf)
-- **CISO in a Box — CIS18 Module:** [github.com/CroodSolutions/CISOinaBox](/overview-of-cis18-critical-security-controls/)
+- **CISO in a Box — CIS18 Module:** [github.com/CroodSolutions/CISOinaBox]({{ '/overview-of-cis18-critical-security-controls/' | relative_url }})
 - **CIS18 Video Walkthrough (Crood Solutions):** [youtu.be/3HQPMbO3Mgw](https://youtu.be/3HQPMbO3Mgw)
 
 ---

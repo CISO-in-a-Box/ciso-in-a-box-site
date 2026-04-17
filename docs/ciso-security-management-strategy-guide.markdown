@@ -199,6 +199,6 @@ In summary, the path to a mature cybersecurity program involves continuously bui
 * LinkedIn article describing how **Governance, Risk, and Compliance (GRC)** becomes an important domain for medium-sized organizations, involving setting security strategy, policies, and managing compliance requirements – implying the need for a dedicated focus on GRC as companies grow.
 
 
-Previous: [Identity and Access Management](/identity-and-access-management-iam-overview/)
+Previous: [Identity and Access Management]({{ '/identity-and-access-management-iam-overview/' | relative_url }})
 
-Next: [Security Leadership](/security-leadership-strategy-guide-for-cisos/)
+Next: [Security Leadership]({{ '/security-leadership-strategy-guide-for-cisos/' | relative_url }})

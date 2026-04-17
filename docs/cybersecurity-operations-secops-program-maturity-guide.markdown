@@ -199,6 +199,6 @@ Effective SecOps does not operate in isolation – it must align with the organi
 In summary, as an organization grows and matures, security operations become increasingly **risk-informed**. Early on, simply getting the basics in place takes precedence, but with maturity, there is a deliberate effort to tie SecOps activities to risk reduction outcomes and business resilience. Mature SecOps teams can demonstrate how their work **cost-effectively reduces the organization’s risk** to an acceptable level, thereby securing not just IT systems but the business mission itself.
 
 
-Previous: [Security Awareness](/security-awareness-building-a-human-firewall/)
+Previous: [Security Awareness]({{ '/security-awareness-building-a-human-firewall/' | relative_url }})
 
-Next: [Response - IR](/cyber-incident-response-strategy-guide-for-cisos/)
+Next: [Response - IR]({{ '/cyber-incident-response-strategy-guide-for-cisos/' | relative_url }})

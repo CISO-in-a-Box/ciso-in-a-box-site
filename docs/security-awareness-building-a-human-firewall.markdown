@@ -153,6 +153,6 @@ Use this data to **improve training, focus on weak spots, and show value to lead
 ## References
 
 
-Previous: [Governance Risk and Compliance](/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/)
+Previous: [Governance Risk and Compliance]({{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }})
 
-Next: [Security Operations - SOC](/cybersecurity-operations-secops-program-maturity-guide/)
+Next: [Security Operations - SOC]({{ '/cybersecurity-operations-secops-program-maturity-guide/' | relative_url }})

@@ -9,6 +9,6 @@ section_number: 21
 Placeholder
 
 
-Previous: [Careers - The Road to CISO](/cybersecurity-and-it-career-pathways/)
+Previous: [Careers - The Road to CISO]({{ '/cybersecurity-and-it-career-pathways/' | relative_url }})
 
-Next: [Resources](/resources/)
+Next: [Resources]({{ '/resources/' | relative_url }})

@@ -6,7 +6,7 @@ share-description: 'We welcome contributions from the community! This project th
 nav_category: 'Guide'
 section_number: 1
 ---
-[Back to Getting Started](/getting-started/)
+[Back to Getting Started]({{ '/getting-started' | relative_url }})
 
 ## Contributing 🤝
 

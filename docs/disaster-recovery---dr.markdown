@@ -252,6 +252,6 @@ Below is a simple Markdown-based checklist that a CISO can use as a template to 
 *   **Post-Disaster Recovery Validation** – Plan for how to validate systems after recovery is documented (who will sign off that systems/data are OK). This includes verifying data consistency and integrity once systems are back online.
 
 
-Previous: [Business Continuity Planning - BCP](/business-continuity-planning---bcp/)
+Previous: [Business Continuity Planning - BCP]({{ '/business-continuity-planning---bcp/' | relative_url }})
 
-Next: [Vulnerability Management and Risk](/vulnerability-management-and-risk/)
+Next: [Vulnerability Management and Risk]({{ '/vulnerability-management-and-risk/' | relative_url }})

@@ -257,6 +257,6 @@ There’s no single path through cybersecurity and IT—each person’s journey 
 ## References
 
 
-Previous: [Frameworks and Standards](/frameworks-and-standards/)
+Previous: [Frameworks and Standards]({{ '/frameworks-and-standards/' | relative_url }})
 
-Next: [Cyber Insurance](/cyber-insurance/)
+Next: [Cyber Insurance]({{ '/cyber-insurance/' | relative_url }})

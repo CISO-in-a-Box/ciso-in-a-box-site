@@ -40,7 +40,7 @@ Here are a couple of other resources you can leverage:
 
 ## Additional Pages in This Section
 
-- [Contributing 🤝](/getting-started/contributing/)
-- [🧭 CISO in a Box – Author Styling Guide](/getting-started/author-styling-guide/)
+- [Contributing 🤝]({{ '/getting-started/contributing/' | relative_url }})
+- [🧭 CISO in a Box – Author Styling Guide]({{ '/getting-started/author-styling-guide/' | relative_url }})
 
-Next: [Understanding Business Risk](/understanding-enterprise-risk-management-erm-for-cisos/)
+Next: [Understanding Business Risk]({{ '/understanding-enterprise-risk-management-erm-for-cisos/' | relative_url }})

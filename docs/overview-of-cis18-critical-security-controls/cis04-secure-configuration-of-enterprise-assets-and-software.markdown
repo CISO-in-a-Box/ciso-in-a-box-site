@@ -6,7 +6,7 @@ share-description: 'Of course, strong words like "all" we know will not happen i
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 ## Overview
 

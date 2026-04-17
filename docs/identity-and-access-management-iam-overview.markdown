@@ -75,6 +75,6 @@ What does “good” look like for IAM? A **mature IAM program** will have sever
 In essence, a mature IAM program means **identity is managed as a lifecycle** (not a one-time project), with continuous improvements. It aligns with business processes (like onboarding) and compliance requirements seamlessly. When IAM is mature, users enjoy easier access (fewer passwords, single sign-on) *while* the organization enjoys stronger security. Achieving this maturity is an ongoing journey, but it pays off by significantly lowering the risk of security breaches related to identity, and by streamlining IT operations and user productivity. An IAM-savvy security leader will continuously benchmark their program against best practices and evolving standards to identify gaps and drive improvements, ensuring that identity management remains a business enabler as well as a guardrail.
 
 
-Previous: [Secure Business Process Design](/secure-business-process-optimization/)
+Previous: [Secure Business Process Design]({{ '/secure-business-process-optimization/' | relative_url }})
 
-Next: [Security Management](/ciso-security-management-strategy-guide/)
+Next: [Security Management]({{ '/ciso-security-management-strategy-guide/' | relative_url }})

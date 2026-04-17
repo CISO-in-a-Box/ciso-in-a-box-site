@@ -6,7 +6,7 @@ share-description: 'This involves making sure people who are onboarded (join) re
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 ## Overview
 
@@ -62,4 +62,4 @@ So often a compromise is due to weak or guessable passwords, such as Summer2026!
 
 ## See Also
 
-Also, be sure to visit the CIS18 section on [Account Management](https://github.com/CroodSolutions/CISOinaBox/edit/main/05%20-%20CIS18%20and%20Basic%20Security%20Controls/CIS05%20-%20Account%20Management.md) and the CISO-in-a-Box section on [Identity and Access Management](/identity-and-access-management-iam-overview/).
+Also, be sure to visit the CIS18 section on [Account Management](https://github.com/CroodSolutions/CISOinaBox/edit/main/05%20-%20CIS18%20and%20Basic%20Security%20Controls/CIS05%20-%20Account%20Management.md) and the CISO-in-a-Box section on [Identity and Access Management]({{ '/identity-and-access-management-iam-overview/' | relative_url }}).

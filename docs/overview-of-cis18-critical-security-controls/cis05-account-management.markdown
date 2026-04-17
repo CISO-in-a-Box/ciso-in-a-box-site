@@ -6,7 +6,7 @@ share-description: 'What does this really mean in the real world?'
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 ## Overview
 
@@ -49,6 +49,6 @@ There are a few critical scenarios that need to be figured out for account manag
 
 ## See Also
 
-Also, be sure to visit the CIS18 section on [Access Control Management](https://github.com/CroodSolutions/CISOinaBox/edit/main/05%20-%20CIS18%20and%20Basic%20Security%20Controls/CIS06%20-%20Access%20Control%20Management.md) and the CISO-in-a-Box section on [Identity and Access Management](/identity-and-access-management-iam-overview/).
+Also, be sure to visit the CIS18 section on [Access Control Management](https://github.com/CroodSolutions/CISOinaBox/edit/main/05%20-%20CIS18%20and%20Basic%20Security%20Controls/CIS06%20-%20Access%20Control%20Management.md) and the CISO-in-a-Box section on [Identity and Access Management]({{ '/identity-and-access-management-iam-overview/' | relative_url }}).
 
 ---

@@ -6,7 +6,7 @@ share-description: 'You are the CISO-in-a-Box Virtual Advisor, a pragmatic and e
 nav_category: 'Guide'
 section_number: 22
 ---
-[Back to Resources](/resources/)
+[Back to Resources]({{ '/resources' | relative_url }})
 
 ---
 name: ciso-box-agent

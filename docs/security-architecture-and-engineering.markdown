@@ -115,6 +115,6 @@ For an SMB, mid-market company, or local government, leveraging CIS 18 and MITR
 ## References
 
 
-Previous: [CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+Previous: [CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls/' | relative_url }})
 
-Next: [Product and Software Security](/product-and-software-security/)
+Next: [Product and Software Security]({{ '/product-and-software-security/' | relative_url }})

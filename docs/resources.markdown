@@ -281,7 +281,7 @@ section_number: 22
 
 ## Additional Pages in This Section
 
-- [CISO-in-a-Box Agent](/resources/ciso-agent/)
-- [Readme](/resources/book-list/)
+- [CISO-in-a-Box Agent]({{ '/resources/ciso-agent/' | relative_url }})
+- [Readme]({{ '/resources/book-list/' | relative_url }})
 
-Previous: [Cyber Insurance](/cyber-insurance/)
+Previous: [Cyber Insurance]({{ '/cyber-insurance/' | relative_url }})

@@ -156,6 +156,6 @@ Establishing or expanding a cybersecurity program is not a one-person job – su
 Each of these stakeholders brings a different perspective and expertise: by coordinating with all of them, a CISO can build a well-rounded cybersecurity program that is embedded in the organization’s processes and culture. Communication and collaboration are key – a CISO should regularly update these stakeholders on cyber risks and progress, and in turn, leverage their support to champion cybersecurity initiatives enterprisewide[edendata.com](https://www.edendata.com/post/ciso-roles-and-responsibilities#:~:text=Safety%20is%20a%20cross,aligned%20with%20the%20firm%27s%20goals)[techtarget.com](https://www.techtarget.com/searchcio/tip/Cybersecurity-teamwork-C-suite-roles-CIOs-should-befriend#:~:text=If%20a%20CIO%20doesn%27t%20have,in%20the%20realm%20of%20security). This broad engagement ensures that the cybersecurity strategy not only aligns with technical requirements, but also with business goals, compliance obligations, and the human element of the enterprise.
 
 
-Previous: [Vulnerability Management and Risk](/vulnerability-management-and-risk/)
+Previous: [Vulnerability Management and Risk]({{ '/vulnerability-management-and-risk/' | relative_url }})
 
-Next: [Careers - The Road to CISO](/cybersecurity-and-it-career-pathways/)
+Next: [Careers - The Road to CISO]({{ '/cybersecurity-and-it-career-pathways/' | relative_url }})

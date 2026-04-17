@@ -6,7 +6,7 @@ share-description: 'Please use the information below to ensure the same voice an
 nav_category: 'Guide'
 section_number: 1
 ---
-[Back to Getting Started](/getting-started/)
+[Back to Getting Started]({{ '/getting-started' | relative_url }})
 
 Please use the information below to ensure the same voice and style are used for all chapters of this project. This will help to ensure there is a consistent voice regardless of who supports this project. 
 

@@ -6,7 +6,7 @@ share-description: 'The goal is to understand, track, and manage the different k
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 ## Overview
 
@@ -25,11 +25,11 @@ The goal is to understand, track, and manage the different kinds of software dep
 
 In most modern enterprise environments, this also includes managing cloud software such as Software-as-a-Service (SaaS) applications, as well as software running in cloud platforms such as Amazon (AWS), Google (GCP), or Microsoft (Azure). 
 
-A huge portion of this also has cross-over into [Data Protection](/overview-of-cis18-critical-security-controls/cis03-data-protection/), as Enterprise Software solutions and projects require integrations between software systems; as well as [Account](/overview-of-cis18-critical-security-controls/cis05-account-management/) and [Access Control](/overview-of-cis18-critical-security-controls/cis06-access-control-management/) since non-human identities, proper scoping of access levels and permissions, and BYOID/SSO are often important elements of such projects. 
+A huge portion of this also has cross-over into [Data Protection]({{ '/overview-of-cis18-critical-security-controls/cis03-data-protection/' | relative_url }}), as Enterprise Software solutions and projects require integrations between software systems; as well as [Account]({{ '/overview-of-cis18-critical-security-controls/cis05-account-management/' | relative_url }}) and [Access Control]({{ '/overview-of-cis18-critical-security-controls/cis06-access-control-management/' | relative_url }}) since non-human identities, proper scoping of access levels and permissions, and BYOID/SSO are often important elements of such projects. 
 
 ## MITRE ATT&CK Techniques Mitigated 
 
-**ATT&CK Relevance:** Directly counters Execution tactics (T1204, T1059) and Persistence via trojaned software (T1554). Application allowlisting is one of the single most effective controls against malware execution, although in large and complex environments and ecosystems it can prove elusive at times. This is where control of software assets will often lead into the [Malware Defence](/overview-of-cis18-critical-security-controls/cis10-malware-defenses/) and [Incident Response](/overview-of-cis18-critical-security-controls/cis17-incident-response-management/) topics.  
+**ATT&CK Relevance:** Directly counters Execution tactics (T1204, T1059) and Persistence via trojaned software (T1554). Application allowlisting is one of the single most effective controls against malware execution, although in large and complex environments and ecosystems it can prove elusive at times. This is where control of software assets will often lead into the [Malware Defence]({{ '/overview-of-cis18-critical-security-controls/cis10-malware-defenses/' | relative_url }}) and [Incident Response]({{ '/overview-of-cis18-critical-security-controls/cis17-incident-response-management/' | relative_url }}) topics.  
 
 ## Solutions and Products 
 

@@ -174,6 +174,6 @@ It’s also worth noting **sector differences**: A small bank might actually nee
 Finally, an organization’s **risk maturity goals should be aligned with its business goals**. Not every company needs to be at “Optimized” level for ERM if it’s not warranted by their context – but as the environment (threats, regulations) intensifies, most are finding that raising ERM maturity is essential for sustainable growth. The open source CISO handbook project, by gathering collective wisdom, can provide tailored guidance for different sizes – for a small business, it might suggest a lightweight risk register template and key controls; for a large enterprise, guidance on advanced topics like risk aggregation and simulation. The important takeaway is that **every organization, big or small, can benefit from understanding and improving their risk management fundamentals**, and the CISO plays a pivotal role in that continuous improvement.
 
 
-Previous: [Getting Started](/getting-started/)
+Previous: [Getting Started]({{ '/getting-started/' | relative_url }})
 
-Next: [Understanding the Adversary](/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/)
+Next: [Understanding the Adversary]({{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }})

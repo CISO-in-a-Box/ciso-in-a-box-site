@@ -188,6 +188,6 @@ Effective cybersecurity focuses on disrupting adversary opportunities through da
 * [CISA Threat Actors](https://www.cisa.gov/topics/cyber-threats-and-advisories/cyber-threat-actor-naming) - Practical threat actor categorization
 
 
-Previous: [Understanding Business Risk](/understanding-enterprise-risk-management-erm-for-cisos/)
+Previous: [Understanding Business Risk]({{ '/understanding-enterprise-risk-management-erm-for-cisos/' | relative_url }})
 
-Next: [Mapping Attack Surface](/mapping-your-attack-surface/)
+Next: [Mapping Attack Surface]({{ '/mapping-your-attack-surface/' | relative_url }})

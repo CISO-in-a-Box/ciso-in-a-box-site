@@ -541,6 +541,6 @@ A mature GRC program operates on a predictable **cadence**. Below are suggested 
 - Monitor vendor incidents/news in real time
 
 
-Previous: [Security Leadership](/security-leadership-strategy-guide-for-cisos/)
+Previous: [Security Leadership]({{ '/security-leadership-strategy-guide-for-cisos/' | relative_url }})
 
-Next: [Security Awareness](/security-awareness-building-a-human-firewall/)
+Next: [Security Awareness]({{ '/security-awareness-building-a-human-firewall/' | relative_url }})

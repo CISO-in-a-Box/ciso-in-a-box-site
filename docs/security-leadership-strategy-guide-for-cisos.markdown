@@ -312,6 +312,6 @@ Effective cybersecurity budgeting demonstrates accountability, increases transpa
 ---
 
 
-Previous: [Security Management](/ciso-security-management-strategy-guide/)
+Previous: [Security Management]({{ '/ciso-security-management-strategy-guide/' | relative_url }})
 
-Next: [Governance Risk and Compliance](/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/)
+Next: [Governance Risk and Compliance]({{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }})

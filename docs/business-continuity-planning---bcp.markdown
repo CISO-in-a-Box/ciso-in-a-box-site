@@ -133,6 +133,6 @@ c. Ship products to customers                       Order System, Customer Datab
 Just like the BCP, the DRP will include procedures, roles, and systems relevant to the business objectives. Unlike BCP though, a DRP plan can include different environment types such as a cold site, warm site, and a hot-hot site. A cold site represents a location where business processes can be recovered to after updates and setup take place. A cold site requires the most amount of time to prepare for DRP events. A warm site is a site that has infrastructure and software ready for DRP events, but lacks all of the required components for activating DRP procedures. A hot-hot site is a fully active and replicated site where DRP events are transitioned rapidly.
 
 
-Previous: [Response - IR](/cyber-incident-response-strategy-guide-for-cisos/)
+Previous: [Response - IR]({{ '/cyber-incident-response-strategy-guide-for-cisos/' | relative_url }})
 
-Next: [Disaster Recovery - DR](/disaster-recovery---dr/)
+Next: [Disaster Recovery - DR]({{ '/disaster-recovery---dr/' | relative_url }})

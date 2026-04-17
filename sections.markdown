@@ -8,7 +8,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
 ## Guide
 
 <div class="section-browser-grid">
-<a class="section-browser-card" href="/getting-started/">
+<a class="section-browser-card" href="{{ '/getting-started/' | relative_url }}">
   <div class="section-browser-number">1</div>
   <div class="section-browser-body">
     <h3>Getting Started</h3>
@@ -16,7 +16,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>2 additional pages</span>
   </div>
 </a>
-<a class="section-browser-card" href="/resources/">
+<a class="section-browser-card" href="{{ '/resources/' | relative_url }}">
   <div class="section-browser-number">22</div>
   <div class="section-browser-body">
     <h3>Resources</h3>
@@ -29,7 +29,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
 ## Risk & Threat Management
 
 <div class="section-browser-grid">
-<a class="section-browser-card" href="/understanding-enterprise-risk-management-erm-for-cisos/">
+<a class="section-browser-card" href="{{ '/understanding-enterprise-risk-management-erm-for-cisos/' | relative_url }}">
   <div class="section-browser-number">2</div>
   <div class="section-browser-body">
     <h3>Understanding Business Risk</h3>
@@ -37,7 +37,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/">
+<a class="section-browser-card" href="{{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }}">
   <div class="section-browser-number">3</div>
   <div class="section-browser-body">
     <h3>Understanding the Adversary</h3>
@@ -45,7 +45,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/mapping-your-attack-surface/">
+<a class="section-browser-card" href="{{ '/mapping-your-attack-surface/' | relative_url }}">
   <div class="section-browser-number">4</div>
   <div class="section-browser-body">
     <h3>Mapping Attack Surface</h3>
@@ -58,7 +58,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
 ## Security Controls
 
 <div class="section-browser-grid">
-<a class="section-browser-card" href="/overview-of-cis18-critical-security-controls/">
+<a class="section-browser-card" href="{{ '/overview-of-cis18-critical-security-controls/' | relative_url }}">
   <div class="section-browser-number">5</div>
   <div class="section-browser-body">
     <h3>CIS18 and Basic Security Controls</h3>
@@ -66,7 +66,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>20 additional pages</span>
   </div>
 </a>
-<a class="section-browser-card" href="/security-architecture-and-engineering/">
+<a class="section-browser-card" href="{{ '/security-architecture-and-engineering/' | relative_url }}">
   <div class="section-browser-number">6</div>
   <div class="section-browser-body">
     <h3>Security Architecture and Engineering</h3>
@@ -74,7 +74,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/product-and-software-security/">
+<a class="section-browser-card" href="{{ '/product-and-software-security/' | relative_url }}">
   <div class="section-browser-number">7</div>
   <div class="section-browser-body">
     <h3>Product and Software Security</h3>
@@ -82,7 +82,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/secure-business-process-optimization/">
+<a class="section-browser-card" href="{{ '/secure-business-process-optimization/' | relative_url }}">
   <div class="section-browser-number">8</div>
   <div class="section-browser-body">
     <h3>Secure Business Process Design</h3>
@@ -95,7 +95,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
 ## Security Program
 
 <div class="section-browser-grid">
-<a class="section-browser-card" href="/identity-and-access-management-iam-overview/">
+<a class="section-browser-card" href="{{ '/identity-and-access-management-iam-overview/' | relative_url }}">
   <div class="section-browser-number">9</div>
   <div class="section-browser-body">
     <h3>Identity and Access Management</h3>
@@ -103,7 +103,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/ciso-security-management-strategy-guide/">
+<a class="section-browser-card" href="{{ '/ciso-security-management-strategy-guide/' | relative_url }}">
   <div class="section-browser-number">10</div>
   <div class="section-browser-body">
     <h3>Security Management</h3>
@@ -111,7 +111,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/security-leadership-strategy-guide-for-cisos/">
+<a class="section-browser-card" href="{{ '/security-leadership-strategy-guide-for-cisos/' | relative_url }}">
   <div class="section-browser-number">11</div>
   <div class="section-browser-body">
     <h3>Security Leadership</h3>
@@ -119,7 +119,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/security-awareness-building-a-human-firewall/">
+<a class="section-browser-card" href="{{ '/security-awareness-building-a-human-firewall/' | relative_url }}">
   <div class="section-browser-number">13</div>
   <div class="section-browser-body">
     <h3>Security Awareness</h3>
@@ -127,7 +127,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/cybersecurity-operations-secops-program-maturity-guide/">
+<a class="section-browser-card" href="{{ '/cybersecurity-operations-secops-program-maturity-guide/' | relative_url }}">
   <div class="section-browser-number">14</div>
   <div class="section-browser-body">
     <h3>Security Operations - SOC</h3>
@@ -135,7 +135,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/cyber-incident-response-strategy-guide-for-cisos/">
+<a class="section-browser-card" href="{{ '/cyber-incident-response-strategy-guide-for-cisos/' | relative_url }}">
   <div class="section-browser-number">15</div>
   <div class="section-browser-body">
     <h3>Response - IR</h3>
@@ -143,7 +143,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/cybersecurity-and-it-career-pathways/">
+<a class="section-browser-card" href="{{ '/cybersecurity-and-it-career-pathways/' | relative_url }}">
   <div class="section-browser-number">20</div>
   <div class="section-browser-body">
     <h3>Careers - The Road to CISO</h3>
@@ -156,7 +156,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
 ## Compliance & Resilience
 
 <div class="section-browser-grid">
-<a class="section-browser-card" href="/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/">
+<a class="section-browser-card" href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}">
   <div class="section-browser-number">12</div>
   <div class="section-browser-body">
     <h3>Governance Risk and Compliance</h3>
@@ -164,7 +164,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/business-continuity-planning---bcp/">
+<a class="section-browser-card" href="{{ '/business-continuity-planning---bcp/' | relative_url }}">
   <div class="section-browser-number">16</div>
   <div class="section-browser-body">
     <h3>Business Continuity Planning - BCP</h3>
@@ -172,7 +172,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/disaster-recovery---dr/">
+<a class="section-browser-card" href="{{ '/disaster-recovery---dr/' | relative_url }}">
   <div class="section-browser-number">17</div>
   <div class="section-browser-body">
     <h3>Disaster Recovery - DR</h3>
@@ -180,7 +180,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/vulnerability-management-and-risk/">
+<a class="section-browser-card" href="{{ '/vulnerability-management-and-risk/' | relative_url }}">
   <div class="section-browser-number">18</div>
   <div class="section-browser-body">
     <h3>Vulnerability Management and Risk</h3>
@@ -188,7 +188,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/frameworks-and-standards/">
+<a class="section-browser-card" href="{{ '/frameworks-and-standards/' | relative_url }}">
   <div class="section-browser-number">19</div>
   <div class="section-browser-body">
     <h3>Frameworks and Standards</h3>
@@ -196,7 +196,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="/cyber-insurance/">
+<a class="section-browser-card" href="{{ '/cyber-insurance/' | relative_url }}">
   <div class="section-browser-number">21</div>
   <div class="section-browser-body">
     <h3>Cyber Insurance</h3>

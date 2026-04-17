@@ -6,7 +6,7 @@ share-description: 'And, that is obviously, a lot. So, how do we approach this t
 nav_category: 'Security Controls'
 section_number: 5
 ---
-[Back to CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)
+[Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})
 
 ## Overview
 
