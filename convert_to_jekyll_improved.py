@@ -429,8 +429,10 @@ section_number: {section_info['number']}
 
 def main():
     """Main execution function."""
-    source_dir = "/home/christian/github/CISOinaBox"
-    output_dir = "/home/christian/github/CISOinaBox/ciso-in-a-box-site"
+    _script_dir = Path(__file__).resolve().parent
+    _repo_root = _script_dir.parent
+    source_dir = str(_repo_root)
+    output_dir = str(_script_dir)
     
     converter = ImprovedCISOToJekyllConverter(source_dir, output_dir)
     report = converter.convert()

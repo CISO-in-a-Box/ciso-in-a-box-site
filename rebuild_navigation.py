@@ -6,8 +6,9 @@ Rebuild complete navigation with all sections
 import os
 from pathlib import Path
 
-docs_dir = Path("/home/christian/github/CISOinaBox/ciso-in-a-box-site/docs")
-config_file = Path("/home/christian/github/CISOinaBox/ciso-in-a-box-site/_config.yml")
+SITE_ROOT = Path(__file__).resolve().parent
+docs_dir = SITE_ROOT / "docs"
+config_file = SITE_ROOT / "_config.yml"
 
 # Get all sections
 sections = []

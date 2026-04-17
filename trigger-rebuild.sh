@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 # Force GitHub Pages rebuild by touching a file and pushing
+#
+# Update SITE_URL below when switching to a custom domain.
+
+SITE_URL="https://ciso-in-a-box.github.io/ciso-in-a-box-site/"
 
 # Add timestamp to trigger rebuild
 echo "// GitHub Pages rebuild trigger: $(date)" > .rebuild-trigger
@@ -15,4 +19,4 @@ echo "Waiting for rebuild..."
 sleep 30
 
 echo "Checking site..."
-curl -s "https://ciso-in-a-box.github.io/ciso-in-a-box-site/" | grep -o "Beautiful Jekyll"
+curl -s "$SITE_URL" | grep -o "Beautiful Jekyll"

@@ -51,8 +51,10 @@ def extract_title_from_directory(dir_path: Path) -> str:
     return ' '.join(capitalized_words)
 
 # Fix generated markdown files
-docs_dir = Path("/home/christian/github/CISOinaBox/ciso-in-a-box-site/docs")
-source_dir = Path("/home/christian/github/CISOinaBox")
+SITE_ROOT = Path(__file__).resolve().parent
+REPO_ROOT = SITE_ROOT.parent
+docs_dir = SITE_ROOT / "docs"
+source_dir = REPO_ROOT
 
 print("🔧 Fixing titles and links...")
 
@@ -135,7 +137,7 @@ for filename, info in section_info.items():
     print(f"✅ Updated {filename} with title: {info['title']}")
 
 # Update config with proper navigation
-config_file = Path("/home/christian/github/CISOinaBox/ciso-in-a-box-site/_config.yml")
+config_file = SITE_ROOT / "_config.yml"
 with open(config_file, 'r', encoding='utf-8') as f:
     config_content = f.read()
 

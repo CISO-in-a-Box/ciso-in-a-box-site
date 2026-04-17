@@ -6,8 +6,10 @@ Generate missing sections that weren't captured
 import os
 from pathlib import Path
 
-source_dir = Path("/home/christian/github/CISOinaBox")
-output_dir = Path("/home/christian/github/CISOinaBox/ciso-in-a-box-site")
+REPO_ROOT = Path(__file__).resolve().parent.parent
+SITE_ROOT = REPO_ROOT / "ciso-in-a-box-site"
+source_dir = REPO_ROOT
+output_dir = SITE_ROOT
 
 # Define missing sections with their proper titles
 missing_sections = [

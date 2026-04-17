@@ -29,7 +29,6 @@ head-extra:
 </div>
 
 <div class="pathways-grid">
-  <!-- Path 1: The New CISO -->
   <div class="pathway-card">
     <div class="pathway-icon">
       <i class="fas fa-flag"></i>
@@ -43,10 +42,9 @@ head-extra:
       <li>Security Leadership Strategy</li>
       <li>Enterprise Risk Management</li>
     </ul>
-    <a href="{{ '/getting-started/' | relative_url }}" class="pathway-btn">Start Leading &rarr;</a>
+    <a href="{{ '/getting-started/' | relative_url }}" class="pathway-btn">
+      The &rarr;</a>
   </div>
-
-  <!-- Path 2: The Program Builder -->
   <div class="pathway-card" style="border-top-color: #7952b3;">
     <div class="pathway-icon" style="color: #7952b3;">
       <i class="fas fa-tools"></i>
@@ -60,10 +58,9 @@ head-extra:
       <li>SecOps & Incident Response</li>
       <li>Vulnerability Management</li>
     </ul>
-    <a href="{{ '/security-architecture-and-engineering/' | relative_url }}" class="pathway-btn" style="color: #7952b3; border-color: #7952b3;">Build Security &rarr;</a>
+    <a href="{{ '/security-architecture-and-engineering/' | relative_url }}" class="pathway-btn" style="color: #7952b3; border-color: #7952b3;">
+      The &rarr;</a>
   </div>
-
-  <!-- Path 3: The Strategist -->
   <div class="pathway-card" style="border-top-color: #ffc107;">
     <div class="pathway-icon" style="color: #ffc107;">
       <i class="fas fa-chess"></i>
@@ -77,7 +74,8 @@ head-extra:
       <li>Business Continuity (BCP)</li>
       <li>Cyber Insurance</li>
     </ul>
-    <a href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}" class="pathway-btn" style="color: #ffc107; border-color: #ffc107;">Align Strategy &rarr;</a>
+    <a href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}" class="pathway-btn" style="color: #ffc107; border-color: #ffc107;">
+      The &rarr;</a>
   </div>
 </div>
 
@@ -94,7 +92,6 @@ head-extra:
       <span>Critical Framework</span>
     </div>
   </a>
-  
   <a href="{{ '/mapping-your-attack-surface/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-map-marked-alt"></i></div>
     <div class="module-info">
@@ -102,7 +99,6 @@ head-extra:
       <span>Know your perimeter</span>
     </div>
   </a>
-  
   <a href="{{ '/identity-and-access-management-iam-overview/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-id-card"></i></div>
     <div class="module-info">
@@ -110,7 +106,6 @@ head-extra:
       <span>Identity is the perimeter</span>
     </div>
   </a>
-  
   <a href="{{ '/product-and-software-security/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-code"></i></div>
     <div class="module-info">
@@ -118,7 +113,6 @@ head-extra:
       <span>Secure Development</span>
     </div>
   </a>
-  
   <a href="{{ '/security-awareness-building-a-human-firewall/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-users"></i></div>
     <div class="module-info">
@@ -126,7 +120,6 @@ head-extra:
       <span>Human Firewall</span>
     </div>
   </a>
-  
   <a href="{{ '/frameworks-and-standards/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-book"></i></div>
     <div class="module-info">
@@ -134,7 +127,6 @@ head-extra:
       <span>ISO, NIST, SOC2</span>
     </div>
   </a>
-
   <a href="{{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-user-secret"></i></div>
     <div class="module-info">
@@ -142,7 +134,6 @@ head-extra:
       <span>Know your adversary</span>
     </div>
   </a>
-
   <a href="{{ '/resources/' | relative_url }}" class="module-card">
     <div class="module-icon"><i class="fas fa-box-open"></i></div>
     <div class="module-info">
