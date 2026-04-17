@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Identity and Access Management (IAM) Overview"
+title: 'Identity and Access Management (IAM) Overview'
 permalink: /identity-and-access-management-iam-overview/
-nav_category: "Security Program"
+share-description: 'Foundations of IAM, access control, lifecycle management, and privileged access.'
+nav_category: 'Security Program'
 section_number: 9
 ---
-
-# Identity and Access Management (IAM) Overview
-
 ## What Is IAM and Why It Matters
 
 Identity and Access Management (IAM) is the practice of ensuring the right people and systems have the right access to the right resources at the right time. In other words, IAM is a combination of policies, processes, and technologies that verifies identities and grants appropriate permissions while keeping unauthorized access at bay. This is critical for cybersecurity and business operations: strong IAM helps prevent data breaches and fraud by making sure only authorized users (or devices) can reach sensitive systems. As modern organizations adopt cloud services and remote work, a robust IAM program becomes **vital** to protect assets without hindering productivity.
@@ -75,3 +73,8 @@ What does “good” look like for IAM? A **mature IAM program** will have sever
 * **Robust Privileged Access Controls:** Administrative and privileged access is tightly governed. The organization uses PAM solutions or policies for managing elevated rights – for example, administrators have separate accounts, must use MFA, and their actions are logged. The principle of least privilege extends to infrastructure and applications, with role-based access and just-in-time elevation in place. Regular audits are conducted on admin accounts and high-risk access to ensure compliance with security policies.
 
 In essence, a mature IAM program means **identity is managed as a lifecycle** (not a one-time project), with continuous improvements. It aligns with business processes (like onboarding) and compliance requirements seamlessly. When IAM is mature, users enjoy easier access (fewer passwords, single sign-on) *while* the organization enjoys stronger security. Achieving this maturity is an ongoing journey, but it pays off by significantly lowering the risk of security breaches related to identity, and by streamlining IT operations and user productivity. An IAM-savvy security leader will continuously benchmark their program against best practices and evolving standards to identify gaps and drive improvements, ensuring that identity management remains a business enabler as well as a guardrail.
+
+
+Previous: [Secure Business Process Design](/secure-business-process-optimization/)
+
+Next: [Security Management](/ciso-security-management-strategy-guide/)

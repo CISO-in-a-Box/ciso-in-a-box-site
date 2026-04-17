@@ -1,46 +1,27 @@
 ###########################################################
 ### CISOinaBox Jekyll Configuration
 
-title: CISO-in-a-Box 🛡️
+title: CISO-in-a-Box
 author: CISOinaBox Contributors
 email: contributors@ciso-in-a-box.org
-description: >- # this means to ignore newlines until "baseurl:"
-  A comprehensive guide to cybersecurity and risk management for organizations
-  looking to improve their security posture, aspiring CISOs, and security professionals.
-baseurl: "/ciso-in-a-box-site" # the subpath of your site, e.g. /blog
-url: "https://ciso-in-a-box.github.io" # the base hostname & protocol for your site
+description: >-
+  A comprehensive guide to cybersecurity and risk management for organizations, aspiring CISOs, and security professionals.
+baseurl: ""
+url: "https://ciso-in-a-box.github.io"
 
-# Navigation Bar
 navbar-links:
-  "Getting Started":
-    - "Getting Started": "/getting-started/"
-  "Risk & Threat Management":
-    - "Understanding Enterprise Risk Management (ERM) for CISOs": "/understanding-enterprise-risk-management-erm-for-cisos/"
-    - "Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense": "/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/"
-    - "Mapping Your Attack Surface": "/mapping-your-attack-surface/"
-  "Security Controls":
-    - "Overview of CIS18 Critical Security Controls": "/overview-of-cis18-critical-security-controls/"
-    - "Security Architecture and Engineering": "/security-architecture-and-engineering/"
-    - "Product and Software Security": "/product-and-software-security/"
-    - "Secure Business Process Optimization": "/secure-business-process-optimization/"
-  "Security Program":
-    - "Identity and Access Management (IAM) Overview": "/identity-and-access-management-iam-overview/"
-    - "CISO Security Management Strategy Guide": "/ciso-security-management-strategy-guide/"
-    - "Security Leadership Strategy Guide for CISOs": "/security-leadership-strategy-guide-for-cisos/"
-    - "Security Awareness: Building a Human Firewall": "/security-awareness-building-a-human-firewall/"
-    - "Cybersecurity Operations (SecOps) Program Maturity Guide": "/cybersecurity-operations-secops-program-maturity-guide/"
-    - "Cyber Incident Response Strategy Guide for CISOs": "/cyber-incident-response-strategy-guide-for-cisos/"
-    - "Cybersecurity and IT Career Pathways": "/cybersecurity-and-it-career-pathways/"
-  "Compliance & Resilience":
-    - "Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs": "/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/"
-    - "Business Continuity Planning   BCP": "/business-continuity-planning---bcp/"
-    - "Disaster Recovery   DR": "/disaster-recovery---dr/"
-    - "Vulnerability Management and Risk": "/vulnerability-management-and-risk/"
-    - "Frameworks and Standards": "/frameworks-and-standards/"
-    - "Cyber Insurance": "/cyber-insurance/"
+  "Browse the Guide":
+    - "Start Here": "/getting-started/"
+    - "Browse All Sections": "/sections/"
     - "Resources": "/resources/"
+  "Learning Paths":
+    - "The New CISO": "/getting-started/"
+    - "The Program Builder": "/security-architecture-and-engineering/"
+    - "The Strategist": "/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/"
+  "Project and Source":
+    - "Contributing": "/contributing/"
+    - "GitHub Repo": "https://github.com/CroodSolutions/CISOinaBox"
 
-# Build settings
 remote_theme: daattali/beautiful-jekyll@6.0.1
 plugins:
   - jekyll-remote-theme
@@ -49,16 +30,13 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
 
-# Custom CSS for navbar fix
 site-css:
   - "/assets/css/custom.css"
 
-# General settings
 timezone: "America/Phoenix"
 highlighter: rouge
 markdown: kramdown
 
-# Colours / background image
 navbar-col: "#0e0e0e"
 navbar-text-col: "#FFFFFF"
 navbar-border-col: "#0e0e0e"
@@ -71,10 +49,7 @@ footer-text-col: "#FFFFFF"
 footer-link-col: "#289dff"
 footer-hover-col: "#289dff"
 
-# Social links
 social-network-links:
   github: CroodSolutions
-  # Add other social links as needed
 
-# Site logo link
 site-logo: "/assets/img/avatar-icon.png"

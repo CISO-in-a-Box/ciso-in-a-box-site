@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Frameworks and Standards"
+title: 'Frameworks and Standards'
 permalink: /frameworks-and-standards/
-nav_category: "Compliance & Resilience"
+share-description: 'A practical guide to common security frameworks, standards, and control mappings.'
+nav_category: 'Compliance & Resilience'
 section_number: 19
 ---
-
 **Cybersecurity Strategy Guide for CISOs**
 
 **Key Cybersecurity Frameworks and Standards**
@@ -154,3 +154,8 @@ Establishing or expanding a cybersecurity program is not a one-person job – su
 - **Business Unit Leaders:** Engaging individual business unit or department leaders is crucial because these managers best understand the processes and assets most vital to their segment of the business. They become champions for security within their units. When business leaders buy in, they will work to implement the necessary controls in their operations and products, rather than viewing security as an external mandate. The CISO should partner with these leaders to align security improvements with business objectives and to minimize any impact on productivity. Moreover, business unit leaders help identify where the most sensitive data and mission-critical systems are, so security efforts can be prioritized accordingly. In essence, security must be a **shared responsibility across all units**[edendata.com](https://www.edendata.com/post/ciso-roles-and-responsibilities#:~:text=Safety%20is%20a%20cross,aligned%20with%20the%20firm%27s%20goals) – by collaborating with business managers, the CISO ensures that cybersecurity measures truly support the business and that each unit actively participates in managing cyber risks in their area.
 
 Each of these stakeholders brings a different perspective and expertise: by coordinating with all of them, a CISO can build a well-rounded cybersecurity program that is embedded in the organization’s processes and culture. Communication and collaboration are key – a CISO should regularly update these stakeholders on cyber risks and progress, and in turn, leverage their support to champion cybersecurity initiatives enterprisewide[edendata.com](https://www.edendata.com/post/ciso-roles-and-responsibilities#:~:text=Safety%20is%20a%20cross,aligned%20with%20the%20firm%27s%20goals)[techtarget.com](https://www.techtarget.com/searchcio/tip/Cybersecurity-teamwork-C-suite-roles-CIOs-should-befriend#:~:text=If%20a%20CIO%20doesn%27t%20have,in%20the%20realm%20of%20security). This broad engagement ensures that the cybersecurity strategy not only aligns with technical requirements, but also with business goals, compliance obligations, and the human element of the enterprise.
+
+
+Previous: [Vulnerability Management and Risk](/vulnerability-management-and-risk/)
+
+Next: [Careers - The Road to CISO](/cybersecurity-and-it-career-pathways/)

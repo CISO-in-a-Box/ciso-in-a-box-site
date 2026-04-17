@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs"
+title: 'Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs'
 permalink: /governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/
-nav_category: "Compliance & Resilience"
+share-description: 'Core governance, risk, and compliance practices for building accountable programs.'
+nav_category: 'Compliance & Resilience'
 section_number: 12
 ---
-
-# Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs
-
 ## Key GRC Components: Governance, Risk Management & Compliance
 
 Effective Governance, Risk Management, and Compliance (GRC) programs rest on three core pillars:
@@ -541,3 +539,8 @@ A mature GRC program operates on a predictable **cadence**. Below are suggested 
 - **Annually** for critical vendors  
 - **Biennially** or upon renewal for lower-tier vendors  
 - Monitor vendor incidents/news in real time
+
+
+Previous: [Security Leadership](/security-leadership-strategy-guide-for-cisos/)
+
+Next: [Security Awareness](/security-awareness-building-a-human-firewall/)

@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Security Awareness: Building a Human Firewall"
+title: 'Security Awareness: Building a Human Firewall'
 permalink: /security-awareness-building-a-human-firewall/
-nav_category: "Security Program"
+share-description: 'How to build user awareness programs that reduce phishing, fraud, and human error.'
+nav_category: 'Security Program'
 section_number: 13
 ---
-
-# Security Awareness: Building a Human Firewall
-
 ## Introduction
 
 Most cyber attacks start with human error. Whether it’s a well-crafted phishing email, a malicious USB left in a parking lot, or a fraudulent phone call, attackers often rely on people as the “weakest link.” **Security awareness** is about turning that weakness into a strength by giving users the knowledge and confidence to spot, avoid, and report suspicious activity. For IT managers, investing in security awareness means fewer incidents, faster response, and a stronger security culture.
@@ -153,3 +151,8 @@ Use this data to **improve training, focus on weak spots, and show value to lead
 * [StaySafeOnline (NCA)](https://staysafeonline.org/)
 
 ## References
+
+
+Previous: [Governance Risk and Compliance](/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/)
+
+Next: [Security Operations - SOC](/cybersecurity-operations-secops-program-maturity-guide/)

@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Getting Started"
+title: 'Getting Started'
 permalink: /getting-started/
-nav_category: "Getting Started"
+share-description: 'Practical first steps for improving security and building momentum.'
+nav_category: 'Guide'
 section_number: 1
 ---
-
 Don't Panic!!
 
 Security does not have to be a difficult or intimidating topic.  
@@ -32,24 +32,15 @@ This repository is intended to provide a basic overview of key knowledge area of
 
 Here are a couple of other resources you can leverage:
 
- - [Accidental CISO](https://www.accidentalciso.net/)
- - [Christian T.'s Blog](https://christiant.io/)
- - [A basic overview video for SMB](https://www.youtube.com/watch?v=bp-dSKiBLIo)
+ - <https://www.accidentalciso.net/>
+ - <https://christiant.io//>
+ - A basic overview video for SMB: <https://www.youtube.com/watch?v=bp-dSKiBLIo>
 
 ![image](https://github.com/user-attachments/assets/07cf6e82-e84e-4bc7-b29f-d9f88e0ead14)
 
-## Updating the Wiki
+## Additional Pages in This Section
 
-This repository includes a script, `update_wiki.sh`, that can be used to automatically populate the project's GitHub Wiki. The script will:
+- [Contributing 🤝](/getting-started/contributing/)
+- [🧭 CISO in a Box – Author Styling Guide](/getting-started/author-styling-guide/)
 
-1.  Clone the wiki repository.
-2.  Clear any existing content.
-3.  Copy the `Readme.md` from each numbered directory into the wiki.
-4.  Create a `_Sidebar.md` file for navigation.
-5.  Push the changes to the remote wiki.
-
-To use the script, you will need to have SSH authentication configured for your GitHub account. Then, simply run the following command from the root of the repository:
-
-```bash
-./update_wiki.sh
-```
+Next: [Understanding Business Risk](/understanding-enterprise-risk-management-erm-for-cisos/)

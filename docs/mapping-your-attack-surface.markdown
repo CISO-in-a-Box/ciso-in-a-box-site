@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Mapping Your Attack Surface"
+title: 'Mapping Your Attack Surface'
 permalink: /mapping-your-attack-surface/
-nav_category: "Risk & Threat Management"
+share-description: 'How to identify exposed systems, services, identities, and external dependencies.'
+nav_category: 'Risk & Threat Management'
 section_number: 4
 ---
-
-# Mapping Your Attack Surface
-
 **Introduction – The Attacker’s Perspective:** Effective cybersecurity starts with viewing your organization the way a hacker would. *Attack surface mapping* is essentially about taking the attacker’s viewpoint and mapping all the points of exposure from the outside in. Your *attack surface* represents the totality of potential entry points an adversary could exploit – from internet-facing servers and software vulnerabilities to human factors like users and credentials. Mapping this attack surface means proactively identifying and cataloging these weaknesses before attackers discover and abuse them. Without such visibility, defenders are “flying blind” and stuck in reactive mode; a complete map of your exposure enables a shift to proactive defense by shoring up gaps in advance. In short, the goal is to have eyes on the same things the attackers do, so you can stay one step ahead.
 
 ## External Footprint: DNS and IP Addresses
@@ -27,3 +25,8 @@ Additionally, leaked or stolen credentials pose a serious risk. If employees reu
 Identifying individual vulnerable points is not enough; you must also consider how those points could be linked in a chain to compromise critical assets. Modern attackers rarely rely on a single exploit. Instead, they combine multiple weaknesses into an **attack path** that progresses from an initial foothold toward the organization’s most sensitive systems (often called the “crown jewels”). In other words, it’s not just isolated bugs or misconfigurations that matter, but how an adversary can **chain** them together. For example, a minor breach on a seemingly low-priority server might give the attacker a stepping stone – from that foothold, they might move laterally through the network or escalate privileges, ultimately reaching a database of customer data or an administrator’s account. Even a non-critical asset can serve as a **stepping stone** in this way. A poorly secured development server or an old legacy system that’s still connected to the network (but no longer well-maintained) could harbor a vulnerability that attackers exploit first, using it to pivot deeper into more valuable systems. This kind of multi-step intrusion is exactly what an attack path represents: the sequence of actions and pivots an attacker takes to go from the outside to the inside, eventually reaching high-value targets.
 
 Mapping out potential attack paths in advance is extremely useful for defense. By thinking like the adversary – “If I get into this system, where could I go next?” – security teams can anticipate likely routes a breach might follow. This insight helps prioritize fixes: you’re not only patching single vulnerabilities, but also disrupting the *paths* attackers would traverse. For instance, if a certain weak web application could lead into your internal network, and that in turn could expose a misconfigured admin interface, you’d want to secure both the web app and the internal admin interface to break the chain. An **attack path analysis** gives a holistic view of your security posture, highlighting how various smaller issues could combine into a serious compromise. This ensures you protect not just the obvious crown jewels, but also the less-obvious intermediate assets that could be used as conduits for an attack. By adopting an attacker’s-eye view of these paths, you can implement controls and monitoring at each step to catch intruders before they reach the truly critical assets. In practice, continuously mapping your attack surface and its possible attack paths allows your organization to remediate weaknesses proactively and stay *one step ahead* of cybercriminals who are looking for any opening.
+
+
+Previous: [Understanding the Adversary](/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/)
+
+Next: [CIS18 and Basic Security Controls](/overview-of-cis18-critical-security-controls/)

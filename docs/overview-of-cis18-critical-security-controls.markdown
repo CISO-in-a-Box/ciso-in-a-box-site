@@ -1,225 +1,167 @@
 ---
 layout: page
-title: "Overview of CIS18 Critical Security Controls"
+title: 'Overview of CIS18 Critical Security Controls'
 permalink: /overview-of-cis18-critical-security-controls/
-nav_category: "Security Controls"
+share-description: 'A structured walkthrough of CIS18 and the controls that reduce common risk.'
+nav_category: 'Security Controls'
 section_number: 5
 ---
+For a general overview of the CIS18 controls and how they align with MITRE ATT&CK, check out [this](/overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18/) section.
 
-# Overview of CIS18 Critical Security Controls
+For a more detailed look, check out the articles we have assembled for each control, organized by:
+ - Logical groupings of controls, according to how you may want to think of them when building out a security program.
+ - Controls listed in proper order, as they appear in CIS18. 
 
-The **CIS Critical Security Controls (CIS18)** are a prioritized set of cybersecurity best practices developed by the Center for Internet Security (CIS). They help organizations of all sizes defend against common and impactful cyber threats by focusing on actions that provide the most risk reduction. Each control is actionable and mapped to real-world attack scenarios.
+Note that this section is: **Still Under Construction**
 
-Below are the 18 controls, with definitions and how they help secure your organization:
+## Logical Flow of Applying CIS18 Controls (According to Mike)
 
----
+It has always been helpful for me, to think of these controls in a more logical grouping, aligned with how we build and manage a security program. Here is a logical grouping that may help you organize control categories, in a way that helps build out a strategy for effective defense. 
 
-## 1. Inventory and Control of Enterprise Assets
+### Finding and Protecting Assets
 
-**Definition:**
-Maintain an accurate inventory of all devices (servers, laptops, desktops, mobile, IoT, etc.) connected to your organization’s network.
+It is frequently said that you cannot protect what you do not know about.  These controls including knowing what enterprise assets exist in your environment, what software is in use (including Cloud), and making sure both are configured properly.  
 
-**How it helps:**
-You can’t protect what you don’t know exists. An accurate inventory allows you to spot unauthorized devices and ensure all endpoints are managed and secured.
+[CIS01 - Inventory and Control of Enterprise Assets](/overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets/)
 
----
+[CIS02 - Inventory and Control of Software Assets](/overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets/)
 
-## 2. Inventory and Control of Software Assets
+[CIS04 - Secure Configuration of Enterprise Assets and Software](/overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software/)
 
-**Definition:**
-Track and manage all authorized and unauthorized software installed on organizational systems.
+### Protecting Data
 
-**How it helps:**
-Reduces risk from unapproved or vulnerable software and helps prevent malware installation.
+These controls relate to understanding what data you have, where it exists, and how to protect and recover that data.  
 
----
+[CIS03 - Data Protection](/overview-of-cis18-critical-security-controls/cis03-data-protection/)
 
-## 3. Data Protection
 
-**Definition:**
-Safeguard sensitive data throughout its lifecycle—collection, storage, processing, and transmission.
+[CIS11 - Data Recovery](/overview-of-cis18-critical-security-controls/cis11-data-recovery/)
 
-**How it helps:**
-Protects against data breaches and unauthorized access, ensuring compliance and trust.
 
----
+### Identity and Access Management 
 
-## 4. Secure Configuration of Enterprise Assets and Software
+Controls related to identity and access, including account lifecycle management, privildged access, single sign-on, and secure authentication principles such as multi-factor authentication (MFA) and zero trust network access (ZTNA).
 
-**Definition:**
-Establish and maintain secure settings for hardware and software, and eliminate default or insecure configurations.
+[CIS05 - Account Management](/overview-of-cis18-critical-security-controls/cis05-account-management/)
 
-**How it helps:**
-Reduces vulnerabilities and makes it harder for attackers to exploit weak configurations.
+[CIS06 - Access Control Management](/overview-of-cis18-critical-security-controls/cis06-access-control-management/)
 
----
+### Managing Vulnerabilities and Risks
 
-## 5. Account Management
+These controls include understanding and managing vulnerabilities across assets, software, and infrastructure - as well as, secure development and managing third-party service providers. Finally, this section includes the broad category of penetration testing, which includes red/purple team work, assume breach, adversary emulation, and other methods to provide assurance that expected vs actual performance of the defensive posture are in alignment. 
 
-**Definition:**
-Manage the lifecycle of user and service accounts—creation, use, monitoring, and deletion.
+[CIS07 - Continuous Vulnerability Management](/overview-of-cis18-critical-security-controls/cis07-continuous-vulnerability-management/)
 
-**How it helps:**
-Prevents unauthorized access and limits potential damage from compromised accounts.
+[CIS16 - Application Software Security](/overview-of-cis18-critical-security-controls/cis16-application-software-security/)
 
----
+[CIS18 - Penetration Testing](/overview-of-cis18-critical-security-controls/cis18-penetration-testing/)
 
-## 6. Access Control Management
+[CIS15 - Service Provider Management](/overview-of-cis18-critical-security-controls/cis15-service-provider-management/)
 
-**Definition:**
-Limit access to systems and data based on need-to-know and least privilege principles.
+### Email and Web Protections
 
-**How it helps:**
-Reduces the chance of insider threats or misuse by ensuring users only access what they need.
+These controls relate to protecting against attacks that come inbound via email, chat, compromised web sites, or other methods involving a user. They often involve a user taking one of these actions:
+ - Clicking a link.
+ - Opening an attachment.
+ - Visiting a compromised or attacker controlled web site.
+ - Plugging in a USB or other malicious device.
+ - Running malicious software (marketplace or social engineering).
+ - Giving up an MFA token. 
 
----
+[CIS09 - Email and Web Browser Protections](/overview-of-cis18-critical-security-controls/cis09-email-and-web-browser-protections/)
 
-## 7. Continuous Vulnerability Management
+[CIS14 - Security Awareness and Skills Training](/overview-of-cis18-critical-security-controls/cis14-security-awareness-and-skills-training/)
 
-**Definition:**
-Identify, prioritize, and remediate software vulnerabilities in your systems on an ongoing basis.
+### Network Defense
 
-**How it helps:**
-Prevents attackers from exploiting known weaknesses by ensuring timely patching and mitigation.
+These controls relate to how a network is setup and what attack opportunities it may provide, as well as monitoring for when something suspicious happens on the network.  
 
----
+[CIS12 - Network Infrastructure Management](/overview-of-cis18-critical-security-controls/cis12-network-infrastructure-management/)
 
-## 8. Audit Log Management
+[CIS13 - Network Monitoring and Defense](/overview-of-cis18-critical-security-controls/cis13-network-monitoring-and-defense/)
 
-**Definition:**
-Collect, review, and retain logs of system activity to support detection, investigation, and response.
+### Detection and Response
 
-**How it helps:**
-Provides crucial evidence during incidents and helps detect suspicious activity early.
+Controls related to seeing attacks and issues, prioritizing, and responding to / escalating as needed.
 
----
+[CIS17 - Incident Response Management](/overview-of-cis18-critical-security-controls/cis17-incident-response-management/)
 
-## 9. Email and Web Browser Protections
+[CIS08 - Log Management](/overview-of-cis18-critical-security-controls/cis08-audit-log-management/)
 
-**Definition:**
-Defend against phishing and malware by securing email systems and browser use.
+### Malware Defense 
 
-**How it helps:**
-Reduces risk from common attack vectors like malicious links, attachments, and compromised websites.
+This section outlines controls specific to stopping malware, such as antivirus, endpoint detection and response (EDR), and malware sandboxing.
 
----
+[CIS10 - Malware Defenses](/overview-of-cis18-critical-security-controls/cis10-malware-defenses/)
 
-## 10. Malware Defenses
+# Listing of CIS18 Controls 
+## (In Sequential Order)
 
-**Definition:**
-Implement anti-malware tools and techniques across endpoints and systems.
+[CIS01 - Inventory and Control of Enterprise Assets](/overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets/)
 
-**How it helps:**
-Detects and blocks known malware, limiting infections and their spread.
+[CIS02 - Inventory and Control of Software Assets](/overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets/)
 
----
+[CIS03 - Data Protection](/overview-of-cis18-critical-security-controls/cis03-data-protection/)
 
-## 11. Data Recovery
+[CIS04 - Secure Configuration of Enterprise Assets and Software](/overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software/)
 
-**Definition:**
-Maintain reliable, secure, and tested backup solutions for critical data and systems.
+[CIS05 - Account Management](/overview-of-cis18-critical-security-controls/cis05-account-management/)
 
-**How it helps:**
-Enables recovery from ransomware, hardware failure, or accidental data loss.
+[CIS06 - Access Control Management](/overview-of-cis18-critical-security-controls/cis06-access-control-management/)
 
----
+[CIS07 - Continuous Vulnerability Management](/overview-of-cis18-critical-security-controls/cis07-continuous-vulnerability-management/)
 
-## 12. Network Infrastructure Management
+[CIS08 - Log Management](/overview-of-cis18-critical-security-controls/cis08-audit-log-management/)
 
-**Definition:**
-Secure and actively manage network devices (routers, switches, firewalls, etc.) and their configurations.
+[CIS09 - Email and Web Browser Protections](/overview-of-cis18-critical-security-controls/cis09-email-and-web-browser-protections/)
 
-**How it helps:**
-Prevents attackers from exploiting network weaknesses and improves overall network resilience.
+[CIS10 - Malware Defenses](/overview-of-cis18-critical-security-controls/cis10-malware-defenses/)
 
----
+[CIS11 - Data Recovery](/overview-of-cis18-critical-security-controls/cis11-data-recovery/)
 
-## 13. Network Monitoring and Defense
+[CIS12 - Network Infrastructure Management](/overview-of-cis18-critical-security-controls/cis12-network-infrastructure-management/)
 
-**Definition:**
-Monitor network traffic for signs of malicious activity and respond appropriately.
+[CIS13 - Network Monitoring and Defense](/overview-of-cis18-critical-security-controls/cis13-network-monitoring-and-defense/)
 
-**How it helps:**
-Early detection of attacks, compromised systems, or policy violations.
+[CIS14 - Security Awareness and Skills Training](/overview-of-cis18-critical-security-controls/cis14-security-awareness-and-skills-training/)
 
----
+[CIS15 - Service Provider Management](/overview-of-cis18-critical-security-controls/cis15-service-provider-management/)
 
-## 14. Security Awareness and Skills Training
+[CIS16 - Application Software Security](/overview-of-cis18-critical-security-controls/cis16-application-software-security/)
 
-**Definition:**
-Educate users and IT staff on security best practices and current threats.
+[CIS17 - Incident Response Management](/overview-of-cis18-critical-security-controls/cis17-incident-response-management/)
 
-**How it helps:**
-Reduces human error and empowers users to recognize and report suspicious activity.
+[CIS18 - Penetration Testing](/overview-of-cis18-critical-security-controls/cis18-penetration-testing/)
 
----
+## Resources and References 
 
-## 15. Service Provider Management
+[CIS Critical Security Controls](https://www.cisecurity.org/controls)
 
-**Definition:**
-Assess and monitor the security of third-party service providers and vendors.
+[MITRE ATT&CK](https://attack.mitre.org/)
 
-**How it helps:**
-Reduces supply chain risk by ensuring your partners maintain good security practices.
+## Additional Pages in This Section
 
----
+- [CIS 18 Security Controls: A Strategic Planning Guide for the Modern Enterprise](/overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18/)
+- [CIS Control 10: Malware Defenses](/overview-of-cis18-critical-security-controls/cis10-malware-defenses/)
+- [CIS Control 11: Data Recovery](/overview-of-cis18-critical-security-controls/cis11-data-recovery/)
+- [CIS Control 12: Network Infrastructure Management](/overview-of-cis18-critical-security-controls/cis12-network-infrastructure-management/)
+- [CIS Control 13: Network Monitoring and Defense](/overview-of-cis18-critical-security-controls/cis13-network-monitoring-and-defense/)
+- [CIS Control 14: Security Awareness and Skills Training](/overview-of-cis18-critical-security-controls/cis14-security-awareness-and-skills-training/)
+- [CIS Control 15: Service Provider Management](/overview-of-cis18-critical-security-controls/cis15-service-provider-management/)
+- [CIS Control 16: Application Software Security](/overview-of-cis18-critical-security-controls/cis16-application-software-security/)
+- [CIS Control 17: Incident Response Management](/overview-of-cis18-critical-security-controls/cis17-incident-response-management/)
+- [CIS Control 18: Penetration Testing](/overview-of-cis18-critical-security-controls/cis18-penetration-testing/)
+- [CIS Control 1: Inventory and Control of Enterprise Assets](/overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets/)
+- [CIS Control 2: Inventory and Control of Software Assets](/overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets/)
+- [CIS Control 3: Data Protection](/overview-of-cis18-critical-security-controls/cis03-data-protection/)
+- [CIS Control 4: Secure Configuration of Enterprise Assets and Software](/overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software/)
+- [CIS Control 5: Account Management](/overview-of-cis18-critical-security-controls/cis05-account-management/)
+- [CIS Control 6: Access Control Management](/overview-of-cis18-critical-security-controls/cis06-access-control-management/)
+- [CIS Control 7: Continuous Vulnerability Management](/overview-of-cis18-critical-security-controls/cis07-continuous-vulnerability-management/)
+- [CIS Control 8: Audit Log Management](/overview-of-cis18-critical-security-controls/cis08-audit-log-management/)
+- [CIS Control 9: Email and Web Browser Protections](/overview-of-cis18-critical-security-controls/cis09-email-and-web-browser-protections/)
+- [Overview of CIS18 Critical Security Controls](/overview-of-cis18-critical-security-controls/basic-high-level-overview/)
 
-## 16. Application Software Security
+Previous: [Mapping Attack Surface](/mapping-your-attack-surface/)
 
-**Definition:**
-Integrate security into the software development lifecycle (SDLC) and manage application vulnerabilities.
-
-**How it helps:**
-Prevents attackers from exploiting software bugs or insecure development practices.
-
----
-
-## 17. Incident Response Management
-
-**Definition:**
-Develop and test plans for detecting, responding to, and recovering from security incidents.
-
-**How it helps:**
-Enables quick and effective responses to minimize the impact of breaches or attacks.
-
----
-
-## 18. Penetration Testing
-
-**Definition:**
-Simulate attacks to identify and address vulnerabilities before real attackers find them.
-
-**How it helps:**
-Validates your security controls and reveals gaps in defenses.
-
----
-
-## Summary Table
-
-| #  | Control Name                      | Purpose                            |
-| -- | --------------------------------- | ---------------------------------- |
-| 1  | Inventory of Enterprise Assets    | Find/manage all devices            |
-| 2  | Inventory of Software Assets      | Track/manage all software          |
-| 3  | Data Protection                   | Secure sensitive data              |
-| 4  | Secure Configurations             | Harden systems & software          |
-| 5  | Account Management                | Control user/service accounts      |
-| 6  | Access Control Management         | Restrict access to least privilege |
-| 7  | Vulnerability Management          | Patch/remediate vulnerabilities    |
-| 8  | Audit Log Management              | Monitor and investigate activity   |
-| 9  | Email & Web Protections           | Block phishing/malware threats     |
-| 10 | Malware Defenses                  | Detect/block malware               |
-| 11 | Data Recovery                     | Restore from incidents             |
-| 12 | Network Infrastructure Management | Secure/manage network devices      |
-| 13 | Network Monitoring & Defense      | Detect/stop network threats        |
-| 14 | Security Awareness Training       | Educate and empower users          |
-| 15 | Service Provider Management       | Assess vendor security             |
-| 16 | Application Security              | Secure in-house/3rd-party apps     |
-| 17 | Incident Response Management      | Plan and recover from incidents    |
-| 18 | Penetration Testing               | Test and improve defenses          |
-
----
-
-**References/Resources:**
-
-* [CIS Controls Overview](https://www.cisecurity.org/controls/cis-controls-list)
-
+Next: [Security Architecture and Engineering](/security-architecture-and-engineering/)

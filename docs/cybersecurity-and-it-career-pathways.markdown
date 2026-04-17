@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Cybersecurity and IT Career Pathways"
+title: 'Cybersecurity and IT Career Pathways'
 permalink: /cybersecurity-and-it-career-pathways/
-nav_category: "Security Program"
+share-description: 'Career paths, skill development, and progression toward security leadership roles.'
+nav_category: 'Security Program'
 section_number: 20
 ---
-
-# Cybersecurity and IT Career Pathways
-
 ## Introduction
 
 Cybersecurity and IT offer dynamic, rewarding careers with many pathways—from entry-level help desk roles to senior leadership positions like Chief Information Security Officer (CISO). Whether you’re starting out or looking to guide your team, understanding these career steps can help map a path for growth, specialization, and leadership.
@@ -35,13 +33,13 @@ Cybersecurity and IT offer dynamic, rewarding careers with many pathways—from 
 * Basic networking, OS (Windows, Mac, Linux)
 * Problem-solving and ticketing systems
 * **Certifications:** 
-   CompTIA IT Fundamentals (ITF+) (https://www.comptia.org/en-us/certifications/itf/)
-   CompTIA Tech+ (https://www.comptia.org/en-us/certifications/tech/)
-   CompTIA A+ (https://www.comptia.org/en-us/certifications/a/)
-   CompTIA Network+ (https://www.comptia.org/en-us/certifications/network/)
-   CompTIA PCPro (https://www.comptia.org/en-us/certifications/pc-pro/)
-   CompTIA Soft Skills Essentials (https://www.comptia.org/en-us/certifications/soft-skills-essentials/)
-   Google IT Support (https://grow.google/certificates/it-support/)
+   CompTIA IT Fundamentals (ITF+) (<https://www.comptia.org/en-us/certifications/itf/>)
+   CompTIA Tech+ (<https://www.comptia.org/en-us/certifications/tech/>)
+   CompTIA A+ (<https://www.comptia.org/en-us/certifications/a/>)
+   CompTIA Network+ (<https://www.comptia.org/en-us/certifications/network/>)
+   CompTIA PCPro (<https://www.comptia.org/en-us/certifications/pc-pro/>)
+   CompTIA Soft Skills Essentials (<https://www.comptia.org/en-us/certifications/soft-skills-essentials/>)
+   Google IT Support (<https://grow.google/certificates/it-support/>)
    Microsoft MCP (source)
 
 ### Career Tips
@@ -257,3 +255,8 @@ There’s no single path through cybersecurity and IT—each person’s journey 
 * [(ISC)² Cybersecurity Certifications Roadmap](https://www.isc2.org/certifications)
 
 ## References
+
+
+Previous: [Frameworks and Standards](/frameworks-and-standards/)
+
+Next: [Cyber Insurance](/cyber-insurance/)

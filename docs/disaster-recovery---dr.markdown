@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Disaster Recovery   DR"
+title: 'Disaster Recovery - DR'
 permalink: /disaster-recovery---dr/
-nav_category: "Compliance & Resilience"
+share-description: 'Recovery strategies for restoring technology, data, and operations after major outages.'
+nav_category: 'Compliance & Resilience'
 section_number: 17
 ---
-
 Disaster Recovery Strategy Guide for CISOs
 ==========================================
 
@@ -250,3 +250,8 @@ Below is a simple Markdown-based checklist that a CISO can use as a template to 
 *   **Compliance Requirements Met** – DR plan and processes meet any industry/regulatory standards applicable (☐ Not Applicable). For example, if required by law or audit, an annual DR test has been performed, data protection regulations for backups are followed, etc.
     
 *   **Post-Disaster Recovery Validation** – Plan for how to validate systems after recovery is documented (who will sign off that systems/data are OK). This includes verifying data consistency and integrity once systems are back online.
+
+
+Previous: [Business Continuity Planning - BCP](/business-continuity-planning---bcp/)
+
+Next: [Vulnerability Management and Risk](/vulnerability-management-and-risk/)

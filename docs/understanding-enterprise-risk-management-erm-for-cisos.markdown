@@ -1,13 +1,11 @@
 ---
 layout: page
-title: "Understanding Enterprise Risk Management (ERM) for CISOs"
+title: 'Understanding Enterprise Risk Management (ERM) for CISOs'
 permalink: /understanding-enterprise-risk-management-erm-for-cisos/
-nav_category: "Risk & Threat Management"
+share-description: 'How to translate cyber issues into business risk, impact, and decision-making.'
+nav_category: 'Risk & Threat Management'
 section_number: 2
 ---
-
-# **Understanding Enterprise Risk Management (ERM) for CISOs**
-
 ## **Key Components of ERM for CISOs**
 
 **Risk Identification:** A continuous process of discovering risks across all parts of the business. CISOs should work with other business units to identify cyber, financial, operational, compliance, reputational, and even physical/hazard risks that could impact objectives. Each risk is documented (often in a **risk register**) with a clear description (condition and consequence) so that all stakeholders understand the potential threat. This broad view ensures even less obvious risks (e.g. third-party vendor issues or emerging digital threats) are captured, rather than focusing only on IT silos.
@@ -174,3 +172,8 @@ It’s also worth noting **sector differences**: A small bank might actually nee
 **Improving Maturity:** Regardless of size, the journey often goes from **reactive to proactive**. For example, early on, a CISO might be focused on technical fixes and putting out fires (reactive). As maturity increases, the CISO’s role shifts to **risk strategist**, actively preventing issues and aligning security initiatives with business strategy. One sign of maturity is when cyber risk discussions happen in advance of big changes (like adopting a new technology or launching a new product) rather than after the fact. At high maturity, organizations also tend to encourage **open discussion of risks** (no shooting the messenger when someone reports a risk). Leadership encourages identifying risks early, which is a cultural aspect.
 
 Finally, an organization’s **risk maturity goals should be aligned with its business goals**. Not every company needs to be at “Optimized” level for ERM if it’s not warranted by their context – but as the environment (threats, regulations) intensifies, most are finding that raising ERM maturity is essential for sustainable growth. The open source CISO handbook project, by gathering collective wisdom, can provide tailored guidance for different sizes – for a small business, it might suggest a lightweight risk register template and key controls; for a large enterprise, guidance on advanced topics like risk aggregation and simulation. The important takeaway is that **every organization, big or small, can benefit from understanding and improving their risk management fundamentals**, and the CISO plays a pivotal role in that continuous improvement.
+
+
+Previous: [Getting Started](/getting-started/)
+
+Next: [Understanding the Adversary](/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/)

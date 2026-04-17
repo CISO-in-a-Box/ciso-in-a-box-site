@@ -14,6 +14,9 @@ head-extra:
   </p>
   <div style="margin-top: 30px;">
     <a href="{{ '/getting-started/' | relative_url }}" class="btn btn-primary btn-lg" style="border-radius: 50px; padding: 12px 30px;">Start the Journey</a>
+    <a href="{{ '/sections/' | relative_url }}" class="btn btn-outline-primary btn-lg" style="border-radius: 50px; padding: 12px 30px; margin-left: 10px;">
+      Browse Sections
+    </a>
     <a href="https://github.com/CroodSolutions/CISOinaBox" class="btn btn-outline-dark btn-lg" style="border-radius: 50px; padding: 12px 30px; margin-left: 10px;">
       <i class="fab fa-github"></i> View Source
     </a>
