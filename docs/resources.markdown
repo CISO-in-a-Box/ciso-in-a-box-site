@@ -8,7 +8,7 @@ section_number: 22
 ---
 # CISO Resources
 
-### CISO Resouces / General
+### CISO Resources / General
 | Link | Description | 
 | --- | --- |
 | [Accidental CISO](https://www.accidentalciso.net/) | Accidental CISO blog and website  |

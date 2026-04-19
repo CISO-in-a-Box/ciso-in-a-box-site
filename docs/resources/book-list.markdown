@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'Readme'
+title: 'Book List'
 permalink: /resources/book-list/
-share-description: 'Placeholder'
+share-description: 'Recommended reading and book resources for CISOs and security professionals.'
 nav_category: 'Guide'
 section_number: 22
 ---
