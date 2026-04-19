@@ -6,6 +6,8 @@ share-description: 'How to translate cyber issues into business risk, impact, an
 nav_category: 'Risk & Threat Management'
 section_number: 2
 ---
+# **Understanding Enterprise Risk Management (ERM) for CISOs**
+
 ## **Key Components of ERM for CISOs**
 
 **Risk Identification:** A continuous process of discovering risks across all parts of the business. CISOs should work with other business units to identify cyber, financial, operational, compliance, reputational, and even physical/hazard risks that could impact objectives. Each risk is documented (often in a **risk register**) with a clear description (condition and consequence) so that all stakeholders understand the potential threat. This broad view ensures even less obvious risks (e.g. third-party vendor issues or emerging digital threats) are captured, rather than focusing only on IT silos.
@@ -24,9 +26,9 @@ section_number: 2
 
 * FAIR Institute Blog – *Cyber Risk as Business Risk* (CISOs quantifying cyber risk in terms of business impact like market share, brand trust). [fairinstitute.org](https://www.fairinstitute.org/blog/cyber-risk-business-risk-ciso-role-fair#:~:text=technical%20challenges,%E2%80%9D)[fairinstitute.org](https://www.fairinstitute.org/blog/cyber-risk-business-risk-ciso-role-fair#:~:text=quantify%20cyber%20risk%20in%20financial,This%20is%20critical%20because)
 
-* NIST CSF 2.0 ERM Guide – (ERM helps aggregate risks; risk appetite guides identification). [csrc.nist.rip](https://csrc.nist.rip/external/nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1303.ipd.pdf#:~:text=of%20the%20organizational%20hierarchy%20and,program%20helps%20inform%20risk%20identification)
+* NIST CSF 2.0 ERM Guide – (ERM helps aggregate risks; risk appetite guides identification). [csrc.nist.rip](/assets/pdf/csrc.nist.rip.pdf#:~:text=of%20the%20organizational%20hierarchy%20and,program%20helps%20inform%20risk%20identification)
 
-* NIST IR 8286A – (Definitions of risk appetite and tolerance from OMB Circular A-123). [nvlpubs.nist.gov](https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8286A.pdf#:~:text=7%20NISTIR%208286%20supports%20the,the%20organization%E2%80%99s%20most%20senior%20level)[nvlpubs.nist.gov](https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8286A.pdf#:~:text=Risk%20appetite%20can%20be%20interpreted,acceptable%20level%20of%20variance%20in)
+* NIST IR 8286A – (Definitions of risk appetite and tolerance from OMB Circular A-123). [nvlpubs.nist.gov](/assets/pdf/nvlpubs.nist.gov.pdf#:~:text=7%20NISTIR%208286%20supports%20the,the%20organization%E2%80%99s%20most%20senior%20level)[nvlpubs.nist.gov](/assets/pdf/nvlpubs.nist.gov.pdf#:~:text=Risk%20appetite%20can%20be%20interpreted,acceptable%20level%20of%20variance%20in)
 
 * AuditBoard – *ERM Fundamentals* (risk treatment options and documentation). [auditboard.com](https://auditboard.com/blog/enterprise-risk-management#:~:text=risk%20appetite%20and%20thresholds,treatment%20takes%20four%20common%20forms)[auditboard.com](https://auditboard.com/blog/enterprise-risk-management#:~:text=,risk%20is%20negligible%20in%20impact)  
 * Wikipedia – *ERM Frameworks* (common risk response strategies: avoid, reduce, share, accept)[en.wikipedia.org](https://en.wikipedia.org/wiki/Enterprise_risk_management#:~:text=identified%20and%20analyzed%2C%20which%20may,include)
@@ -81,7 +83,7 @@ This shared lifecycle mirrors the broader ERM processes and makes cybersecurity 
 
 * Wikipedia – *Risk Response Strategies* (avoid, reduce, share/transfer, accept defined). [en.wikipedia.org](https://en.wikipedia.org/wiki/Enterprise_risk_management#:~:text=identified%20and%20analyzed%2C%20which%20may,include)
 
-* NIST CSF 2.0 Quick Start – (ERM calls for understanding core risks, actions taken, and risk appetite informs risk ID). [csrc.nist.rip](https://csrc.nist.rip/external/nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1303.ipd.pdf#:~:text=of%20the%20organizational%20hierarchy%20and,program%20helps%20inform%20risk%20identification)[csrc.nist.rip](https://csrc.nist.rip/external/nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1303.ipd.pdf#:~:text=necessary%20actions%20are%20taken,Many%20entities)
+* NIST CSF 2.0 Quick Start – (ERM calls for understanding core risks, actions taken, and risk appetite informs risk ID). [csrc.nist.rip](/assets/pdf/csrc.nist.rip.pdf#:~:text=of%20the%20organizational%20hierarchy%20and,program%20helps%20inform%20risk%20identification)[csrc.nist.rip](/assets/pdf/csrc.nist.rip.pdf#:~:text=necessary%20actions%20are%20taken,Many%20entities)
 
 ## **Governance & Cross-Functional Roles in ERM**
 
@@ -137,7 +139,7 @@ In summary, these ISO frameworks support ERM by **standardizing risk management 
 
 * Wikipedia – *ISO 31000* (principles and guidelines for effective risk management across all types of risk; “Gold Standard” for ERM). [en.wikipedia.org](https://en.wikipedia.org/wiki/Enterprise_risk_management#:~:text=match%20at%20L276%20ISO%2031000,risk%20management%20across%20all%20sectors)
 
-* ISO/IEC 27005:2018 Standard – (Information security risk management should be **aligned with overall enterprise risk management**; security risk treated in context of enterprise needs). [amnafzar.net](https://www.amnafzar.net/files/1/ISO%2027000/ISO%20IEC%2027005-2018.pdf#:~:text=and%2C%20in%20particular%2C%20should%20be,Information%20security)
+* ISO/IEC 27005:2018 Standard – (Information security risk management should be **aligned with overall enterprise risk management**; security risk treated in context of enterprise needs). [amnafzar.net](/assets/pdf/amnafzar.net.pdf#:~:text=and%2C%20in%20particular%2C%20should%20be,Information%20security)
 
 * Wikipedia – *COSO ERM Framework* (COSO ERM (similar goals as ISO31000) highlights integrating risk with strategy, and tying risk management to risk appetite and objective-setting). [en.wikipedia.org](https://en.wikipedia.org/wiki/Enterprise_risk_management#:~:text=The%20COSO%20%20,5)[en.wikipedia.org](https://en.wikipedia.org/wiki/Enterprise_risk_management#:~:text=across%20the%20enterprise%2C%20designed%20to,5)
 
@@ -172,8 +174,3 @@ It’s also worth noting **sector differences**: A small bank might actually nee
 **Improving Maturity:** Regardless of size, the journey often goes from **reactive to proactive**. For example, early on, a CISO might be focused on technical fixes and putting out fires (reactive). As maturity increases, the CISO’s role shifts to **risk strategist**, actively preventing issues and aligning security initiatives with business strategy. One sign of maturity is when cyber risk discussions happen in advance of big changes (like adopting a new technology or launching a new product) rather than after the fact. At high maturity, organizations also tend to encourage **open discussion of risks** (no shooting the messenger when someone reports a risk). Leadership encourages identifying risks early, which is a cultural aspect.
 
 Finally, an organization’s **risk maturity goals should be aligned with its business goals**. Not every company needs to be at “Optimized” level for ERM if it’s not warranted by their context – but as the environment (threats, regulations) intensifies, most are finding that raising ERM maturity is essential for sustainable growth. The open source CISO handbook project, by gathering collective wisdom, can provide tailored guidance for different sizes – for a small business, it might suggest a lightweight risk register template and key controls; for a large enterprise, guidance on advanced topics like risk aggregation and simulation. The important takeaway is that **every organization, big or small, can benefit from understanding and improving their risk management fundamentals**, and the CISO plays a pivotal role in that continuous improvement.
-
-
-Previous: [Getting Started]({{ '/getting-started/' | relative_url }})
-
-Next: [Understanding the Adversary]({{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }})

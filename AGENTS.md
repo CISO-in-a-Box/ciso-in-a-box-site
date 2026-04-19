@@ -94,11 +94,37 @@ permalink: /section-slug
 
 ## Development Workflow
 
-### Local Development
+### Build Process
+The site uses a Python-based conversion script to generate Jekyll pages from source content. Hand-crafted pages in `docs/` (like `resources.markdown`) are preserved and updated in place.
+
+```bash
+# Build the site (regenerates docs/ from source directories)
+cd ciso-in-a-box-site
+./build.sh
+
+# Build and serve locally
+./build.sh serve        # serves on http://localhost:4000
+./build.sh serve 4001   # serves on custom port
+```
+
+### What build.sh does
+1. Runs `convert_to_jekyll_improved.py` - regenerates pages from source `XX - Section/` directories, preserving existing hand-crafted pages by matching on `section_number`
+2. Checks for duplicate permalinks and removes auto-generated duplicates
+3. Runs `rebuild_navigation.py` to regenerate `_config.yml` navigation
+4. Optionally serves the static `_site/` directory
+
+### Legacy Scripts (do not run directly)
+- `fix_duplicates.py` - superseded by build.sh duplicate detection
+- `fix_titles_and_links.py` - superseded by convert_to_jekyll_improved.py
+- `generate_missing_sections.py` - superseded by convert_to_jekyll_improved.py
+- `rebuild_navigation.py` - called by build.sh, can be run standalone
+- `trigger-rebuild.sh` - triggers GitHub Pages rebuild (pushes to remote)
+
+### Local Development (Jekyll - requires Ruby)
 ```bash
 # Set up environment
 cd ciso-in-a-box-site
-export GEM_HOME=~/tmp/gems  # Local gem directory
+export GEM_HOME=~/tmp/gems
 ~/tmp/gems/bin/bundle install
 
 # Development server

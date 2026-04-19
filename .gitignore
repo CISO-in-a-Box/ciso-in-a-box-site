@@ -15,3 +15,7 @@ jekyll_server.log
 # OS generated files
 .DS_Store
 Thumbs.db
+
+# Audit report files
+CONTENT_AUDIT_REPORT.md
+CONTENT_AUDIT_REPORT.pdf
