@@ -43,7 +43,7 @@ head-extra:
       <li>Enterprise Risk Management</li>
     </ul>
     <a href="{{ '/getting-started/' | relative_url }}" class="pathway-btn">
-      The &rarr;</a>
+      New CISO &rarr;</a>
   </div>
   <div class="pathway-card" style="border-top-color: #7952b3;">
     <div class="pathway-icon" style="color: #7952b3;">
@@ -59,7 +59,7 @@ head-extra:
       <li>Vulnerability Management</li>
     </ul>
     <a href="{{ '/security-architecture-and-engineering/' | relative_url }}" class="pathway-btn" style="color: #7952b3; border-color: #7952b3;">
-      The &rarr;</a>
+      Program Builder &rarr;</a>
   </div>
   <div class="pathway-card" style="border-top-color: #ffc107;">
     <div class="pathway-icon" style="color: #ffc107;">
@@ -75,7 +75,7 @@ head-extra:
       <li>Cyber Insurance</li>
     </ul>
     <a href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}" class="pathway-btn" style="color: #ffc107; border-color: #ffc107;">
-      The &rarr;</a>
+      Strategist &rarr;</a>
   </div>
 </div>
 

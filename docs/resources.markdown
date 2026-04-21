@@ -6,15 +6,14 @@ share-description: 'Reference links, tools, templates, and supporting material a
 nav_category: 'Guide'
 section_number: 22
 ---
-# CISO Resources
-
 ### CISO Resources / General
+
 | Link | Description | 
 | --- | --- |
 | [Accidental CISO](https://www.accidentalciso.net/) | Accidental CISO blog and website  |
 | [Last Week as a vCISO](https://www.lastweekasavciso.com/) | Last week as a VCISO - insights on building a vCISO business  |
 | [CISO Portal](https://www.ciso-portal.com/) | CISO Portal - all things CISO  |
-| [CISOTradeCraft/CISO Role](https://github.com/cisotradecraft/Podcast/blob/main/README.md#ciso-role) | CISOTradecraft's Github repository on the role of the CISO
+| [CISOTradeCraft/CISO Role](https://github.com/cisotradecraft/Podcast/blob/main/README.md#ciso-role) | CISOTradecraft's Github repository on the role of the CISO |
 | [Interactive Verizon Data Breach Investigations Report](https://www.verizon.com/business/resources/reports/dbir/) | Interactive page on Verizon Data Breach Investigations  |
 | [CISA All Resources & Tools](https://www.cisa.gov/resources-tools/all-resources-tools) | Resources and Tools from US Government agency, CISA  |
 | [Board of Directors Insights Hub - Google Cloud](https://cloud.google.com/solutions/security/board-of-directors#section-2) | Google Cloud's board of directors insights hub  |
@@ -133,9 +132,9 @@ section_number: 22
 | [ENISA - Good Practices for Supply Chain Cybersecurity](https://www.enisa.europa.eu/publications/good-practices-for-supply-chain-cybersecurity) | The report provides an overview of the current supply chain cybersecurity practices followed by essential and important entities in the EU, based on the results of a 2022 ENISA study which focused on investments of cybersecurity budgets among organisations in the EU.  |
 | [Security Score Cards](https://securityscorecards.dev/) |  Build better security habits,one test at a time. Quickly assess open source projects for risky practices |
 | [Boostsecurity.io](https://boostsecurity.io/) | Service provider for Actionable Security Automation  |
-| [Continuous Cloud Audit Metrics Catalog](https://htmlpreview.github.io/?https://github.com/cloudsecurityalliance/continuous-audit-metrics/blob/main/metrics-catalog.html) | Catalog from the Cloud Security Alliance of metrics.  |
+| [Continuous Cloud Audit Metrics Catalog](https://htmlpreview.github.io/?<https://github.com/cloudsecurityalliance/continuous-audit-metrics/blob/main/metrics-catalog.html>) | Catalog from the Cloud Security Alliance of metrics.  |
 | [Cloud Security Alliance (CSA) Metrics](https://www.securitymetametrics.com/html/csa.html) | A list of metrics and overview from Cloud Security Alliance.  |
-| [Securing your Open Source Dependencies (Google PDF)](/assets/pdf/Securing%20your%20Open%20Source%20Dependencies%20(Google%20PDF).pdf) | A PDF from Google on 5 practical steps to securing open-source dependencies.  |
+| [Securing your Open Source Dependencies (Google PDF)](https://services.google.com/fh/files/misc/securing_your_open_source_dependencies_infographic.pdf) | A PDF from Google on 5 practical steps to securing open-source dependencies.  |
 | [Supply-chain Levels for Software Artifacts (SLSA)](https://slsa.dev/) | Security Framework to prevent tampering, improve integrity, and secure packages and infrastructure in your projects.  |
 
 ### Cyber Risk
@@ -150,7 +149,7 @@ section_number: 22
 | [GRC Lab (Content from Aron Lange)](https://grclab.com/) | Information on GRC, overviews of Information Security, and others |
 | [The Duckbill Group](https://www.duckbillgroup.com/) | Information and consultancy on AWS Strategies and risk mitigation  |
 | [Building a Cyber Risk Management Program](https://www.oreilly.com/library/view/building-a-cyber/9781098147785/) | O'Reilly - building a cyber risk management program info.  |
-| [Building a Cyber Risk Management Prgram (PDF)](/assets/pdf/Building%20a%20Cyber%20Risk%20Management%20Prgram%20(PDF).pdf) | PDF of "Building a Cyber Risk Management Program |
+| [Building a Cyber Risk Management Prgram (PDF)](https://ebook.app.hcu.edu.gh/wp-content/uploads/2024/08/Brian-Allen-Brandon-Bapst-Terry-Allan-Hicks-Building-a-Cyber-Risk-Management-Program_-Evolving-Security-for-the-Digital-Age-2023-OReilly-Media-libgen.li-1.pdf) | PDF of "Building a Cyber Risk Management Program |
 | [Centre for Risk Studies (Cambridge)](https://www.jbs.cam.ac.uk/faculty-research/centres/risk/) | Cambridge's center for studying risk.  |
 
 ### NIST Resources
@@ -165,6 +164,7 @@ section_number: 22
 | [National Online Informative References Program](https://csrc.nist.gov/projects/olir) | NIST Project for National Online Informative References  |
 
 ### MITRE
+
 | Link | Description |
 | --- | --- |
 | [MITRE Assistant](https://www.allarounddefender.io/home) | MITRE Assistant | 
@@ -210,7 +210,7 @@ section_number: 22
 | [PCI Security Standards Council (PCI SSC)](https://www.pcisecuritystandards.org/) | A global forum that brings together payments industry stakeholders to develop and drive adoption of data security standards and resources for safe payments worldwide |
 | [FDIC: Cybersecurity Resources Page](https://www.fdic.gov/banker-resource-center/cybersecurity-resources) | FDIC's Cybersecurity Resources Page containing links and bookmark-able websites | 
 | [Enhancing Healthcare Security: New Guidance from CISA](https://quicktakes.loeb.com/post/102it9w/enhancing-healthcare-cyber-security-new-guidance-from-cisa#page=1) | CISA guidance blog for common vulnerabilities across the Healthcare and Public Health (HPH) Sector |
-| [Mitigation Guide: Healthcare and Public Health (HPH) Sector - CISA PDF](/assets/pdf/Mitigation%20Guide:%20Healthcare%20and%20Public%20Health%20(HPH)%20Sector%20-%20CISA%20PDF.pdf) | Official PDF link to CISA's HPH Mitigation guide |
+| [Mitigation Guide: Healthcare and Public Health (HPH) Sector - CISA PDF](https://www.cisa.gov/sites/default/files/2023-11/HPH-Sector-Mitigation-Guide-TLP-CLEAR_508c.pdf) | Official PDF link to CISA's HPH Mitigation guide |
 | [OIG General Compliance Program Guidance blog from Akerman Insights](https://www.healthlawrx.com/2023/11/compliance-officers-read-the-new-oig-general-compliance-program-guidance/#page=1) |  Ackerman Insights on the latest Developments in Healthcare Law - guidance on reading the Office of Inspector General (OIG) guidance on Compliance Programs |
 
 
@@ -258,7 +258,7 @@ section_number: 22
 | [Threat Hunting Maturity Model](http://detect-respond.blogspot.com/2015/10/a-simple-hunting-maturity-model.html) | Threat Hunting Maturity Model is a five-level evaluation system of how efficient an organization is in terms of cyber hunting  |
 | [Cyber Threat Intelligence Capability Maturity Model(CTI-CMM)](https://www.cti-cmm.org/) | The CTI-CMM is a community-developed framework to help Cyber Threat Intelligence teams assess and improve their support for internal stakeholders. It defines 11 domains tied to typical stakeholder functions and maps specific CTI practices to levels of maturity  |
 | [Vendor Risk Management Maturity Model (VRMMM)](https://sharedassessments.org/vrmmm/) | ) - The VRMMM evaluates third-party risk programs against a set of comprehensive best practices and industry benchmarks. The focus of the VRMMM is to provide third party risk managers with a tool they can use to evaluate their program against a comprehensive set of best practices  |
-| [Enterprise Browser Security Maturity Model (LayerX)](/assets/pdf/Enterprise%20Browser%20Security%20Maturity%20Model%20(LayerX).pdf) | The Browser Security Maturity Model by LayerX provides a structured, three-stage approach to securing the enterprise web browser as a critical risk surface in the SaaS, BYOD, and GenAI era |
+| [Enterprise Browser Security Maturity Model (LayerX)](https://go.layerxsecurity.com/hubfs/The-Secure-Enterprise-Browser-Maturity-Guide.pdf) | The Browser Security Maturity Model by LayerX provides a structured, three-stage approach to securing the enterprise web browser as a critical risk surface in the SaaS, BYOD, and GenAI era |
 | [OWASP DevSecOps Maturity Model (DSOMM)](https://owasp.org/www-project-devsecops-maturity-model/) | The DevSecOps Maturity Model, which is presented in the talk, shows security measures which are applied when using DevOps strategies and how these can be prioritized  | 
 | [SOAR Maturity Model](https://chronicle.security/blog/posts/SOAR-adoption-maturity-model/) | As security orchestration, automation and response (SOAR) adoption continues at a rapid pace, security operations teams have a greater need for a structured planning approach  |
 | [Consumer Authentication Strength Maturoity Model (CASMM)](https://danielmiessler.com/blog/casmm-consumer-authentication-security-maturity-model/) | An easy-to-use security model for the average internet user. Basically, how secure is someone’s current behavior with respect to passwords and authentication, and how can they improve?  |
@@ -266,7 +266,7 @@ section_number: 22
 | [Red Team Maturity Model](https://www.redteams.fyi/) |  A model to reference when gauging Red Team maturity, as well as set goals and provide guidance when building internal Red Teams  |
 | [Cybersecurity Capability Maturity Model (C2M2)](https://www.energy.gov/ceser/cybersecurity-capability-maturity-model-c2m2) | You can use the C2M2 to consistently measure cybersecurity capabilities over time, identify target maturity levels based on risk, and prioritize the actions and investments  |
 | [Vulnerability Management Maturity Model](https://www.sans.org/posters/key-metrics-cloud-enterprise-vmmm/) | The SANS Vulnerability Management Maturity Model helps you gauge the effectiveness of your Vulnerability Management program  |
-| [IoT Security Maturity Model](/assets/pdf/IoT%20Security%20Maturity%20Model.pdf) | The goal of a Security Maturity Model (SMM) is to provide a path for Internet of Things (IoT) providers to know where they need to be and how to invest in security mechanisms that meet their requirements without over-investing in unnecessary security mechanisms  |
+| [IoT Security Maturity Model](https://www.iiconsortium.org/pdf/SMM_Description_and_Intended_Use_FINAL_Updated_V1.1.pdf) | The goal of a Security Maturity Model (SMM) is to provide a path for Internet of Things (IoT) providers to know where they need to be and how to invest in security mechanisms that meet their requirements without over-investing in unnecessary security mechanisms  |
 | [ENISA Computer Security Incident Response Teams (CSIRT) Maturity Framework](https://www.enisa.europa.eu/publications/enisa-csirt-maturity-framework) | The ENISA CSIRT Maturity Framework is intended to contribute to the enhancement of the global capacity to manage cyber incidents, with a focus on CSIRTs  |
 | [API Security Model](https://curity.io/resources/learn/the-api-security-maturity-model/) | Inspired by the Richardson Maturity Model, which outlines increasing degrees of web service development maturity, the API Security Maturity Model reframes the model within the context of security. Within this model, security and trust are improved the higher up you go  |
 | [Building Security in Maturity Model (BSIMM)](https://www.bsimm.com/) | BSIMM helps organizations plan, implement, and measure their software security initiatives  |
@@ -278,4 +278,11 @@ section_number: 22
 | [Threat Model Maturity Model](https://blog.secpillars.com/2022/06/threat-model-maturity-model.html) | This framework attempts to be a prescriptive target for designing a specific strategy to successfully threat model  |
 | [Insider Threat Program Maturity Model](https://www.veriato.com/resources/whitepapers/insider-threat-maturity-report-2019) | The Insider Threat Program Maturity Model created to help security professionals assess their organization’s ability to monitor for, detect, and respond to insider threats. By using a maturity model for reference, organizations can see where their program needs improvement, working towards an Optimized level of maturity  |
 | [Security Maturity Model](https://www.wwt.com/wwt-research/security-maturity-model) |  This model is designed to help organizations grow and mature their security capabilities related to people, processes and technology. The goal is to help you better understand the reality of where your organization stands today and the steps you should take to level up. A step-by-step guide for CISOs to build alignment, reduce risk and deliver business value. CISOs can no longer focus strictly on developing technical capabilities and protecting their organizations. Executives and boards are looking to CISOs to make investments that drive growth with a holistic security framework. No security program can fully eliminate risk or human error, but a mature approach to cybersecurity can mitigate the risks that pose the most danger to organizational objectives and success. |
-| [Product Security Incident Response Team (PSIRT) Maturity Model](https://www.first.org/standards/frameworks/psirts/psirt_maturity_document) | A PSIRT is an entity within an organization which, at its core, focuses on the identification, assessment, and disposition of the risks associated with security vulnerabilities within the products, including offerings, solutions, components, and/or services which an organization produces and/or sells. PRIST supports Identifying metrics for evaluating performance and/or effectiveness to identify improvements. [PSIRT services framework](/assets/pdf/PSIRT%20services%20framework.pdf) helps to assess or evaluate how well a PSIRT is operating, and to identify potential areas for improvement. The PSIRT will be able to measure its performance and understand areas where improvement is desired.
+| [Product Security Incident Response Team (PSIRT) Maturity Model](https://www.first.org/standards/frameworks/psirts/psirt_maturity_document) | A PSIRT is an entity within an organization which, at its core, focuses on the identification, assessment, and disposition of the risks associated with security vulnerabilities within the products, including offerings, solutions, components, and/or services which an organization produces and/or sells. PRIST supports Identifying metrics for evaluating performance and/or effectiveness to identify improvements. [PSIRT services framework](https://www.first.org/standards/frameworks/psirts/FIRST_PSIRT_Services_Framework_v1.0.pdf) helps to assess or evaluate how well a PSIRT is operating, and to identify potential areas for improvement. The PSIRT will be able to measure its performance and understand areas where improvement is desired. |
+
+## Additional Pages in This Section
+
+- [CISO-in-a-Box Agent]({{ '/resources/ciso-agent/' | relative_url }})
+- [Readme]({{ '/resources/book-list/' | relative_url }})
+
+Previous: [Cyber Insurance]({{ '/cyber-insurance/' | relative_url }})

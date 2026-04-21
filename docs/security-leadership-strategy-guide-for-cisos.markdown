@@ -6,8 +6,6 @@ share-description: 'Leadership approaches for setting direction, influencing sta
 nav_category: 'Security Program'
 section_number: 11
 ---
-# **Security Leadership Strategy Guide for CISOs**
-
 ## **1A. Establishing a Strategic Vision (First 100 Days as CISO)**
 
 **Description:** The first 100 days in a CISO’s tenure are critically important for setting the tone and direction of the cybersecurity program. In this period, a new CISO must establish credibility, understand the business and risk landscape, and craft a strategic vision that aligns security initiatives with the organization’s goals. Early efforts to learn the company’s culture and operations ensure that security plans will *enable* the business rather than hinder it. By laying this groundwork, the CISO builds stakeholder trust and sets the stage for a mature, business-aligned security program.
@@ -313,3 +311,7 @@ Effective cybersecurity budgeting demonstrates accountability, increases transpa
 
 ---
 
+
+Previous: [Security Management]({{ '/ciso-security-management-strategy-guide/' | relative_url }})
+
+Next: [Governance Risk and Compliance]({{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }})

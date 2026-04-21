@@ -6,8 +6,6 @@ share-description: 'Operating the security function through roles, planning, gov
 nav_category: 'Security Program'
 section_number: 10
 ---
-# **CISO Security Management Strategy Guide**
-
 ## **Define Clear Roles and Responsibilities**
 
 Every security team member should have a **clearly defined role** to prevent overlaps and confusion. When responsibilities are muddled, critical tasks can slip through the cracks. Start by crafting **detailed job descriptions** for each security role, outlining specific duties, required skills, and performance expectations. These descriptions set clear accountability and also help in recruiting the right talent. **Regularly update job roles** as the organization and threat landscape evolve. Cybersecurity is dynamic – new threats and technologies emerge constantly – so roles and responsibilities must be reviewed and refined periodically to stay aligned with current needs. By maintaining clarity in who is responsible for what, the security program operates more efficiently and can respond to incidents or risks without delay.
@@ -200,3 +198,7 @@ In summary, the path to a mature cybersecurity program involves continuously bui
 
 * LinkedIn article describing how **Governance, Risk, and Compliance (GRC)** becomes an important domain for medium-sized organizations, involving setting security strategy, policies, and managing compliance requirements – implying the need for a dedicated focus on GRC as companies grow.
 
+
+Previous: [Identity and Access Management]({{ '/identity-and-access-management-iam-overview/' | relative_url }})
+
+Next: [Security Leadership]({{ '/security-leadership-strategy-guide-for-cisos/' | relative_url }})

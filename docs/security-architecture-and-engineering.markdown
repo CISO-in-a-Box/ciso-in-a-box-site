@@ -6,8 +6,6 @@ share-description: 'Design principles and engineering patterns for resilient, de
 nav_category: 'Security Controls'
 section_number: 6
 ---
-# Security Engineering and Architecture 
-
 ## The Evolving Role of Security Architecture
 
 In today's hyper-connected world, the role of security architecture has fundamentally shifted. We've moved beyond the traditional "castle-and-moat" approach, where a strong perimeter was the primary defense. With the rise of cloud computing, remote work, and sophisticated threats, security architecture is now a distributed and dynamic discipline. It's about building security into the fabric of the IT ecosystem, from the cloud to the endpoint, with a focus on identity, data, and resilience. This modern approach is essential for any CISO looking to build a security program that can withstand the challenges of today's threat landscape.
@@ -117,3 +115,6 @@ For an SMB, mid-market company, or local government, leveraging CIS 18 and MITR
 ## References
 
 
+Previous: [CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls/' | relative_url }})
+
+Next: [Product and Software Security]({{ '/product-and-software-security/' | relative_url }})

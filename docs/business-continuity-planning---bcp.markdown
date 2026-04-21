@@ -130,4 +130,9 @@ a. Processing payments from customers               Website Portal              
 b. Hosting a website to receive customer orders     Website Portal, Inventory          5 minutes     24 hours        2 hours
 c. Ship products to customers                       Order System, Customer Database    24 hours      1 hour          1 hour
 
-Just like the BCP, the DRP will include procedures, roles, and systems relevant to the business objectives. Unlike BCP though, a DRP plan can include different environment types such as a cold site, warm site, and a hot-hot site. A cold site represents a location where business processes can be recovered to after updates and setup take place. A cold site requires the most amount of time to prepare for DRP events. A warm site is a site that has infrastructure and software ready for DRP events, but lacks all of the required components for activating DRP procedures. A hot-hot site is a fully active and replicated site where DRP events are transitioned rapidly.  
+Just like the BCP, the DRP will include procedures, roles, and systems relevant to the business objectives. Unlike BCP though, a DRP plan can include different environment types such as a cold site, warm site, and a hot-hot site. A cold site represents a location where business processes can be recovered to after updates and setup take place. A cold site requires the most amount of time to prepare for DRP events. A warm site is a site that has infrastructure and software ready for DRP events, but lacks all of the required components for activating DRP procedures. A hot-hot site is a fully active and replicated site where DRP events are transitioned rapidly.
+
+
+Previous: [Response - IR]({{ '/cyber-incident-response-strategy-guide-for-cisos/' | relative_url }})
+
+Next: [Disaster Recovery - DR]({{ '/disaster-recovery---dr/' | relative_url }})

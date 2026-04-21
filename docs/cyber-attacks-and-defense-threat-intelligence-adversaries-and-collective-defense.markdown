@@ -6,8 +6,6 @@ share-description: 'Who attacks organizations, how they operate, and how defende
 nav_category: 'Risk & Threat Management'
 section_number: 3
 ---
-# Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense
-
 ## Introduction
 
 Cyber attacks are a growing threat to organizations of all sizes. Small and medium businesses (SMBs) and local governments, in particular, are increasingly targeted as larger enterprises harden their defenses. A *cyber attack* can take many forms—data breaches, malware infections, phishing scams, ransomware, DDoS, spyware, and more. These attacks are launched by *threat actors* (e.g., cybercriminal gangs, nation-state hackers, or insiders) seeking to steal data, disrupt operations, or extort money. To protect against such threats, it’s important to understand how cyber attacks work, how to defend and respond, and how sharing intelligence and working collectively can strengthen our security. This overview begins high-level and then introduces technical depth, defining key terms along the way.
@@ -188,3 +186,8 @@ Effective cybersecurity focuses on disrupting adversary opportunities through da
 * [IBM X-Force Exchange](https://exchange.xforce.ibmcloud.com/) - Collaborative threat intelligence
 * [VirusTotal](https://www.virustotal.com/gui/home/upload) - IOC analysis and sharing
 * [CISA Threat Actors](https://www.cisa.gov/topics/cyber-threats-and-advisories/cyber-threat-actor-naming) - Practical threat actor categorization
+
+
+Previous: [Understanding Business Risk]({{ '/understanding-enterprise-risk-management-erm-for-cisos/' | relative_url }})
+
+Next: [Mapping Attack Surface]({{ '/mapping-your-attack-surface/' | relative_url }})

@@ -6,8 +6,6 @@ share-description: 'How to prepare for, manage, and learn from cybersecurity inc
 nav_category: 'Security Program'
 section_number: 15
 ---
-# **Cyber Incident Response Strategy Guide for CISOs**
-
 ## **1\. Establishing the Foundation: CIR Governance**
 
 A strong governance foundation ensures that cyber incident response (CIR) is organized, accountable, and business-aligned. The CISO should formalize how incidents are handled by defining an **Incident Response Team (IRT)** structure with cross-functional participation. This includes appointing representatives from security/IT, legal/compliance, HR, public relations, and executive leadership, so that both technical and business perspectives are covered during a crisis. Clear **roles and responsibilities** must be documented for each stakeholder, with management support (through policies and charters) to empower decision-making authority when high-impact actions (like shutting down systems) are needed. Establishing formal governance (e.g. an IRT charter and escalation procedures) ensures incidents are handled consistently and in line with organizational risk tolerance.
@@ -153,3 +151,7 @@ For reference, here are key templates and documentation that a CISO should devel
 
 These templates should be stored in an accessible location (with backups offline in case of ransomware). The CISO is responsible for keeping them up to date – e.g., if personnel change or if lessons learned suggest adding a step to a playbook, the template should be revised. Regular testing of the incident response plan via exercises will also highlight if template documents are missing information or need refinement.
 
+
+Previous: [Security Operations - SOC]({{ '/cybersecurity-operations-secops-program-maturity-guide/' | relative_url }})
+
+Next: [Business Continuity Planning - BCP]({{ '/business-continuity-planning---bcp/' | relative_url }})
