@@ -13,7 +13,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
   <div class="section-browser-body">
     <h3>Getting Started</h3>
     <p>Practical first steps for improving security and building momentum.</p>
-    <span>2 additional pages</span>
+    <span>3 additional pages</span>
   </div>
 </a>
 <a class="section-browser-card" href="{{ '/resources/' | relative_url }}">
@@ -34,7 +34,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
   <div class="section-browser-body">
     <h3>Understanding Business Risk</h3>
     <p>How to translate cyber issues into business risk, impact, and decision-making.</p>
-    <span>Section overview</span>
+    <span>1 additional page</span>
   </div>
 </a>
 <a class="section-browser-card" href="{{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/' | relative_url }}">
@@ -42,7 +42,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
   <div class="section-browser-body">
     <h3>Understanding the Adversary</h3>
     <p>Who attacks organizations, how they operate, and how defenders can respond.</p>
-    <span>Section overview</span>
+    <span>3 additional pages</span>
   </div>
 </a>
 <a class="section-browser-card" href="{{ '/mapping-your-attack-surface/' | relative_url }}">
