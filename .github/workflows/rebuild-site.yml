@@ -94,9 +94,12 @@ jobs:
         run: |
           # verify_site.py and the built HTML both assume baseurl
           # /ciso-in-a-box-site, so serve from a dir that contains a
-          # ciso-in-a-box-site/ symlink to _site.
-          mkdir -p /tmp/serve/ciso-in-a-box-site
-          ln -sfn "$GITHUB_WORKSPACE/ciso-in-a-box-site/_site" /tmp/serve/ciso-in-a-box-site
+          # ciso-in-a-box-site/ copy of _site. (A symlink would be
+          # cleaner, but Python's http.server does not follow a
+          # symlinked directory reliably across runners.)
+          rm -rf /tmp/serve
+          mkdir -p /tmp/serve
+          cp -r "$GITHUB_WORKSPACE/ciso-in-a-box-site/_site" /tmp/serve/ciso-in-a-box-site
           python -m http.server 8765 --bind 127.0.0.1 --directory /tmp/serve &
           echo $! > /tmp/http.pid
           sleep 1
