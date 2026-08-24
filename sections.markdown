@@ -50,7 +50,7 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library, or
   <div class="section-browser-body">
     <h3>Mapping Attack Surface</h3>
     <p>How to identify exposed systems, services, identities, and external dependencies.</p>
-    <span>Section overview</span>
+    <span>1 additional page</span>
   </div>
 </a>
 </div>
