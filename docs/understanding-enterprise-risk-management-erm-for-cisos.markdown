@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'Chapter 02 – Understanding Business Risk'
+title: 'Understanding Enterprise Risk Management (ERM) for CISOs'
 permalink: /understanding-enterprise-risk-management-erm-for-cisos/
-share-description: 'Here''s a hard truth that most new CISOs learn the slow way: nobody in your executive team wakes up thinking about CVEs, attack surface exposure, or your SIEM alert volume. They wake up thinking about revenue, customers,'
+share-description: 'How to translate cyber issues into business risk, impact, and decision-making.'
 section_number: 2
 ---
 ---

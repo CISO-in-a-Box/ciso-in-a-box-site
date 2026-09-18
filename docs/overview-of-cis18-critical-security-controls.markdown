@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'Introduction and Overview'
+title: 'Overview of CIS18 Critical Security Controls'
 permalink: /overview-of-cis18-critical-security-controls/
-share-description: 'For a general overview of the CIS18 controls and how they align with MITRE ATT&CK, check out this section.'
+share-description: 'A structured walkthrough of CIS18 and the controls that reduce common risk.'
 section_number: 5
 ---
 For a general overview of the CIS18 controls and how they align with MITRE ATT&CK, check out [this]({{ '/overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18/' | relative_url }}) section.

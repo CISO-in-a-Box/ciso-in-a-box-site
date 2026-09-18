@@ -20,7 +20,9 @@ directory name, otherwise it is derived from the directory name with
 the numeric prefix removed. Child routes are derived from the
 source-relative path; a nested README's filename never becomes a route
 component. Page titles and descriptions are extracted from the content
-itself with general algorithms.
+itself with general algorithms, with optional curated wording applied
+via CURATED_SECTION_TITLES / CURATED_SECTION_DESCRIPTIONS for
+section homes where derivation is worse than hand-written text.
 
 Configured presentation routes (navbar, homepage pathways, modules)
 are validated against the discovered pages and fail generation if they
@@ -44,6 +46,8 @@ from urllib.parse import quote, unquote, urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from site_config import (
+    CURATED_SECTION_DESCRIPTIONS,
+    CURATED_SECTION_TITLES,
     GITHUB_BRANCH,
     GITHUB_ORG,
     GITHUB_REPO_URL,
@@ -288,6 +292,19 @@ def validate_section_routes(sections: list[Section]) -> None:
         raise GenerationError(f"Duplicate section slugs discovered: {duplicates}")
 
 
+def validate_curated_overrides(section_routes: set[str]) -> None:
+    stale = sorted(
+        (set(CURATED_SECTION_TITLES) | set(CURATED_SECTION_DESCRIPTIONS))
+        - section_routes
+    )
+    if stale:
+        raise GenerationError(
+            "Curated editorial overrides reference routes that are not "
+            "discovered section homes (remove or update them): "
+            + ", ".join(stale)
+        )
+
+
 # ---- Page model --------------------------------------------------------------
 
 
@@ -302,21 +319,26 @@ def build_pages(source_root: Path, site_root: Path) -> tuple[list[Page], list[Pa
     for section in sections:
         readme = find_section_readme(section.directory)
         slug = section_slug(section)
+        home_route = f"/{slug}/"
         section_page = Page(
             source_path=readme if readme is not None else section.directory,
-            title=(
+            title=CURATED_SECTION_TITLES.get(
+                home_route,
                 extract_title(
                     readme, is_readme=True, directory_title=section.source_title
                 )
                 if readme is not None
-                else section.source_title
+                else section.source_title,
             ),
-            permalink=f"/{slug}/",
+            permalink=home_route,
             output_path=docs_root / f"{slug}.markdown",
             description=(
-                description_from_text(read_text(readme))
-                if readme is not None
-                else DEFAULT_DESCRIPTION
+                CURATED_SECTION_DESCRIPTIONS.get(
+                    home_route,
+                    description_from_text(read_text(readme))
+                    if readme is not None
+                    else DEFAULT_DESCRIPTION,
+                )
             ),
             section=section,
             is_section_home=True,
@@ -852,6 +874,9 @@ def generate(source_root: Path, site_root: Path) -> None:
     pages, section_pages = build_pages(source_root, site_root)
     lookup = build_lookup(pages)
     validate_configured_routes(pages)
+    validate_curated_overrides(
+        {page.permalink for page in section_pages}
+    )
 
     copy_assets(source_root, site_root)
     write_config(site_root, pages)

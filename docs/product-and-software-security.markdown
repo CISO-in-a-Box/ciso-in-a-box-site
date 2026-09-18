@@ -2,7 +2,7 @@
 layout: page
 title: 'Product and Software Security'
 permalink: /product-and-software-security/
-share-description: 'Change 07 - Product and Software Evaluation & Selection Process'
+share-description: 'How to evaluate, build, and secure software and technology products safely.'
 section_number: 7
 ---
 Change *07 \- Product and Software Evaluation & Selection Process*

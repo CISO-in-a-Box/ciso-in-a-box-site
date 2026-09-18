@@ -2,7 +2,7 @@
 layout: page
 title: 'Getting Started'
 permalink: /getting-started/
-share-description: 'Don''t Panic!!'
+share-description: 'Practical first steps for improving security and building momentum.'
 section_number: 1
 ---
 Don't Panic!!

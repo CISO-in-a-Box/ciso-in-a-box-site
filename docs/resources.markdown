@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'CISO Resources'
+title: 'Resources'
 permalink: /resources/
-share-description: 'Guidance and reference material from the CISO-in-a-Box repository.'
+share-description: 'Reference links, tools, templates, and supporting material across the guide.'
 section_number: 22
 ---
 ### CISO Resources / General

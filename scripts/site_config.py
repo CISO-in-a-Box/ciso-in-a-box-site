@@ -77,6 +77,79 @@ LEGACY_SECTION_ROUTES = {
         "cybersecurity-and-it-career-pathways",
 }
 
+# ---- Curated editorial overrides ------------------------------------------
+# Optional, route-keyed overrides for section-home metadata. Publishing
+# does not require any entry: absent routes fall back to the general
+# derivation (content H1 for titles, first prose paragraph for
+# descriptions). Entries exist purely to keep hand-curated wording
+# where derivation would be worse (e.g. a section README whose first
+# paragraph is "Don't Panic!!"). Every entry must match a discovered
+# section-home route; stale entries fail generation.
+
+CURATED_SECTION_TITLES = {
+    "/understanding-enterprise-risk-management-erm-for-cisos/":
+        "Understanding Enterprise Risk Management (ERM) for CISOs",
+    "/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/":
+        "Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense",
+    "/mapping-your-attack-surface/":
+        "Mapping Your Attack Surface",
+    "/overview-of-cis18-critical-security-controls/":
+        "Overview of CIS18 Critical Security Controls",
+    "/disaster-recovery---dr/":
+        "Disaster Recovery - DR",
+    "/security-architecture-and-engineering/":
+        "Security Architecture and Engineering",
+    "/resources/":
+        "Resources",
+}
+
+CURATED_SECTION_DESCRIPTIONS = {
+    "/getting-started/":
+        "Practical first steps for improving security and building momentum.",
+    "/understanding-enterprise-risk-management-erm-for-cisos/":
+        "How to translate cyber issues into business risk, impact, and decision-making.",
+    "/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/":
+        "Who attacks organizations, how they operate, and how defenders can respond.",
+    "/mapping-your-attack-surface/":
+        "How to identify exposed systems, services, identities, and external dependencies.",
+    "/overview-of-cis18-critical-security-controls/":
+        "A structured walkthrough of CIS18 and the controls that reduce common risk.",
+    "/security-architecture-and-engineering/":
+        "Design principles and engineering patterns for resilient, defensible systems.",
+    "/product-and-software-security/":
+        "How to evaluate, build, and secure software and technology products safely.",
+    "/secure-business-process-optimization/":
+        "Ways to improve business processes without introducing avoidable security gaps.",
+    "/identity-and-access-management-iam-overview/":
+        "Foundations of IAM, access control, lifecycle management, and privileged access.",
+    "/ciso-security-management-strategy-guide/":
+        "Operating the security function through roles, planning, governance, and execution.",
+    "/security-leadership-strategy-guide-for-cisos/":
+        "Leadership approaches for setting direction, influencing stakeholders, and scaling impact.",
+    "/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/":
+        "Core governance, risk, and compliance practices for building accountable programs.",
+    "/security-awareness-building-a-human-firewall/":
+        "How to build user awareness programs that reduce phishing, fraud, and human error.",
+    "/cybersecurity-operations-secops-program-maturity-guide/":
+        "Monitoring, detection, triage, and operational practices for effective SecOps teams.",
+    "/cyber-incident-response-strategy-guide-for-cisos/":
+        "How to prepare for, manage, and learn from cybersecurity incidents effectively.",
+    "/business-continuity-planning---bcp/":
+        "Planning to keep critical business services operating during disruptive events.",
+    "/disaster-recovery---dr/":
+        "Recovery strategies for restoring technology, data, and operations after major outages.",
+    "/vulnerability-management-and-risk/":
+        "Methods for identifying, prioritizing, and reducing vulnerability-driven risk.",
+    "/frameworks-and-standards/":
+        "A practical guide to common security frameworks, standards, and control mappings.",
+    "/cybersecurity-and-it-career-pathways/":
+        "Career paths, skill development, and progression toward security leadership roles.",
+    "/cyber-insurance/":
+        "How cyber insurance works and how to evaluate coverage, readiness, and tradeoffs.",
+    "/resources/":
+        "Reference links, tools, templates, and supporting material across the guide.",
+}
+
 # ---- Curated presentation ------------------------------------------------
 # These reference discovered pages by public route. All routes listed
 # here must exist as generated pages; generation fails otherwise.

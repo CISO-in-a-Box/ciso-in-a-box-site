@@ -1,8 +1,8 @@
 ---
 layout: page
-title: 'Security Engineering and Architecture'
+title: 'Security Architecture and Engineering'
 permalink: /security-architecture-and-engineering/
-share-description: 'In today''s hyper-connected world, the role of security architecture has fundamentally shifted. We''ve moved beyond the traditional "castle-and-moat" approach, where a strong perimeter was the primary defense. With the ris'
+share-description: 'Design principles and engineering patterns for resilient, defensible systems.'
 section_number: 6
 ---
 ## The Evolving Role of Security Architecture

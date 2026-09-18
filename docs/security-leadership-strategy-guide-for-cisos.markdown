@@ -2,7 +2,7 @@
 layout: page
 title: 'Security Leadership Strategy Guide for CISOs'
 permalink: /security-leadership-strategy-guide-for-cisos/
-share-description: '1. Reassess Enterprise Context: Start by revisiting the organization’s mission, business goals, and risk appetite. Ensure you understand any changes in the company’s strategic plan, new lines of business, or shifts in wh'
+share-description: 'Leadership approaches for setting direction, influencing stakeholders, and scaling impact.'
 section_number: 11
 ---
 ## **1A. Establishing a Strategic Vision (First 100 Days as CISO)**

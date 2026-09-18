@@ -114,6 +114,20 @@ hard-coded per-section metadata with general derivation:
   from the content repository (deferred at review time; kept working
   until the site-owned pipeline has run stably in production for a
   while).
-- Optionally revisit the 8 re-derived page titles and 22 derived
-  section descriptions if curated wording is wanted (a content
-  decision, not a publishing one).
+- Sections-page grouping: the pre-migration site grouped the browse
+  page into five curated categories. Restoring that requires a config
+  that assigns every section route to a category, which starts to
+  duplicate the content inventory in presentation config; deferred as
+  a deliberate design decision.
+
+## Curated editorial overrides (restored)
+
+The 8 re-derived titles and 22 derived section descriptions noted
+above were addressed after review: `CURATED_SECTION_TITLES` and
+`CURATED_SECTION_DESCRIPTIONS` in `scripts/site_config.py` hold
+optional route-keyed overrides applied to section homes. Publishing
+does not require any entry (absent routes fall back to derivation),
+and stale entries fail generation. The published titles and summaries
+are restored; the only intentionally kept derivation improvements are
+`/resources/book-list/` titled "Book List" (was "Readme") and the
+un-categorized sections browse layout.

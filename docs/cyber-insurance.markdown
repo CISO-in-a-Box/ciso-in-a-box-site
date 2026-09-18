@@ -2,7 +2,7 @@
 layout: page
 title: 'Cyber Insurance'
 permalink: /cyber-insurance/
-share-description: 'Placeholder'
+share-description: 'How cyber insurance works and how to evaluate coverage, readiness, and tradeoffs.'
 section_number: 21
 ---
 Placeholder

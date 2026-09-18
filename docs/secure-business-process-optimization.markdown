@@ -2,7 +2,7 @@
 layout: page
 title: 'Secure Business Process Optimization'
 permalink: /secure-business-process-optimization/
-share-description: 'Modern organizations rely on efficient, interconnected business processes to deliver products and services. But efficiency without security can expose the company to serious risks—from data breaches to fraud or operation'
+share-description: 'Ways to improve business processes without introducing avoidable security gaps.'
 section_number: 8
 ---
 ## Introduction

@@ -2,7 +2,7 @@
 layout: page
 title: 'Cybersecurity and IT Career Pathways'
 permalink: /cybersecurity-and-it-career-pathways/
-share-description: 'Cybersecurity and IT offer dynamic, rewarding careers with many pathways—from entry-level help desk roles to senior leadership positions like Chief Information Security Officer (CISO). Whether you’re starting out or look'
+share-description: 'Career paths, skill development, and progression toward security leadership roles.'
 section_number: 20
 ---
 ## Introduction

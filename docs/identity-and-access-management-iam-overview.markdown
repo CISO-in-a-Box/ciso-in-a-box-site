@@ -2,7 +2,7 @@
 layout: page
 title: 'Identity and Access Management (IAM) Overview'
 permalink: /identity-and-access-management-iam-overview/
-share-description: 'Identity and Access Management (IAM) is the practice of ensuring the right people and systems have the right access to the right resources at the right time. In other words, IAM is a combination of policies, processes, a'
+share-description: 'Foundations of IAM, access control, lifecycle management, and privileged access.'
 section_number: 9
 ---
 ## What Is IAM and Why It Matters

@@ -2,7 +2,7 @@
 layout: page
 title: 'Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs'
 permalink: /governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/
-share-description: 'Effective Governance, Risk Management, and Compliance (GRC) programs rest on three core pillars:'
+share-description: 'Core governance, risk, and compliance practices for building accountable programs.'
 section_number: 12
 ---
 ## Key GRC Components: Governance, Risk Management & Compliance

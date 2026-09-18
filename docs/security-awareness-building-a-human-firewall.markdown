@@ -2,7 +2,7 @@
 layout: page
 title: 'Security Awareness: Building a Human Firewall'
 permalink: /security-awareness-building-a-human-firewall/
-share-description: 'Most cyber attacks start with human error. Whether it’s a well-crafted phishing email, a malicious USB left in a parking lot, or a fraudulent phone call, attackers often rely on people as the “weakest link.” Security awa'
+share-description: 'How to build user awareness programs that reduce phishing, fraud, and human error.'
 section_number: 13
 ---
 ## Introduction

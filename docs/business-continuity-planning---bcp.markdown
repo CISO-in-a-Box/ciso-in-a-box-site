@@ -2,7 +2,7 @@
 layout: page
 title: 'Business Continuity Planning - BCP'
 permalink: /business-continuity-planning---bcp/
-share-description: 'Business Continuity Planning (BCP)'
+share-description: 'Planning to keep critical business services operating during disruptive events.'
 section_number: 16
 ---
 Business Continuity Planning (BCP)
