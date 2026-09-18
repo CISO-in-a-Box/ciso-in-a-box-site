@@ -1380,15 +1380,16 @@ def write_skill(site_root: Path, source_commit: str) -> dict[str, str]:
     zip_path = skill_root / "skill.zip"
     # Deterministic archive: fixed timestamps, sorted members, stable
     # permissions and archive names, no platform-dependent zip tool.
-    with zipfile.ZipFile(
-        zip_path, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9
-    ) as archive:
+    # Store members rather than relying on zlib's implementation-specific
+    # DEFLATE output. The package is tiny, and ZIP_STORED keeps bytes stable
+    # across Python and zlib versions as well as across platforms.
+    with zipfile.ZipFile(zip_path, "w", compression=zipfile.ZIP_STORED) as archive:
         for rel, text in sorted(artifacts.items()):
             info = zipfile.ZipInfo(
                 filename=f"{SKILL_NAME}/{rel}",
                 date_time=(1980, 1, 1, 0, 0, 0),
             )
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.compress_type = zipfile.ZIP_STORED
             # Explicit Unix origin and fixed 0644 mode keep the archive
             # byte-identical regardless of the generating platform.
             info.create_system = 3
