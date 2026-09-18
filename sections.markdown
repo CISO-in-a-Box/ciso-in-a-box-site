@@ -2,10 +2,10 @@
 layout: page
 title: 'Browse All Sections'
 permalink: /sections/
-share-description: 'Browse all sections of the CISO-in-a-Box content library.'
+share-description: 'Browse all sections of the CISO-in-a-Box content library, organized by category.'
 ---
 
-## All Sections
+## Guide
 
 <div class="section-browser-grid">
 <a class="section-browser-card" href="{{ '/getting-started/' | relative_url }}">
@@ -16,6 +16,19 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
     <span>3 additional pages</span>
   </div>
 </a>
+<a class="section-browser-card" href="{{ '/resources/' | relative_url }}">
+  <div class="section-browser-number">22</div>
+  <div class="section-browser-body">
+    <h3>Resources</h3>
+    <p>Reference links, tools, templates, and supporting material across the guide.</p>
+    <span>2 additional pages</span>
+  </div>
+</a>
+</div>
+
+## Risk & Threat Management
+
+<div class="section-browser-grid">
 <a class="section-browser-card" href="{{ '/understanding-enterprise-risk-management-erm-for-cisos/' | relative_url }}">
   <div class="section-browser-number">2</div>
   <div class="section-browser-body">
@@ -40,6 +53,11 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
     <span>1 additional page</span>
   </div>
 </a>
+</div>
+
+## Security Controls
+
+<div class="section-browser-grid">
 <a class="section-browser-card" href="{{ '/overview-of-cis18-critical-security-controls/' | relative_url }}">
   <div class="section-browser-number">5</div>
   <div class="section-browser-body">
@@ -72,6 +90,11 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
     <span>Section overview</span>
   </div>
 </a>
+</div>
+
+## Security Program
+
+<div class="section-browser-grid">
 <a class="section-browser-card" href="{{ '/identity-and-access-management-iam-overview/' | relative_url }}">
   <div class="section-browser-number">9</div>
   <div class="section-browser-body">
@@ -96,14 +119,6 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}">
-  <div class="section-browser-number">12</div>
-  <div class="section-browser-body">
-    <h3>Governance Risk and Compliance</h3>
-    <p>Core governance, risk, and compliance practices for building accountable programs.</p>
-    <span>Section overview</span>
-  </div>
-</a>
 <a class="section-browser-card" href="{{ '/security-awareness-building-a-human-firewall/' | relative_url }}">
   <div class="section-browser-number">13</div>
   <div class="section-browser-body">
@@ -125,6 +140,27 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
   <div class="section-browser-body">
     <h3>Response - IR</h3>
     <p>How to prepare for, manage, and learn from cybersecurity incidents effectively.</p>
+    <span>Section overview</span>
+  </div>
+</a>
+<a class="section-browser-card" href="{{ '/cybersecurity-and-it-career-pathways/' | relative_url }}">
+  <div class="section-browser-number">20</div>
+  <div class="section-browser-body">
+    <h3>Careers - The Road to CISO</h3>
+    <p>Career paths, skill development, and progression toward security leadership roles.</p>
+    <span>Section overview</span>
+  </div>
+</a>
+</div>
+
+## Compliance & Resilience
+
+<div class="section-browser-grid">
+<a class="section-browser-card" href="{{ '/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/' | relative_url }}">
+  <div class="section-browser-number">12</div>
+  <div class="section-browser-body">
+    <h3>Governance Risk and Compliance</h3>
+    <p>Core governance, risk, and compliance practices for building accountable programs.</p>
     <span>Section overview</span>
   </div>
 </a>
@@ -160,28 +196,12 @@ share-description: 'Browse all sections of the CISO-in-a-Box content library.'
     <span>Section overview</span>
   </div>
 </a>
-<a class="section-browser-card" href="{{ '/cybersecurity-and-it-career-pathways/' | relative_url }}">
-  <div class="section-browser-number">20</div>
-  <div class="section-browser-body">
-    <h3>Careers - The Road to CISO</h3>
-    <p>Career paths, skill development, and progression toward security leadership roles.</p>
-    <span>Section overview</span>
-  </div>
-</a>
 <a class="section-browser-card" href="{{ '/cyber-insurance/' | relative_url }}">
   <div class="section-browser-number">21</div>
   <div class="section-browser-body">
     <h3>Cyber Insurance</h3>
     <p>How cyber insurance works and how to evaluate coverage, readiness, and tradeoffs.</p>
     <span>Section overview</span>
-  </div>
-</a>
-<a class="section-browser-card" href="{{ '/resources/' | relative_url }}">
-  <div class="section-browser-number">22</div>
-  <div class="section-browser-body">
-    <h3>Resources</h3>
-    <p>Reference links, tools, templates, and supporting material across the guide.</p>
-    <span>2 additional pages</span>
   </div>
 </a>
 </div>

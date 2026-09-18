@@ -46,6 +46,7 @@ from urllib.parse import quote, unquote, urlparse
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from site_config import (
+    CURATED_SECTION_CATEGORIES,
     CURATED_SECTION_DESCRIPTIONS,
     CURATED_SECTION_TITLES,
     GITHUB_BRANCH,
@@ -55,6 +56,7 @@ from site_config import (
     LEGACY_SECTION_ROUTES,
     NAVBAR_CONFIG,
     PATHWAY_CARDS,
+    SECTION_CATEGORY_ORDER,
     SITE_AUTHOR,
     SITE_BASEURL,
     SITE_DESCRIPTION,
@@ -294,7 +296,11 @@ def validate_section_routes(sections: list[Section]) -> None:
 
 def validate_curated_overrides(section_routes: set[str]) -> None:
     stale = sorted(
-        (set(CURATED_SECTION_TITLES) | set(CURATED_SECTION_DESCRIPTIONS))
+        (
+            set(CURATED_SECTION_TITLES)
+            | set(CURATED_SECTION_DESCRIPTIONS)
+            | set(CURATED_SECTION_CATEGORIES)
+        )
         - section_routes
     )
     if stale:
@@ -302,6 +308,15 @@ def validate_curated_overrides(section_routes: set[str]) -> None:
             "Curated editorial overrides reference routes that are not "
             "discovered section homes (remove or update them): "
             + ", ".join(stale)
+        )
+    bad_categories = sorted(
+        set(CURATED_SECTION_CATEGORIES.values()) - set(SECTION_CATEGORY_ORDER)
+    )
+    if bad_categories:
+        raise GenerationError(
+            "CURATED_SECTION_CATEGORIES references category names that are "
+            "not in SECTION_CATEGORY_ORDER (remove or update them): "
+            + ", ".join(bad_categories)
         )
 
 
@@ -593,9 +608,30 @@ def copy_assets(source_root: Path, site_root: Path) -> list[Path]:
 
 
 def sections_cards(section_pages: list[Page]) -> str:
-    blocks: list[str] = []
-    blocks.extend(["## All Sections", "", '<div class="section-browser-grid">'])
+    grouped: dict[str | None, list[Page]] = {}
     for page in section_pages:
+        category = CURATED_SECTION_CATEGORIES.get(page.permalink)
+        grouped.setdefault(category, []).append(page)
+
+    blocks: list[str] = []
+    for category in SECTION_CATEGORY_ORDER:
+        pages = grouped.pop(category, [])
+        if not pages:
+            continue
+        blocks.extend(_section_group(category, pages))
+    unassigned = grouped.pop(None, [])
+    if unassigned:
+        blocks.extend(_section_group("Additional Sections", unassigned))
+    if grouped:
+        # Cannot happen: unknown categories are rejected during validation.
+        for category, pages in grouped.items():
+            blocks.extend(_section_group(category, pages))
+    return "\n".join(blocks).strip() + "\n"
+
+
+def _section_group(heading: str, pages: list[Page]) -> list[str]:
+    blocks = [f"## {heading}", "", '<div class="section-browser-grid">']
+    for page in pages:
         count = len(page.related_pages)
         count_text = (
             f"{count} additional page{'s' if count != 1 else ''}"
@@ -616,7 +652,7 @@ def sections_cards(section_pages: list[Page]) -> str:
             ]
         )
     blocks.extend(["</div>", ""])
-    return "\n".join(blocks).strip() + "\n"
+    return blocks
 
 
 def write_sections_page(section_pages: list[Page], site_root: Path) -> None:
@@ -626,7 +662,7 @@ def write_sections_page(section_pages: list[Page], site_root: Path) -> None:
             "layout: page",
             "title: 'Browse All Sections'",
             "permalink: /sections/",
-            "share-description: 'Browse all sections of the CISO-in-a-Box content library.'",
+            "share-description: 'Browse all sections of the CISO-in-a-Box content library, organized by category.'",
             "---",
             "",
             sections_cards(section_pages).strip(),

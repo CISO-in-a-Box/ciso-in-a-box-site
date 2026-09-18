@@ -114,11 +114,6 @@ hard-coded per-section metadata with general derivation:
   from the content repository (deferred at review time; kept working
   until the site-owned pipeline has run stably in production for a
   while).
-- Sections-page grouping: the pre-migration site grouped the browse
-  page into five curated categories. Restoring that requires a config
-  that assigns every section route to a category, which starts to
-  duplicate the content inventory in presentation config; deferred as
-  a deliberate design decision.
 
 ## Curated editorial overrides (restored)
 
@@ -128,6 +123,13 @@ above were addressed after review: `CURATED_SECTION_TITLES` and
 optional route-keyed overrides applied to section homes. Publishing
 does not require any entry (absent routes fall back to derivation),
 and stale entries fail generation. The published titles and summaries
-are restored; the only intentionally kept derivation improvements are
-`/resources/book-list/` titled "Book List" (was "Readme") and the
-un-categorized sections browse layout.
+are restored; the only intentionally kept derivation improvement is
+`/resources/book-list/` titled "Book List" (was "Readme").
+
+The `/sections/` browse-page category grouping is also restored via
+`SECTION_CATEGORY_ORDER` + `CURATED_SECTION_CATEGORIES`. A section
+absent from the category map still publishes and appears under a
+trailing "Additional Sections" group, so grouping is presentation
+only and never gates discovery. With these, 53 of 55 built pages are
+byte-identical to the pre-migration published site; the two remaining
+differences are the intentional "Book List" naming.

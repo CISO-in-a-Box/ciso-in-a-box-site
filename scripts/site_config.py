@@ -150,6 +150,48 @@ CURATED_SECTION_DESCRIPTIONS = {
         "Reference links, tools, templates, and supporting material across the guide.",
 }
 
+# ---- Curated sections-page grouping ---------------------------------------
+# Display categories for the /sections/ browse page, in render order.
+# CURATED_SECTION_CATEGORIES assigns each section home (by public
+# route) to one of these. Both are presentation choices only: a
+# section absent from the map still publishes and appears on the
+# browse page under a trailing "Additional Sections" group, so
+# dynamic discovery is never gated by this config. Stale routes or
+# category names not in SECTION_CATEGORY_ORDER fail generation.
+
+SECTION_CATEGORY_ORDER = [
+    "Guide",
+    "Risk & Threat Management",
+    "Security Controls",
+    "Security Program",
+    "Compliance & Resilience",
+]
+
+CURATED_SECTION_CATEGORIES = {
+    "/getting-started/": "Guide",
+    "/understanding-enterprise-risk-management-erm-for-cisos/": "Risk & Threat Management",
+    "/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/": "Risk & Threat Management",
+    "/mapping-your-attack-surface/": "Risk & Threat Management",
+    "/overview-of-cis18-critical-security-controls/": "Security Controls",
+    "/security-architecture-and-engineering/": "Security Controls",
+    "/product-and-software-security/": "Security Controls",
+    "/secure-business-process-optimization/": "Security Controls",
+    "/identity-and-access-management-iam-overview/": "Security Program",
+    "/ciso-security-management-strategy-guide/": "Security Program",
+    "/security-leadership-strategy-guide-for-cisos/": "Security Program",
+    "/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/": "Compliance & Resilience",
+    "/security-awareness-building-a-human-firewall/": "Security Program",
+    "/cybersecurity-operations-secops-program-maturity-guide/": "Security Program",
+    "/cyber-incident-response-strategy-guide-for-cisos/": "Security Program",
+    "/business-continuity-planning---bcp/": "Compliance & Resilience",
+    "/disaster-recovery---dr/": "Compliance & Resilience",
+    "/vulnerability-management-and-risk/": "Compliance & Resilience",
+    "/frameworks-and-standards/": "Compliance & Resilience",
+    "/cybersecurity-and-it-career-pathways/": "Security Program",
+    "/cyber-insurance/": "Compliance & Resilience",
+    "/resources/": "Guide",
+}
+
 # ---- Curated presentation ------------------------------------------------
 # These reference discovered pages by public route. All routes listed
 # here must exist as generated pages; generation fails otherwise.
