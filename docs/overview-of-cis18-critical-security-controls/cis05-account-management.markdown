@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 5: Account Management'
 permalink: /overview-of-cis18-critical-security-controls/cis05-account-management/
 share-description: 'What does this really mean in the real world?'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

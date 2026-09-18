@@ -3,7 +3,6 @@ layout: page
 title: 'Mapping Your Attack Surface'
 permalink: /mapping-your-attack-surface/old-readme-file/
 share-description: 'From the outside, threat actors will profile all publicly visible assets of your organization. A key part of this attack surface is your external network footprint – things like domain records and IP address ranges. DNS'
-nav_category: 'Risk & Threat Management'
 section_number: 4
 ---
 [Back to Mapping Attack Surface]({{ '/mapping-your-attack-surface' | relative_url }})

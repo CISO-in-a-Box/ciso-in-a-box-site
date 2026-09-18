@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 1: Inventory and Control of Enterprise Assets'
 permalink: /overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets/
 share-description: 'This usually involves identification of unknown, non-compliant, nonstandard, or specialized devices - followed by, taking appropriate action to reduce the risk these devices represent to the organization.'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

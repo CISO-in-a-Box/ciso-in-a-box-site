@@ -3,7 +3,6 @@ layout: page
 title: 'Supplemental: Frameworks for Defending Against Attacks — PICERL, MITRE, and Beyond'
 permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-defense-frameworks/
 share-description: 'Frameworks are organizing tools, not destinations. The goal is a security program that detects threats, responds effectively, and reduces risk to the organization. Frameworks give you a common language, a structured way'
-nav_category: 'Risk & Threat Management'
 section_number: 3
 ---
 [Back to Understanding the Adversary]({{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense' | relative_url }})

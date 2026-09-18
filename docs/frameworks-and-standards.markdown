@@ -2,8 +2,7 @@
 layout: page
 title: 'Frameworks and Standards'
 permalink: /frameworks-and-standards/
-share-description: 'A practical guide to common security frameworks, standards, and control mappings.'
-nav_category: 'Compliance & Resilience'
+share-description: 'The NIST CSF is a voluntary framework that provides a common taxonomy and structured approach for managing cybersecurity risk. It consists of five core functions – Identify, Protect, Detect, Respond, Recover – which are'
 section_number: 19
 ---
 **Cybersecurity Strategy Guide for CISOs**

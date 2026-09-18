@@ -3,7 +3,6 @@ layout: page
 title: 'Legal Notice and Disclaimer'
 permalink: /getting-started/disclaimer/
 share-description: 'CISOinaBox is a free, community-driven cybersecurity handbook written to help new CISOs and security leaders execute their roles more effectively. It is published as an open-source project under the [MIT License / CC BY'
-nav_category: 'Guide'
 section_number: 1
 ---
 [Back to Getting Started]({{ '/getting-started' | relative_url }})

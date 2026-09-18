@@ -1,7 +1,10 @@
 # CISOinaBox Website Build - AGENTS.md
 
 ## Overview
-This document outlines the successful conversion of CISOinaBox from a repository-based documentation structure to a GitHub Pages-hosted Jekyll website, including methodologies, tools, and processes used for future maintenance and updates.
+
+**PR1 of the publishing migration is complete.** The authoritative generation implementation now lives in this repository (the publishing repo), not the content repository. See `MIGRATION.md` for details.
+
+This document outlines the original conversion of CISOinaBox from a repository-based documentation structure to a GitHub Pages-hosted Jekyll website. The **Legacy Build Process** section below describes the superseded conversion path and is retained for historical reference only.
 
 ## Project Structure Conversion
 
@@ -95,7 +98,8 @@ permalink: /section-slug
 ## Development Workflow
 
 ### Build Process
-The site uses a Python-based conversion script to generate Jekyll pages from source content. Hand-crafted pages in `docs/` (like `resources.markdown`) are preserved and updated in place.
+
+**The site-owned generator is authoritative: use it.** The build below is a **legacy** path retained for reference; it regenerates from source using the old content-repository converter scripts and is superseded by `scripts/generate_site.py`. Do not run it for production workflows.
 
 ```bash
 # Build the site (regenerates docs/ from source directories)

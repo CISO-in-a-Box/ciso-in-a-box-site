@@ -2,8 +2,7 @@
 layout: page
 title: 'CISO Security Management Strategy Guide'
 permalink: /ciso-security-management-strategy-guide/
-share-description: 'Operating the security function through roles, planning, governance, and execution.'
-nav_category: 'Security Program'
+share-description: 'Every security team member should have a clearly defined role to prevent overlaps and confusion. When responsibilities are muddled, critical tasks can slip through the cracks. Start by crafting detailed job descriptions'
 section_number: 10
 ---
 ## **Define Clear Roles and Responsibilities**

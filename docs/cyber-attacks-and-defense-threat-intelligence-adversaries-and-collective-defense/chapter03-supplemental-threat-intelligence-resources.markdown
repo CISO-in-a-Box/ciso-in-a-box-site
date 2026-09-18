@@ -3,7 +3,6 @@ layout: page
 title: 'Supplemental: Top Resources for Understanding Emerging Threats'
 permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-threat-intelligence-resources/
 share-description: 'Threat intelligence resources fall into several categories: government and non-profit sources that provide free, high-quality intelligence; commercial platforms with enriched data and analysis; community and peer-sharing'
-nav_category: 'Risk & Threat Management'
 section_number: 3
 ---
 [Back to Understanding the Adversary]({{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense' | relative_url }})

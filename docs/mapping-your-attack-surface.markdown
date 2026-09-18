@@ -1,9 +1,8 @@
 ---
 layout: page
-title: 'Mapping Your Attack Surface'
+title: 'Attack Surface Management'
 permalink: /mapping-your-attack-surface/
-share-description: 'How to identify exposed systems, services, identities, and external dependencies.'
-nav_category: 'Risk & Threat Management'
+share-description: 'Effective cybersecurity starts with a shift in perspective: before you can defend your organization, you have to see it the way an attacker sees it from the outside in: no credentials, no internal access, no map. Your at'
 section_number: 4
 ---
 ## Introduction: Seeing Your Organization the Way an Attacker Does

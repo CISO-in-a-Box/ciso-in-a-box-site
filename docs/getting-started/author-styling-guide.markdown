@@ -3,7 +3,6 @@ layout: page
 title: '🧭 CISO in a Box – Author Styling Guide'
 permalink: /getting-started/author-styling-guide/
 share-description: 'Please use the information below to ensure the same voice and style are used for all chapters of this project. This will help to ensure there is a consistent voice regardless of who supports this project.'
-nav_category: 'Guide'
 section_number: 1
 ---
 [Back to Getting Started]({{ '/getting-started' | relative_url }})

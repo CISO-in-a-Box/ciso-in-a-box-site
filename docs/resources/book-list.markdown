@@ -1,9 +1,8 @@
 ---
 layout: page
-title: 'Readme'
+title: 'Book List'
 permalink: /resources/book-list/
 share-description: 'Placeholder'
-nav_category: 'Guide'
 section_number: 22
 ---
 [Back to Resources]({{ '/resources' | relative_url }})

@@ -3,7 +3,6 @@ layout: page
 title: 'Contributing 🤝'
 permalink: /getting-started/contributing/
 share-description: 'We welcome contributions from the community! This project thrives on collaborative efforts to improve and expand its content. Here''s how you can contribute:'
-nav_category: 'Guide'
 section_number: 1
 ---
 [Back to Getting Started]({{ '/getting-started' | relative_url }})

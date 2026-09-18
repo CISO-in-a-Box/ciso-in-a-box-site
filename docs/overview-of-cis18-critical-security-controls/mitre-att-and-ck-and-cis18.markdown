@@ -3,7 +3,6 @@ layout: page
 title: 'CIS 18 Security Controls: A Strategic Planning Guide for the Modern Enterprise'
 permalink: /overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18/
 share-description: 'Note that this guide was made with the help of Anthropic Opus 4.6, pointed to community resources as well as videos and presentations by the authors of the CISOinaBox project.'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

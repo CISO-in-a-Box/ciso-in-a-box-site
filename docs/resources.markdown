@@ -1,9 +1,8 @@
 ---
 layout: page
-title: 'Resources'
+title: 'CISO Resources'
 permalink: /resources/
-share-description: 'Reference links, tools, templates, and supporting material across the guide.'
-nav_category: 'Guide'
+share-description: 'Guidance and reference material from the CISO-in-a-Box repository.'
 section_number: 22
 ---
 ### CISO Resources / General
@@ -282,7 +281,7 @@ section_number: 22
 
 ## Additional Pages in This Section
 
+- [Book List]({{ '/resources/book-list/' | relative_url }})
 - [CISO-in-a-Box Agent]({{ '/resources/ciso-agent/' | relative_url }})
-- [Readme]({{ '/resources/book-list/' | relative_url }})
 
 Previous: [Cyber Insurance]({{ '/cyber-insurance/' | relative_url }})

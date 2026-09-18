@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 6: Access Control Management'
 permalink: /overview-of-cis18-critical-security-controls/cis06-access-control-management/
 share-description: 'This involves making sure people who are onboarded (join) receive the appropriate accounts and access levels, those who leave have all access removed, and those who move have access adjusted to line up with their new rol'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

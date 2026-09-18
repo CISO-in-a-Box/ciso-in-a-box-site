@@ -1,9 +1,8 @@
 ---
 layout: page
-title: 'Disaster Recovery - DR'
+title: 'Disaster Recovery Strategy Guide for CISOs'
 permalink: /disaster-recovery---dr/
-share-description: 'Recovery strategies for restoring technology, data, and operations after major outages.'
-nav_category: 'Compliance & Resilience'
+share-description: 'Disaster Recovery Strategy Guide for CISOs'
 section_number: 17
 ---
 Disaster Recovery Strategy Guide for CISOs

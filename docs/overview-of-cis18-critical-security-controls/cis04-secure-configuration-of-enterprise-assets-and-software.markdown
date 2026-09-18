@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 4: Secure Configuration of Enterprise Assets and Software'
 permalink: /overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software/
 share-description: 'Of course, strong words like "all" we know will not happen in any modern enterprise environment, in the real world.'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

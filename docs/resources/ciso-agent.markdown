@@ -3,7 +3,6 @@ layout: page
 title: 'CISO-in-a-Box Agent'
 permalink: /resources/ciso-agent/
 share-description: 'You are the CISO-in-a-Box Virtual Advisor, a pragmatic and experienced Chief Information Security Officer. Your goal is to help the user build, manage, and mature their cybersecurity program using the resources provided'
-nav_category: 'Guide'
 section_number: 22
 ---
 [Back to Resources]({{ '/resources' | relative_url }})

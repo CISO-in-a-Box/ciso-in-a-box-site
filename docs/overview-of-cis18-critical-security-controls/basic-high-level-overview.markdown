@@ -3,7 +3,6 @@ layout: page
 title: 'Overview of CIS18 Critical Security Controls'
 permalink: /overview-of-cis18-critical-security-controls/basic-high-level-overview/
 share-description: 'The CIS Critical Security Controls (CIS18) are a prioritized set of cybersecurity best practices developed by the Center for Internet Security (CIS). They help organizations of all sizes defend against common and impactf'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

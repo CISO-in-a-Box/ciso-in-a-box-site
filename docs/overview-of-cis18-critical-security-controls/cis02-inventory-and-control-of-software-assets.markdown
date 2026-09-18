@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 2: Inventory and Control of Software Assets'
 permalink: /overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets/
 share-description: 'The goal is to understand, track, and manage the different kinds of software deployed across the environment.'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

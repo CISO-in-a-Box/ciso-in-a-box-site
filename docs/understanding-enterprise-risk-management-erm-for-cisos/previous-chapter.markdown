@@ -3,7 +3,6 @@ layout: page
 title: 'Understanding Enterprise Risk Management (ERM) for CISOs'
 permalink: /understanding-enterprise-risk-management-erm-for-cisos/previous-chapter/
 share-description: 'One of the CISO’s key roles is to translate technical risks into the broader business risk categories that executives and the board care about. Cybersecurity issues are never just IT problems; they can trigger impacts in'
-nav_category: 'Risk & Threat Management'
 section_number: 2
 ---
 [Back to Understanding Business Risk]({{ '/understanding-enterprise-risk-management-erm-for-cisos' | relative_url }})

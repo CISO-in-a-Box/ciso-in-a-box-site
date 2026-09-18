@@ -2,8 +2,7 @@
 layout: page
 title: 'Cyber Incident Response Strategy Guide for CISOs'
 permalink: /cyber-incident-response-strategy-guide-for-cisos/
-share-description: 'How to prepare for, manage, and learn from cybersecurity incidents effectively.'
-nav_category: 'Security Program'
+share-description: 'A strong governance foundation ensures that cyber incident response (CIR) is organized, accountable, and business-aligned. The CISO should formalize how incidents are handled by defining an Incident Response Team (IRT) s'
 section_number: 15
 ---
 ## **1\. Establishing the Foundation: CIR Governance**

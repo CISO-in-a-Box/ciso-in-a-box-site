@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 3: Data Protection'
 permalink: /overview-of-cis18-critical-security-controls/cis03-data-protection/
 share-description: 'And, that is obviously, a lot. So, how do we approach this topic in the real world?'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

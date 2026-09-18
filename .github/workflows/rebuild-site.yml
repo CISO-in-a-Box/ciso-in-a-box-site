@@ -1,10 +1,12 @@
 name: Rebuild site from source repo
 
-# Runs in the ciso-in-a-box-site repo. Pulls the latest source content
-# from the public CroodSolutions/CISOinaBox repo, regenerates the Jekyll
-# source via generate_site.py, builds _site with Jekyll, gates on a local
-# page health check, then commits the regenerated site to main.
-# Pushing to main triggers GitHub Pages to publish.
+# Runs in the ciso-in-a-box-site repo. Uses independent sibling
+# checkouts (site/ + source/), regenerates the Jekyll source with the
+# site-owned generator at scripts/generate_site.py, builds _site with
+# Jekyll, gates on the site-owned verifier at scripts/verify_site.py
+# (served under the configured baseurl /ciso-in-a-box-site), then
+# commits the regenerated site to main. Pushing to main triggers
+# GitHub Pages to publish.
 
 on:
   push:
@@ -15,9 +17,10 @@ on:
       - 'sections.markdown'
       - '_config.yml'
       - '_includes/**'
-      - 'assets/**'
+      - 'assets/content/**'
       - 'Gemfile'
       - 'Gemfile.lock'
+      - 'scripts/**'
       - '.github/workflows/rebuild-site.yml'
   schedule:
     - cron: '17 8 * * 1'
@@ -38,7 +41,7 @@ jobs:
       - name: Checkout site repo
         uses: actions/checkout@v4
         with:
-          path: ciso-in-a-box-site
+          path: site
           fetch-depth: 0
 
       - name: Checkout source repo (public)
@@ -49,22 +52,9 @@ jobs:
           path: source
           fetch-depth: 1
 
-      - name: Capture source SHA
+      - name: Record source SHA (full)
         id: src
-        run: echo "sha=$(git -C source rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
-
-      - name: Assemble source layout for generate_site.py
-        run: |
-          # generate_site.py expects ROOT/ to contain the numbered section
-          # dirs and a sibling ciso-in-a-box-site/ output dir. Copy source
-          # content to the workspace root (excluding the empty submodule
-          # placeholder) so both live side by side. The site repo checkout
-          # at ./ciso-in-a-box-site stays intact with its .git for the push.
-          rm -rf source/ciso-in-a-box-site
-          cp -r source/* .
-          test -f generate_site.py
-          test -f site_config.py
-          test -f verify_site.py
+        run: echo "sha=$(git -C source rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -73,40 +63,50 @@ jobs:
 
       - name: Regenerate site source
         run: |
-          python generate_site.py
-          echo "--- generated files ---"
-          ls ciso-in-a-box-site/docs/ | head
+          python site/scripts/generate_site.py \
+            --source-root source \
+            --site-root site
+          echo "--- generated pages ---"
+          find site/docs -name '*.markdown' | wc -l
+          echo "--- generated content assets ---"
+          find site/assets/content -type f | wc -l
+
+      - name: Confirm source checkout is unchanged
+        run: |
+          git -C source status --short
+          test -z "$(git -C source status --short)" \
+            || { echo "source checkout was modified by generation"; exit 1; }
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.3'
-          working-directory: ciso-in-a-box-site
+          working-directory: site
           bundler: '2.7.2'
           bundler-cache: true
 
       - name: Build site with Jekyll
         run: |
-          cd ciso-in-a-box-site
+          cd site
           bundle exec jekyll build -d _site
 
-      - name: Serve built site locally
+      - name: Serve built site locally under its base URL
         run: |
-          # verify_site.py and the built HTML both assume baseurl
-          # /ciso-in-a-box-site, so serve from a dir that contains a
-          # ciso-in-a-box-site/ copy of _site. (A symlink would be
-          # cleaner, but Python's http.server does not follow a
-          # symlinked directory reliably across runners.)
+          # The built HTML uses baseurl /ciso-in-a-box-site, so serve
+          # from a directory that exposes _site under that path to test
+          # the actual configured base URL.
           rm -rf /tmp/serve
           mkdir -p /tmp/serve
-          cp -r "$GITHUB_WORKSPACE/ciso-in-a-box-site/_site" /tmp/serve/ciso-in-a-box-site
+          cp -r "$GITHUB_WORKSPACE/site/_site" /tmp/serve/ciso-in-a-box-site
           python -m http.server 8765 --bind 127.0.0.1 --directory /tmp/serve &
           echo $! > /tmp/http.pid
           sleep 1
 
-      - name: Run page health check
+      - name: Run site verifier
         run: |
-          python verify_site.py http://127.0.0.1:8765
+          python site/scripts/verify_site.py \
+            --build-root site/_site \
+            --base-url http://127.0.0.1:8765
 
       - name: Stop local server
         if: always()
@@ -115,14 +115,19 @@ jobs:
 
       - name: Commit regenerated site
         run: |
-          cd ciso-in-a-box-site
+          cd site
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs sections.markdown _config.yml index.markdown contributing.markdown assets 2>/dev/null || true
+          # Stage only generator-owned output. assets/content/ holds
+          # generated copies of source-repository files; the rest of
+          # assets/ is site-owned static files.
+          git add docs sections.markdown _config.yml index.markdown contributing.markdown assets/content 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No site changes to commit"
           else
-            git commit -m "Regenerate site from source@${{ steps.src.outputs.sha }}
+            git commit -m "Regenerate site from source@$(git -C "$GITHUB_WORKSPACE/source" rev-parse --short HEAD)
+
+          Source commit: ${{ steps.src.outputs.sha }}
 
           Auto-rebuild from CroodSolutions/CISOinaBox source updates.
           Generated by .github/workflows/rebuild-site.yml"

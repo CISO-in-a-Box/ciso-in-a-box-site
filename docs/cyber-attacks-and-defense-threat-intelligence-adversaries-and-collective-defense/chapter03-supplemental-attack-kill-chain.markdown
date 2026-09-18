@@ -3,7 +3,6 @@ layout: page
 title: 'Supplemental: How Cyber Attacks Work — The Attack Kill Chain'
 permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-attack-kill-chain/
 share-description: 'Understanding how attacks work is not an academic exercise. It is the foundation of effective defense. When you know the stages an attacker must move through to achieve their objective, you gain something valuable: multi'
-nav_category: 'Risk & Threat Management'
 section_number: 3
 ---
 [Back to Understanding the Adversary]({{ '/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense' | relative_url }})

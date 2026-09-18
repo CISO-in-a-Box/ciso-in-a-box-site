@@ -3,7 +3,6 @@ layout: page
 title: 'CIS Control 15: Service Provider Management'
 permalink: /overview-of-cis18-critical-security-controls/cis15-service-provider-management/
 share-description: 'Guidance and reference material from the CISO-in-a-Box repository.'
-nav_category: 'Security Controls'
 section_number: 5
 ---
 [Back to CIS18 and Basic Security Controls]({{ '/overview-of-cis18-critical-security-controls' | relative_url }})

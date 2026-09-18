@@ -1,9 +1,8 @@
 ---
 layout: page
-title: 'Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense'
+title: 'Chapter 03 – Understanding the Adversary'
 permalink: /cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/
-share-description: 'Who attacks organizations, how they operate, and how defenders can respond.'
-nav_category: 'Risk & Threat Management'
+share-description: 'One of the first things new CISOs discover is that the word "adversary" gets used as if it always means some sophisticated hacker sitting in a basement halfway around the world, patiently plotting a targeted attack again'
 section_number: 3
 ---
 ---
