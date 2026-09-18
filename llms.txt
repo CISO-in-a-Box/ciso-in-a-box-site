@@ -1,0 +1,38 @@
+# CISO-in-a-Box
+
+> A comprehensive guide to cybersecurity and risk management for organizations, aspiring CISOs, and security professionals.
+
+Canonical site: https://ciso-in-a-box.github.io/ciso-in-a-box-site
+Authoritative content repository: https://github.com/CroodSolutions/CISOinaBox
+Source commit: 2882c6067c3aa748d66152fb90540d71d74349da
+
+## Guide
+
+- [Business Continuity Planning - BCP](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/business-continuity-planning---bcp.md): Planning to keep critical business services operating during disruptive events.
+- [CISO Security Management Strategy Guide](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/ciso-security-management-strategy-guide.md): Operating the security function through roles, planning, governance, and execution.
+- [Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense.md): Who attacks organizations, how they operate, and how defenders can respond.
+- [Cyber Incident Response Strategy Guide for CISOs](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-incident-response-strategy-guide-for-cisos.md): How to prepare for, manage, and learn from cybersecurity incidents effectively.
+- [Cyber Insurance](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-insurance.md): How cyber insurance works and how to evaluate coverage, readiness, and tradeoffs.
+- [Cybersecurity and IT Career Pathways](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cybersecurity-and-it-career-pathways.md): Career paths, skill development, and progression toward security leadership roles.
+- [Cybersecurity Operations (SecOps) Program Maturity Guide](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cybersecurity-operations-secops-program-maturity-guide.md): Monitoring, detection, triage, and operational practices for effective SecOps teams.
+- [Disaster Recovery - DR](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/disaster-recovery---dr.md): Recovery strategies for restoring technology, data, and operations after major outages.
+- [Frameworks and Standards](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/frameworks-and-standards.md): A practical guide to common security frameworks, standards, and control mappings.
+- [Getting Started](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/getting-started.md): Practical first steps for improving security and building momentum.
+- [Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs.md): Core governance, risk, and compliance practices for building accountable programs.
+- [Identity and Access Management (IAM) Overview](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/identity-and-access-management-iam-overview.md): Foundations of IAM, access control, lifecycle management, and privileged access.
+- [Mapping Your Attack Surface](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/mapping-your-attack-surface.md): How to identify exposed systems, services, identities, and external dependencies.
+- [Overview of CIS18 Critical Security Controls](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls.md): A structured walkthrough of CIS18 and the controls that reduce common risk.
+- [Product and Software Security](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/product-and-software-security.md): How to evaluate, build, and secure software and technology products safely.
+- [Resources](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/resources.md): Reference links, tools, templates, and supporting material across the guide.
+- [Secure Business Process Optimization](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/secure-business-process-optimization.md): Ways to improve business processes without introducing avoidable security gaps.
+- [Security Architecture and Engineering](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-architecture-and-engineering.md): Design principles and engineering patterns for resilient, defensible systems.
+- [Security Awareness: Building a Human Firewall](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-awareness-building-a-human-firewall.md): How to build user awareness programs that reduce phishing, fraud, and human error.
+- [Security Leadership Strategy Guide for CISOs](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-leadership-strategy-guide-for-cisos.md): Leadership approaches for setting direction, influencing stakeholders, and scaling impact.
+- [Understanding Enterprise Risk Management (ERM) for CISOs](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/understanding-enterprise-risk-management-erm-for-cisos.md): How to translate cyber issues into business risk, impact, and decision-making.
+- [Vulnerability Management and Risk](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/vulnerability-management-and-risk.md): Methods for identifying, prioritizing, and reducing vulnerability-driven risk.
+- [Contributing](https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/contributing.md): We welcome contributions from the community! This project thrives on collaborative efforts to improve and expand its content. Here's how you can contribute:
+
+## Machine-Readable Indexes
+
+- [Manifest](https://ciso-in-a-box.github.io/ciso-in-a-box-site/manifest.json)
+- [Search Index](https://ciso-in-a-box.github.io/ciso-in-a-box-site/search-index.json)

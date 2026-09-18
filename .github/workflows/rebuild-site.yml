@@ -15,9 +15,14 @@ on:
       - 'docs/**'
       - 'index.markdown'
       - 'sections.markdown'
+      - 'markdown/**'
+      - 'llms.txt'
+      - 'manifest.json'
+      - 'search-index.json'
       - '_config.yml'
       - '_includes/**'
       - 'assets/content/**'
+      - 'robots.txt'
       - 'Gemfile'
       - 'Gemfile.lock'
       - 'scripts/**'
@@ -65,11 +70,14 @@ jobs:
         run: |
           python site/scripts/generate_site.py \
             --source-root source \
-            --site-root site
+            --site-root site \
+            --source-commit "${{ steps.src.outputs.sha }}"
           echo "--- generated pages ---"
           find site/docs -name '*.markdown' | wc -l
           echo "--- generated content assets ---"
           find site/assets/content -type f | wc -l
+          echo "--- generated markdown peers ---"
+          find site/markdown -name '*.md' | wc -l
 
       - name: Confirm source checkout is unchanged
         run: |
@@ -106,7 +114,8 @@ jobs:
         run: |
           python site/scripts/verify_site.py \
             --build-root site/_site \
-            --base-url http://127.0.0.1:8765
+            --base-url http://127.0.0.1:8765 \
+            --source-commit "${{ steps.src.outputs.sha }}"
 
       - name: Stop local server
         if: always()
@@ -119,9 +128,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Stage only generator-owned output. assets/content/ holds
-          # generated copies of source-repository files; the rest of
-          # assets/ is site-owned static files.
-          git add docs sections.markdown _config.yml index.markdown contributing.markdown assets/content 2>/dev/null || true
+          # generated copies of source-repository files; markdown/,
+          # llms.txt, manifest.json, and search-index.json are the
+          # generated machine-readable layer; the rest of assets/ is
+          # site-owned static files.
+          git add docs sections.markdown _config.yml index.markdown contributing.markdown assets/content markdown llms.txt manifest.json search-index.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No site changes to commit"
           else

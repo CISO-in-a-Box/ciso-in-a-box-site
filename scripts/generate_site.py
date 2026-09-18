@@ -28,13 +28,22 @@ Configured presentation routes (navbar, homepage pathways, modules)
 are validated against the discovered pages and fail generation if they
 do not resolve.
 
+Machine-readable layer: the same discovered Page model also produces
+raw Markdown peers under markdown/ (faithful source copies carrying a
+compact provenance comment), llms.txt (concise discovery index),
+manifest.json (canonical page inventory), and search-index.json
+(static lexical search corpus). All are deterministic: no timestamps,
+no environment paths; --source-commit pins the exact content revision.
+
 Usage:
-    python scripts/generate_site.py --source-root <dir> --site-root <dir>
+    python scripts/generate_site.py --source-root <dir> --site-root <dir> \\
+        --source-commit <40-character SHA>
 """
 
 from __future__ import annotations
 
 import argparse
+import json
 import re
 import shutil
 import sys
@@ -63,6 +72,8 @@ from site_config import (
     SITE_EMAIL,
     SITE_TITLE,
     SITE_URL,
+    public_site_root,
+    public_url,
 )
 
 SECTION_DIR_RE = re.compile(r"^(\d+)\s*-\s*(.+)$")
@@ -78,6 +89,17 @@ FALLBACK_TITLE = "Untitled Page"
 
 class GenerationError(RuntimeError):
     """Fatal, actionable generation error."""
+
+
+SHA1_RE = re.compile(r"^[0-9a-f]{40}$")
+
+
+def validate_source_commit(value: str) -> str:
+    if not SHA1_RE.match(value):
+        raise GenerationError(
+            f"--source-commit must be a full 40-character hex Git SHA, got: {value!r}"
+        )
+    return value
 
 
 @dataclass
@@ -470,10 +492,23 @@ def relative_asset_url(source_root: Path, path: Path) -> str:
     )
 
 
+def absolute_asset_url(source_root: Path, path: Path) -> str:
+    rel = path.relative_to(source_root)
+    return public_url(
+        "/assets/content/" + "/".join(quote(part) for part in rel.parts)
+    )
+
+
 def jekyll_relative_url(path: str) -> str:
     if not path.startswith("/"):
         path = "/" + path
     return "{{ '" + path + "' | relative_url }}"
+
+
+def public_page_url(path: str) -> str:
+    if not path.startswith("/"):
+        path = "/" + path
+    return public_url(path)
 
 
 def jekyll_permalink(path: str, fragment: str | None = None) -> str:
@@ -488,8 +523,11 @@ def rewrite_links(
     source_path: Path,
     permalink_lookup: dict[Path, str],
     source_root: Path,
+    url_builder=None,
 ) -> str:
     pattern = re.compile(r"(!?\[[^\]]*\]\()([^()]+)(\))")
+    page_url = url_builder or jekyll_relative_url
+    asset_url = relative_asset_url if url_builder is None else absolute_asset_url
 
     def replace(match: re.Match[str]) -> str:
         prefix, raw_url, suffix = match.groups()
@@ -508,9 +546,12 @@ def rewrite_links(
                     break
 
         if target in permalink_lookup:
-            url = jekyll_permalink(permalink_lookup[target])
+            url = page_url(permalink_lookup[target])
+            if fragment:
+                url = f"{url}#{fragment}"
+            return f"{prefix}{url}{suffix}"
         elif target.is_file() and target.suffix.lower() != ".md":
-            url = relative_asset_url(source_root, target)
+            url = asset_url(source_root, target)
         else:
             return match.group(0)
 
@@ -531,6 +572,91 @@ def autolink_plain_urls(text: str) -> str:
         return f"<{trimmed}>{suffix}"
 
     return url_pattern.sub(replace, text)
+
+
+# ---- Machine-readable layer ------------------------------------------------
+
+
+def markdown_peer_route(permalink: str) -> str:
+    """Deterministic raw-Markdown peer route derived from the HTML permalink.
+
+    /foo/ -> /markdown/foo.md ; /foo/bar/ -> /markdown/foo/bar.md
+    """
+    parts = [part for part in permalink.strip("/").split("/") if part]
+    return "/" + "/".join(["markdown", *parts]) + ".md"
+
+
+def is_source_backed(page: Page) -> bool:
+    return page.source_path.is_file()
+
+
+def extract_headings(text: str) -> list[str]:
+    """Markdown headings in document order: ATX and setext, fence-aware.
+
+    Mirrors the heading rules of the published HTML (kramdown): ATX
+    ``#{1,6} <content>`` lines and setext underlines (``=+`` -> h1,
+    ``-{2,}`` -> h2) that directly follow a single-line paragraph.
+    Underlines after multi-line paragraphs are kramdown em-dashes, not
+    headings. Fenced code blocks are skipped. Markdown backslash
+    escapes are unescaped; dash-only placeholder headings are dropped.
+    """
+    headings: list[str] = []
+    lines = text.splitlines()
+    single_para: str | None = None
+    in_fence = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            single_para = None
+            continue
+        if in_fence:
+            continue
+        atx = re.match(r"^\s*(?:(?:[-*+]|\d+[.)])\s+)*(#{1,6})\s+(.+)$", line)
+        if atx:
+            heading = heading_text(atx.group(2))
+            if heading:
+                headings.append(heading)
+            single_para = None
+            continue
+        if re.fullmatch(r"=+|-{2,}", stripped):
+            # Setext underline after a single-line paragraph, otherwise a
+            # thematic break / kramdown em-dash. Either way the line is a
+            # block boundary and never paragraph content.
+            if single_para is not None:
+                heading = heading_text(single_para)
+                if heading:
+                    headings.append(heading)
+            single_para = None
+            continue
+        if stripped:
+            single_para = None if single_para is not None else stripped
+        else:
+            single_para = None
+    return headings
+
+
+def heading_text(raw: str) -> str:
+    """Heading text as kramdown renders it: emphasis markers removed,
+    backslash escapes unescaped, literal > and # kept."""
+    text = re.sub(r"\\([\\`*_{}\[\]()#+\-.!>~|\"'])", r"\1", raw)
+    text = re.sub(r"!\[[^\]]*\]\([^)]*\)", "", text)
+    text = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", text)
+    text = text.replace("`", "")
+    text = re.sub(r"[*_]+", "", text)
+    text = re.sub(r"\s+", " ", text)
+    text = text.strip()
+    # Dash-only headings render as kramdown em-dash placeholders.
+    return "" if re.fullmatch(r"[-=_]+", text) else text
+
+
+def normalize_text(text: str) -> str:
+    """Deterministic searchable text: markdown and long tokens stripped,
+    whitespace collapsed. Data-URI image payloads are removed."""
+    text = re.sub(r"data:[^\s)>]+", " ", text)
+    text = strip_markdown(text)
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
 
 
 # ---- Page assembly ----------------------------------------------------------------
@@ -893,10 +1019,176 @@ def write_config(site_root: Path, pages: list[Page]) -> None:
     write_text(site_root / "index.markdown", content + "\n")
 
 
-# ---- Entry point --------------------------------------------------------------
+# ---- Machine-readable artifacts ---------------------------------------------
 
 
-def generate(source_root: Path, site_root: Path) -> None:
+def build_peer_body(page: Page, lookup: dict[Path, str], source_root: Path) -> str:
+    """Faithful raw Markdown body: same normalization as the HTML page,
+    with internal links rewritten to absolute public URLs (no Liquid)."""
+    raw_text = read_text(page.source_path)
+    return (
+        repair_table_rows(
+            autolink_plain_urls(
+                rewrite_links(
+                    strip_excluded_sections(remove_first_h1(raw_text)),
+                    page.source_path,
+                    lookup,
+                    source_root,
+                    url_builder=public_page_url,
+                )
+            )
+        ).strip()
+        + "\n"
+    )
+
+
+def write_markdown_peers(
+    pages: list[Page],
+    lookup: dict[Path, str],
+    source_root: Path,
+    site_root: Path,
+    source_commit: str,
+) -> list[Page]:
+    """Write one raw .md peer per source-backed Markdown page.
+
+    The provenance comment must stay the first bytes of the file: it
+    both carries provenance and guarantees Jekyll treats the peer as a
+    raw static file (a leading '---' would be consumed as front
+    matter). Returns the pages that received a peer.
+    """
+    peers_root = site_root / "markdown"
+    if peers_root.exists():
+        shutil.rmtree(peers_root)
+    peers_root.mkdir(parents=True, exist_ok=True)
+
+    peered: list[Page] = []
+    for page in sorted(pages, key=lambda p: p.permalink):
+        if not is_source_backed(page):
+            continue
+        body = build_peer_body(page, lookup, source_root)
+        comment = "\n".join(
+            [
+                "<!-- ciso-in-a-box",
+                f"canonical_url: {public_url(page.permalink)}",
+                f"source_repository: {GITHUB_REPO_URL}",
+                f"source_path: {page.source_path.relative_to(source_root).as_posix()}",
+                f"source_commit: {source_commit}",
+                "-->",
+                "",
+            ]
+        )
+        rel = Path(*page.permalink.strip("/").split("/")).with_suffix(".md")
+        write_text(peers_root / rel, comment + body)
+        peered.append(page)
+    return peered
+
+
+def build_manifest(
+    pages: list[Page], source_root: Path, source_commit: str
+) -> dict:
+    return {
+        "source_repository": GITHUB_REPO_URL,
+        "source_commit": source_commit,
+        "site_url": public_site_root(),
+        "pages": [
+            {
+                "title": page.title,
+                "description": page.description,
+                "source_path": page.source_path.relative_to(source_root).as_posix(),
+                "html_url": public_url(page.permalink),
+                "markdown_url": public_url(markdown_peer_route(page.permalink)),
+                "section": page.section.number if page.section else None,
+            }
+            for page in sorted(pages, key=lambda p: p.permalink)
+            if is_source_backed(page)
+        ],
+    }
+
+
+def build_search_index(
+    pages: list[Page], source_root: Path, source_commit: str
+) -> list[dict]:
+    records = []
+    for page in sorted(pages, key=lambda p: p.permalink):
+        if not is_source_backed(page):
+            continue
+        # Headings come from the same repaired text the published HTML
+        # is built from, so generator-side table repair cannot shift
+        # heading boundaries.
+        text = repair_table_rows(
+            strip_excluded_sections(remove_first_h1(read_text(page.source_path)))
+        )
+        records.append(
+            {
+                "title": page.title,
+                "description": page.description,
+                "html_url": public_url(page.permalink),
+                "markdown_url": public_url(markdown_peer_route(page.permalink)),
+                "source_path": page.source_path.relative_to(source_root).as_posix(),
+                "source_commit": source_commit,
+                "section": page.section.number if page.section else None,
+                "headings": extract_headings(text),
+                "text": normalize_text(text),
+            }
+        )
+    return records
+
+
+def write_llms_txt(
+    section_pages: list[Page],
+    pages: list[Page],
+    source_commit: str,
+    site_root: Path,
+) -> None:
+    manifest_url = public_url("/manifest.json")
+    search_url = public_url("/search-index.json")
+
+    lines = [
+        f"# {SITE_TITLE}",
+        "",
+        f"> {SITE_DESCRIPTION}",
+        "",
+        f"Canonical site: {public_site_root()}",
+        f"Authoritative content repository: {GITHUB_REPO_URL}",
+        f"Source commit: {source_commit}",
+        "",
+        "## Guide",
+        "",
+    ]
+    for page in sorted(section_pages, key=lambda p: p.permalink):
+        lines.append(
+            f"- [{page.title}]({public_url(markdown_peer_route(page.permalink))}):"
+            f" {page.description}"
+        )
+    contributing = next(
+        (p for p in pages if p.permalink == "/contributing/"), None
+    )
+    if contributing is not None:
+        lines.append(
+            f"- [{contributing.title}]({public_url(markdown_peer_route(contributing.permalink))}):"
+            f" {contributing.description}"
+        )
+    lines.extend(
+        [
+            "",
+            "## Machine-Readable Indexes",
+            "",
+            f"- [Manifest]({manifest_url})",
+            f"- [Search Index]({search_url})",
+            "",
+        ]
+    )
+    write_text(site_root / "llms.txt", "\n".join(lines))
+
+
+def write_json(path: Path, payload) -> None:
+    write_text(
+        path,
+        json.dumps(payload, indent=2, ensure_ascii=False, sort_keys=False) + "\n",
+    )
+
+
+def generate(source_root: Path, site_root: Path, source_commit: str) -> None:
     source_root = source_root.resolve()
     site_root = site_root.resolve()
     if not source_root.is_dir():
@@ -949,6 +1241,14 @@ def generate(source_root: Path, site_root: Path) -> None:
             body = build_child_intro(page) + body
         write_text(page.output_path, front_matter(page) + body)
 
+    write_markdown_peers(pages, lookup, source_root, site_root, source_commit)
+    write_json(site_root / "manifest.json", build_manifest(pages, source_root, source_commit))
+    write_json(
+        site_root / "search-index.json",
+        build_search_index(pages, source_root, source_commit),
+    )
+    write_llms_txt(section_pages, pages, source_commit, site_root)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
@@ -964,9 +1264,18 @@ if __name__ == "__main__":
         required=True,
         help="Publishing repository root to write generated Jekyll source into",
     )
+    parser.add_argument(
+        "--source-commit",
+        required=True,
+        help="Full 40-character SHA of the content revision being generated",
+    )
     args = parser.parse_args()
     try:
-        generate(args.source_root, args.site_root)
+        generate(
+            args.source_root,
+            args.site_root,
+            validate_source_commit(args.source_commit),
+        )
     except GenerationError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         raise SystemExit(1)

@@ -1,0 +1,431 @@
+{
+  "source_repository": "https://github.com/CroodSolutions/CISOinaBox",
+  "source_commit": "2882c6067c3aa748d66152fb90540d71d74349da",
+  "site_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site",
+  "pages": [
+    {
+      "title": "Business Continuity Planning - BCP",
+      "description": "Planning to keep critical business services operating during disruptive events.",
+      "source_path": "16 - Business Continuity Planning - BCP/readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/business-continuity-planning---bcp/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/business-continuity-planning---bcp.md",
+      "section": 16
+    },
+    {
+      "title": "CISO Security Management Strategy Guide",
+      "description": "Operating the security function through roles, planning, governance, and execution.",
+      "source_path": "10 - Security Management/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/ciso-security-management-strategy-guide/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/ciso-security-management-strategy-guide.md",
+      "section": 10
+    },
+    {
+      "title": "Contributing",
+      "description": "We welcome contributions from the community! This project thrives on collaborative efforts to improve and expand its content. Here's how you can contribute:",
+      "source_path": "CONTRIBUTING.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/contributing/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/contributing.md",
+      "section": null
+    },
+    {
+      "title": "Cyber Attacks and Defense: Threat Intelligence, Adversaries, and Collective Defense",
+      "description": "Who attacks organizations, how they operate, and how defenders can respond.",
+      "source_path": "03 - Understanding the Adversary/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense.md",
+      "section": 3
+    },
+    {
+      "title": "Supplemental: How Cyber Attacks Work — The Attack Kill Chain",
+      "description": "Understanding how attacks work is not an academic exercise. It is the foundation of effective defense. When you know the stages an attacker must move through to achieve their objective, you gain something valuable: multi",
+      "source_path": "03 - Understanding the Adversary/Chapter03_Supplemental_Attack-Kill-Chain.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-attack-kill-chain/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-attack-kill-chain.md",
+      "section": 3
+    },
+    {
+      "title": "Supplemental: Frameworks for Defending Against Attacks — PICERL, MITRE, and Beyond",
+      "description": "Frameworks are organizing tools, not destinations. The goal is a security program that detects threats, responds effectively, and reduces risk to the organization. Frameworks give you a common language, a structured way",
+      "source_path": "03 - Understanding the Adversary/Chapter03_Supplemental_Defense-Frameworks.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-defense-frameworks/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-defense-frameworks.md",
+      "section": 3
+    },
+    {
+      "title": "Supplemental: Top Resources for Understanding Emerging Threats",
+      "description": "Threat intelligence resources fall into several categories: government and non-profit sources that provide free, high-quality intelligence; commercial platforms with enriched data and analysis; community and peer-sharing",
+      "source_path": "03 - Understanding the Adversary/Chapter03_Supplemental_Threat-Intelligence-Resources.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-threat-intelligence-resources/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-attacks-and-defense-threat-intelligence-adversaries-and-collective-defense/chapter03-supplemental-threat-intelligence-resources.md",
+      "section": 3
+    },
+    {
+      "title": "Cyber Incident Response Strategy Guide for CISOs",
+      "description": "How to prepare for, manage, and learn from cybersecurity incidents effectively.",
+      "source_path": "15 - Response - IR/readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-incident-response-strategy-guide-for-cisos/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-incident-response-strategy-guide-for-cisos.md",
+      "section": 15
+    },
+    {
+      "title": "Cyber Insurance",
+      "description": "How cyber insurance works and how to evaluate coverage, readiness, and tradeoffs.",
+      "source_path": "21 - Cyber Insurance/README.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cyber-insurance/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cyber-insurance.md",
+      "section": 21
+    },
+    {
+      "title": "Cybersecurity and IT Career Pathways",
+      "description": "Career paths, skill development, and progression toward security leadership roles.",
+      "source_path": "20 - Careers - The Road to CISO/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cybersecurity-and-it-career-pathways/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cybersecurity-and-it-career-pathways.md",
+      "section": 20
+    },
+    {
+      "title": "Cybersecurity Operations (SecOps) Program Maturity Guide",
+      "description": "Monitoring, detection, triage, and operational practices for effective SecOps teams.",
+      "source_path": "14 - Security Operations - SOC/readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/cybersecurity-operations-secops-program-maturity-guide/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/cybersecurity-operations-secops-program-maturity-guide.md",
+      "section": 14
+    },
+    {
+      "title": "Disaster Recovery - DR",
+      "description": "Recovery strategies for restoring technology, data, and operations after major outages.",
+      "source_path": "17 - Disaster Recovery - DR/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/disaster-recovery---dr/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/disaster-recovery---dr.md",
+      "section": 17
+    },
+    {
+      "title": "Frameworks and Standards",
+      "description": "A practical guide to common security frameworks, standards, and control mappings.",
+      "source_path": "19 - Frameworks and Standards/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/frameworks-and-standards/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/frameworks-and-standards.md",
+      "section": 19
+    },
+    {
+      "title": "Getting Started",
+      "description": "Practical first steps for improving security and building momentum.",
+      "source_path": "01 - Getting Started/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/getting-started/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/getting-started.md",
+      "section": 1
+    },
+    {
+      "title": "🧭 CISO in a Box – Author Styling Guide",
+      "description": "Please use the information below to ensure the same voice and style are used for all chapters of this project. This will help to ensure there is a consistent voice regardless of who supports this project.",
+      "source_path": "01 - Getting Started/Author Styling Guide.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/getting-started/author-styling-guide/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/getting-started/author-styling-guide.md",
+      "section": 1
+    },
+    {
+      "title": "Contributing 🤝",
+      "description": "We welcome contributions from the community! This project thrives on collaborative efforts to improve and expand its content. Here's how you can contribute:",
+      "source_path": "01 - Getting Started/CONTRIBUTING.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/getting-started/contributing/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/getting-started/contributing.md",
+      "section": 1
+    },
+    {
+      "title": "Legal Notice and Disclaimer",
+      "description": "CISOinaBox is a free, community-driven cybersecurity handbook written to help new CISOs and security leaders execute their roles more effectively. It is published as an open-source project under the [MIT License / CC BY",
+      "source_path": "01 - Getting Started/DISCLAIMER.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/getting-started/disclaimer/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/getting-started/disclaimer.md",
+      "section": 1
+    },
+    {
+      "title": "Governance, Risk & Compliance (GRC) Strategy Guide for Cybersecurity Programs",
+      "description": "Core governance, risk, and compliance practices for building accountable programs.",
+      "source_path": "12 - Governance Risk and Compliance/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/governance-risk-compliance-grc-strategy-guide-for-cybersecurity-programs.md",
+      "section": 12
+    },
+    {
+      "title": "Identity and Access Management (IAM) Overview",
+      "description": "Foundations of IAM, access control, lifecycle management, and privileged access.",
+      "source_path": "09 - Identity and Access Management/README.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/identity-and-access-management-iam-overview/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/identity-and-access-management-iam-overview.md",
+      "section": 9
+    },
+    {
+      "title": "Mapping Your Attack Surface",
+      "description": "How to identify exposed systems, services, identities, and external dependencies.",
+      "source_path": "04 - Mapping Attack Surface/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/mapping-your-attack-surface/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/mapping-your-attack-surface.md",
+      "section": 4
+    },
+    {
+      "title": "Mapping Your Attack Surface",
+      "description": "From the outside, threat actors will profile all publicly visible assets of your organization. A key part of this attack surface is your external network footprint – things like domain records and IP address ranges. DNS",
+      "source_path": "04 - Mapping Attack Surface/Old Readme File.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/mapping-your-attack-surface/old-readme-file/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/mapping-your-attack-surface/old-readme-file.md",
+      "section": 4
+    },
+    {
+      "title": "Overview of CIS18 Critical Security Controls",
+      "description": "A structured walkthrough of CIS18 and the controls that reduce common risk.",
+      "source_path": "05 - CIS18 and Basic Security Controls/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls.md",
+      "section": 5
+    },
+    {
+      "title": "Overview of CIS18 Critical Security Controls",
+      "description": "The CIS Critical Security Controls (CIS18) are a prioritized set of cybersecurity best practices developed by the Center for Internet Security (CIS). They help organizations of all sizes defend against common and impactf",
+      "source_path": "05 - CIS18 and Basic Security Controls/Basic High Level Overview.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/basic-high-level-overview/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/basic-high-level-overview.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 1: Inventory and Control of Enterprise Assets",
+      "description": "This usually involves identification of unknown, non-compliant, nonstandard, or specialized devices - followed by, taking appropriate action to reduce the risk these devices represent to the organization.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS01 - Inventory and Control of Enterprise Assets.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis01-inventory-and-control-of-enterprise-assets.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 2: Inventory and Control of Software Assets",
+      "description": "The goal is to understand, track, and manage the different kinds of software deployed across the environment.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS02 - Inventory and Control of Software Assets.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis02-inventory-and-control-of-software-assets.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 3: Data Protection",
+      "description": "And, that is obviously, a lot. So, how do we approach this topic in the real world?",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS03 - Data Protection.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis03-data-protection/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis03-data-protection.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 4: Secure Configuration of Enterprise Assets and Software",
+      "description": "Of course, strong words like \"all\" we know will not happen in any modern enterprise environment, in the real world.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS04 - Secure Configuration of Enterprise Assets and Software.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis04-secure-configuration-of-enterprise-assets-and-software.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 5: Account Management",
+      "description": "What does this really mean in the real world?",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS05 - Account Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis05-account-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis05-account-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 6: Access Control Management",
+      "description": "This involves making sure people who are onboarded (join) receive the appropriate accounts and access levels, those who leave have all access removed, and those who move have access adjusted to line up with their new rol",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS06 - Access Control Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis06-access-control-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis06-access-control-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 7: Continuous Vulnerability Management",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS07 - Continuous Vulnerability Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis07-continuous-vulnerability-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis07-continuous-vulnerability-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 8: Audit Log Management",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS08 - Audit Log Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis08-audit-log-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis08-audit-log-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 9: Email and Web Browser Protections",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS09 - Email and Web Browser Protections.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis09-email-and-web-browser-protections/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis09-email-and-web-browser-protections.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 10: Malware Defenses",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS10 - Malware Defenses.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis10-malware-defenses/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis10-malware-defenses.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 11: Data Recovery",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS11 - Data Recovery.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis11-data-recovery/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis11-data-recovery.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 12: Network Infrastructure Management",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS12 - Network Infrastructure Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis12-network-infrastructure-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis12-network-infrastructure-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 13: Network Monitoring and Defense",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS13 - Network Monitoring and Defense.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis13-network-monitoring-and-defense/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis13-network-monitoring-and-defense.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 14: Security Awareness and Skills Training",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS14 - Security Awareness and Skills Training.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis14-security-awareness-and-skills-training/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis14-security-awareness-and-skills-training.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 15: Service Provider Management",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS15 - Service Provider Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis15-service-provider-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis15-service-provider-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 16: Application Software Security",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS16 - Application Software Security.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis16-application-software-security/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis16-application-software-security.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 17: Incident Response Management",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS17 - Incident Response Management.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis17-incident-response-management/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis17-incident-response-management.md",
+      "section": 5
+    },
+    {
+      "title": "CIS Control 18: Penetration Testing",
+      "description": "Guidance and reference material from the CISO-in-a-Box repository.",
+      "source_path": "05 - CIS18 and Basic Security Controls/CIS18 - Penetration Testing.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/cis18-penetration-testing/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/cis18-penetration-testing.md",
+      "section": 5
+    },
+    {
+      "title": "CIS 18 Security Controls: A Strategic Planning Guide for the Modern Enterprise",
+      "description": "Note that this guide was made with the help of Anthropic Opus 4.6, pointed to community resources as well as videos and presentations by the authors of the CISOinaBox project.",
+      "source_path": "05 - CIS18 and Basic Security Controls/MITRE ATT&CK and CIS18.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/overview-of-cis18-critical-security-controls/mitre-att-and-ck-and-cis18.md",
+      "section": 5
+    },
+    {
+      "title": "Product and Software Security",
+      "description": "How to evaluate, build, and secure software and technology products safely.",
+      "source_path": "07 - Product and Software Security/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/product-and-software-security/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/product-and-software-security.md",
+      "section": 7
+    },
+    {
+      "title": "Resources",
+      "description": "Reference links, tools, templates, and supporting material across the guide.",
+      "source_path": "22 - Resources/README.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/resources/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/resources.md",
+      "section": 22
+    },
+    {
+      "title": "Book List",
+      "description": "Placeholder",
+      "source_path": "22 - Resources/Book List/README.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/resources/book-list/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/resources/book-list.md",
+      "section": 22
+    },
+    {
+      "title": "CISO-in-a-Box Agent",
+      "description": "You are the CISO-in-a-Box Virtual Advisor, a pragmatic and experienced Chief Information Security Officer. Your goal is to help the user build, manage, and mature their cybersecurity program using the resources provided",
+      "source_path": "22 - Resources/CISO_Agent.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/resources/ciso-agent/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/resources/ciso-agent.md",
+      "section": 22
+    },
+    {
+      "title": "Secure Business Process Optimization",
+      "description": "Ways to improve business processes without introducing avoidable security gaps.",
+      "source_path": "08 - Secure Business Process Design/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/secure-business-process-optimization/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/secure-business-process-optimization.md",
+      "section": 8
+    },
+    {
+      "title": "Security Architecture and Engineering",
+      "description": "Design principles and engineering patterns for resilient, defensible systems.",
+      "source_path": "06 - Security Architecture and Engineering/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/security-architecture-and-engineering/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-architecture-and-engineering.md",
+      "section": 6
+    },
+    {
+      "title": "Security Awareness: Building a Human Firewall",
+      "description": "How to build user awareness programs that reduce phishing, fraud, and human error.",
+      "source_path": "13 - Security Awareness/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/security-awareness-building-a-human-firewall/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-awareness-building-a-human-firewall.md",
+      "section": 13
+    },
+    {
+      "title": "Security Leadership Strategy Guide for CISOs",
+      "description": "Leadership approaches for setting direction, influencing stakeholders, and scaling impact.",
+      "source_path": "11 - Security Leadership/readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/security-leadership-strategy-guide-for-cisos/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/security-leadership-strategy-guide-for-cisos.md",
+      "section": 11
+    },
+    {
+      "title": "Understanding Enterprise Risk Management (ERM) for CISOs",
+      "description": "How to translate cyber issues into business risk, impact, and decision-making.",
+      "source_path": "02 - Understanding Business Risk/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/understanding-enterprise-risk-management-erm-for-cisos/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/understanding-enterprise-risk-management-erm-for-cisos.md",
+      "section": 2
+    },
+    {
+      "title": "Understanding Enterprise Risk Management (ERM) for CISOs",
+      "description": "One of the CISO’s key roles is to translate technical risks into the broader business risk categories that executives and the board care about. Cybersecurity issues are never just IT problems; they can trigger impacts in",
+      "source_path": "02 - Understanding Business Risk/Previous Chapter.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/understanding-enterprise-risk-management-erm-for-cisos/previous-chapter/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/understanding-enterprise-risk-management-erm-for-cisos/previous-chapter.md",
+      "section": 2
+    },
+    {
+      "title": "Vulnerability Management and Risk",
+      "description": "Methods for identifying, prioritizing, and reducing vulnerability-driven risk.",
+      "source_path": "18 - Vulnerability Management and Risk/Readme.md",
+      "html_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/vulnerability-management-and-risk/",
+      "markdown_url": "https://ciso-in-a-box.github.io/ciso-in-a-box-site/markdown/vulnerability-management-and-risk.md",
+      "section": 18
+    }
+  ]
+}

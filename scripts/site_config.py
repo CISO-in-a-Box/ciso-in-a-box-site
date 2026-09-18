@@ -30,6 +30,18 @@ SITE_DESCRIPTION = (
 SITE_URL = "https://ciso-in-a-box.github.io"
 SITE_BASEURL = "/ciso-in-a-box-site"
 
+
+def public_site_root() -> str:
+    """Canonical public site root, e.g. https://host/baseurl (no trailing slash)."""
+    return SITE_URL.rstrip("/") + "/" + SITE_BASEURL.strip("/")
+
+
+def public_url(path: str) -> str:
+    """Absolute public URL for a site-absolute path (e.g. /getting-started/)."""
+    if not path.startswith("/"):
+        path = "/" + path
+    return public_site_root() + path
+
 # ---- Source repository (read-only content input) ------------------------
 
 GITHUB_REPO_URL = "https://github.com/CroodSolutions/CISOinaBox"

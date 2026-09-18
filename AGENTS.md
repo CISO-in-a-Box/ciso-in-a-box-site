@@ -105,17 +105,57 @@ input.
 
 ```bash
 # Regenerate Jekyll source from the content repo
-python scripts/generate_site.py --source-root <content-checkout> --site-root .
+python scripts/generate_site.py \
+  --source-root <content-checkout> \
+  --site-root . \
+  --source-commit "$(git -C <content-checkout> rev-parse HEAD)"
 
 # Verify a built site (served under the configured base URL)
-python scripts/verify_site.py --build-root _site --base-url http://127.0.0.1:8765
+python scripts/verify_site.py \
+  --build-root _site \
+  --base-url http://127.0.0.1:8765 \
+  --source-commit "$(git -C <content-checkout> rev-parse HEAD)"
 ```
+
+The same exact 40-character source SHA must be passed to generation and
+verification. The generator also produces the machine-readable layer
+alongside the Jekyll source: raw Markdown peers under `markdown/`,
+`llms.txt`, `manifest.json`, and `search-index.json` — all deterministic
+(no timestamps).
 
 The old content-side converter scripts (`build.sh`,
 `convert_to_jekyll_improved.py`, `rebuild_navigation.py`,
 `trigger-rebuild.sh`) were deleted in PR2. CI
 (`rebuild-site.yml`) regenerates and verifies on every relevant push
 using the scripts above; see `MIGRATION.md` for the architecture.
+
+### Machine-Readable Layer (PR3)
+
+The same discovered page model also publishes static machine-readable
+artifacts next to the HTML site:
+
+- `markdown/` — one raw `.md` peer per source-backed Markdown page
+  (`/foo/bar/` HTML route -> `/markdown/foo/bar.md` peer), each led by
+  a compact provenance comment (canonical URL, source repository,
+  source path, exact source commit) followed by the faithful source
+  Markdown. No Jekyll front matter; the leading comment is what keeps
+  the file raw through Jekyll.
+- `llms.txt` — concise discovery index: 22 section-home peers,
+  Contributing, and the machine indexes.
+- `manifest.json` — canonical page inventory (title, description,
+  source path, canonical HTML URL, markdown peer URL, section number),
+  deterministically ordered by route.
+- `search-index.json` — static lexical search corpus per page:
+  metadata, headings, and normalized text. No embeddings, no ranking,
+  no UI.
+
+All four are deterministic generator-owned outputs (no timestamps, no
+environment paths). `robots.txt` is a simple site-owned crawler policy
+that now allows crawling and advertises the sitemap; the intentional
+`noindex` meta tag was removed. `verify_site.py` validates the
+artifacts, the built peers, the sitemap, robots, and the absence of
+noindex, using the built `manifest.json` as the declaration of expected
+pages — no content checkout needed.
 
 ### Local Development (Jekyll - requires Ruby)
 ```bash

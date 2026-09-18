@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+
+Sitemap: https://ciso-in-a-box.github.io/ciso-in-a-box-site/sitemap.xml

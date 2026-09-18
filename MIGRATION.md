@@ -1,11 +1,11 @@
 # Publishing Migration — PR1
 
-Status: **PR1 and PR2 complete.** The publishing repository owns site
-generation, publishing configuration, verification, and CI. The
-content repository's publishing scripts are deleted; the content
-repository now contains content only (the `ciso-in-a-box-site`
-submodule gitlink and `.gitmodules` remain for now — see deferred
-work below).
+Status: **PR1, PR2, and PR3 complete.** The publishing repository owns
+site generation, publishing configuration, verification, CI, and the
+machine-readable publishing layer. The content repository's publishing
+scripts are deleted; the content repository now contains content only
+(the `ciso-in-a-box-site` submodule gitlink and `.gitmodules` remain
+for now — see deferred work below).
 
 ## Ownership
 
@@ -27,17 +27,74 @@ configuration (`scripts/site_config.py`), verification
 (`scripts/verify_site.py`), Jekyll presentation, CI/CD, and the
 generated publishing artifacts (`docs/`, `assets/content/`,
 `_config.yml`, `index.markdown`, `sections.markdown`,
-`contributing.markdown`).
+`contributing.markdown`, and the PR3 machine-readable layer:
+`markdown/`, `llms.txt`, `manifest.json`, `search-index.json`).
 
 The content-repository copies of `generate_site.py`, `site_config.py`,
 and `verify_site.py` were deleted in PR2.
+
+## Machine-readable layer — PR3
+
+The same dynamic discovery and page model now also publishes static
+machine-readable artifacts, extending the generator-owned set with
+`markdown/`, `llms.txt`, `manifest.json`, and `search-index.json`:
+
+- **Raw Markdown peers** — every source-backed Markdown page gets a
+  raw `.md` peer derived deterministically from the canonical HTML
+  route (`/foo/bar/` -> `/markdown/foo/bar.md`). Each peer is led by a
+  compact provenance comment (canonical URL, source repository, source
+  path, exact 40-character source commit) followed by the faithful
+  source Markdown. The comment prefix is also what keeps the file raw
+  through Jekyll: a peer starting with `---` would be consumed as
+  front matter, so provenance and rawness are the same mechanism.
+  Internal links in peers are absolute public URLs; no Liquid.
+- **`llms.txt`** — concise discovery index at the site root: project
+  identity, canonical site URL, authoritative content repository,
+  exact source commit, the 22 section-home markdown peers plus
+  Contributing, and links to the machine indexes.
+- **`manifest.json`** — canonical machine-readable inventory:
+  source repository, source commit, site URL, and a deterministically
+  route-ordered page array with title, description, source path,
+  canonical HTML URL, markdown peer URL, and section number
+  (null for non-section pages such as Contributing).
+- **`search-index.json`** — static lexical search corpus built from the
+  same pages: metadata, markdown headings (ATX and setext, mirroring
+  the published HTML), and normalized searchable text. No embeddings,
+  ranking, database, or UI.
+
+All four are deterministic: identical source content, source commit,
+site configuration, and generator version produce byte-identical
+output. Provenance is the exact source commit passed via
+`--source-commit` (validated as a full 40-character SHA and passed
+identically to generation and verification) — never a timestamp.
+
+Crawler policy: `robots.txt` now allows all crawling and advertises
+the sitemap, and the intentional `noindex, nofollow` meta tag was
+removed from `_includes/custom.html`. `jekyll-sitemap` remains the
+only sitemap generator; the verifier validates its output.
+
+`verify_site.py` consumes the built `manifest.json` as the declaration
+of expected pages and peers (no content checkout or rescanning): it
+validates the manifest, the search index, `llms.txt`, the built raw
+peers, the sitemap (existence, XML validity, configured URL prefix,
+presence of every built canonical HTML route), robots.txt, and the
+absence of noindex, then HTTP-checks all routes plus
+`/llms.txt`, `/manifest.json`, `/search-index.json`, `/sitemap.xml`,
+`/robots.txt`, and every markdown peer under the configured base URL.
+
+Baseline parity for PR3: the 53 generated content pages, home, and
+sections browse page are byte-identical to the pre-PR3 site; the only
+built-HTML change is the intentional removal of the noindex meta tag
+from the homepage. New artifacts are additive.
 
 ## Site-owned tooling
 
 Generate (explicit roots; works from nested or independent checkouts):
 
 ```bash
-python scripts/generate_site.py --source-root <content> --site-root <site>
+python scripts/generate_site.py \
+  --source-root <content> --site-root <site> \
+  --source-commit "$(git -C <content> rev-parse HEAD)"
 ```
 
 Verify (against a server exposing the built site under the configured
@@ -45,7 +102,8 @@ base URL `/ciso-in-a-box-site`):
 
 ```bash
 python scripts/verify_site.py --build-root _site \
-  --base-url http://127.0.0.1:8765
+  --base-url http://127.0.0.1:8765 \
+  --source-commit "$(git -C <content> rev-parse HEAD)"
 ```
 
 ## Content model
