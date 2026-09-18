@@ -20,6 +20,9 @@ head-extra:
     <a href="https://github.com/CroodSolutions/CISOinaBox" class="btn btn-outline-dark btn-lg" style="border-radius: 50px; padding: 12px 30px; margin-left: 10px;">
       <i class="fab fa-github"></i> View Source
     </a>
+    <a href="{{ '/use-with-ai/' | relative_url }}" class="btn btn-outline-primary btn-lg" style="border-radius: 50px; padding: 12px 30px; margin-left: 10px;">
+      <i class="fas fa-robot"></i> Use with AI
+    </a>
   </div>
 </div>
 

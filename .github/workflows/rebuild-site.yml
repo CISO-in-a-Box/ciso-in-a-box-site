@@ -15,13 +15,18 @@ on:
       - 'docs/**'
       - 'index.markdown'
       - 'sections.markdown'
+      - 'use-with-ai.markdown'
+      - 'skill/**'
       - 'markdown/**'
       - 'llms.txt'
       - 'manifest.json'
       - 'search-index.json'
       - '_config.yml'
       - '_includes/**'
+      - '_layouts/**'
       - 'assets/content/**'
+      - 'assets/css/**'
+      - 'assets/js/**'
       - 'robots.txt'
       - 'Gemfile'
       - 'Gemfile.lock'
@@ -78,6 +83,8 @@ jobs:
           find site/assets/content -type f | wc -l
           echo "--- generated markdown peers ---"
           find site/markdown -name '*.md' | wc -l
+          echo "--- generated skill files ---"
+          find site/skill -type f | sort
 
       - name: Confirm source checkout is unchanged
         run: |
@@ -130,9 +137,12 @@ jobs:
           # Stage only generator-owned output. assets/content/ holds
           # generated copies of source-repository files; markdown/,
           # llms.txt, manifest.json, and search-index.json are the
-          # generated machine-readable layer; the rest of assets/ is
-          # site-owned static files.
-          git add docs sections.markdown _config.yml index.markdown contributing.markdown assets/content markdown llms.txt manifest.json search-index.json 2>/dev/null || true
+          # generated machine-readable layer; skill/ and
+          # use-with-ai.markdown are the generated Skill package and
+          # its installation page; the rest of assets/, _layouts/, and
+          # _includes/ are site-owned static files committed directly
+          # and never modified by generation.
+          git add docs sections.markdown use-with-ai.markdown skill _config.yml index.markdown contributing.markdown assets/content markdown llms.txt manifest.json search-index.json 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No site changes to commit"
           else

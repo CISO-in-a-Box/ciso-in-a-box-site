@@ -33,6 +33,23 @@ plugins:
 site-css:
   - "/assets/css/custom.css"
 
+site-js:
+  - "/assets/js/copy-buttons.js"
+
+# .md files are raw static files unless they carry front matter;
+# the only front-matter .md file is the generated SKILL.md, which
+# the skill-raw layout publishes byte-identically (kramdown
+# conversion is reserved for .markdown pages).
+markdown_ext: "markdown,mkdown,mkdn,mkd"
+defaults:
+  - scope:
+      path: "skill/ciso-in-a-box/SKILL.md"
+    values:
+      layout: skill-raw
+      permalink: /skill/ciso-in-a-box/SKILL.md
+      sitemap: false
+      skill_name: ciso-in-a-box
+
 timezone: "America/Phoenix"
 highlighter: rouge
 markdown: kramdown

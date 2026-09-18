@@ -49,6 +49,39 @@ GITHUB_ORG = "CroodSolutions"
 GITHUB_REPO_NAME = "CISOinaBox"
 GITHUB_BRANCH = "main"
 
+# ---- Generated Skill -------------------------------------------------------
+# The published Skill is a control plane, not a knowledge copy: it teaches
+# a compatible model to retrieve relevant CISO-in-a-Box material
+# progressively from the published static interface (llms.txt,
+# manifest.json, search-index.json, raw Markdown peers). These constants
+# are the single source of truth for every generated Skill artifact and
+# for the /use-with-ai/ page.
+
+SKILL_NAME = "ciso-in-a-box"
+SKILL_DISPLAY_NAME = "CISO-in-a-Box"
+SKILL_TRIGGER_DESCRIPTION = (
+    "Use when a task involves CISO strategy, cybersecurity program "
+    "design or operation, security leadership, security architecture, "
+    "cyber risk, governance risk and compliance (GRC), identity and "
+    "access management (IAM), security operations, incident response, "
+    "vulnerability management, business continuity, disaster recovery, "
+    "security awareness, or security frameworks and controls, or "
+    "otherwise asks for CISO-in-a-Box guidance. The Skill retrieves "
+    "authoritative CISO-in-a-Box material progressively from the "
+    "published site rather than bundling it."
+)
+SKILL_SHORT_DESCRIPTION = (
+    "Use authoritative CISO-in-a-Box cybersecurity guidance with "
+    "progressive retrieval."
+)
+
+SKILL_DIR = f"skill/{SKILL_NAME}"
+SKILL_MD_PUBLIC_PATH = f"/{SKILL_DIR}/SKILL.md"
+SKILL_YAML_PUBLIC_PATH = f"/{SKILL_DIR}/agents/openai.yaml"
+SKILL_ENDPOINTS_PUBLIC_PATH = f"/{SKILL_DIR}/references/endpoints.md"
+SKILL_ZIP_PUBLIC_PATH = f"/{SKILL_DIR}/skill.zip"
+USE_WITH_AI_ROUTE = "/use-with-ai/"
+
 # ---- Public URL compatibility -------------------------------------------
 
 # Section directory name -> published route slug, for sections whose

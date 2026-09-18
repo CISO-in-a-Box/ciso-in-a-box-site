@@ -1,11 +1,11 @@
 # Publishing Migration — PR1
 
-Status: **PR1, PR2, and PR3 complete.** The publishing repository owns
-site generation, publishing configuration, verification, CI, and the
-machine-readable publishing layer. The content repository's publishing
-scripts are deleted; the content repository now contains content only
-(the `ciso-in-a-box-site` submodule gitlink and `.gitmodules` remain
-for now — see deferred work below).
+Status: **PR1, PR2, PR3, and PR4 complete.** The publishing repository
+owns site generation, publishing configuration, verification, CI, the
+machine-readable publishing layer, and the generated Skill. The content
+repository's publishing scripts are deleted; the content repository now
+contains content only (the `ciso-in-a-box-site` submodule gitlink and
+`.gitmodules` are retained intentionally — see the note at the end).
 
 ## Ownership
 
@@ -87,6 +87,68 @@ sections browse page are byte-identical to the pre-PR3 site; the only
 built-HTML change is the intentional removal of the noindex meta tag
 from the homepage. New artifacts are additive.
 
+## Generated Skill — PR4
+
+The same compiler run now also generates a lightweight
+**CISO-in-a-Box Skill** (`ciso-in-a-box`) and a human-facing
+**`/use-with-ai/`** page. The Skill is a control plane, not a
+knowledge copy: it bundles no Markdown peers, manifest, search index,
+or `llms.txt` content, and teaches a compatible model to retrieve
+relevant current material progressively from the published static
+interface:
+
+```text
+Skill metadata -> SKILL.md -> references/endpoints.md
+    -> llms.txt / manifest.json -> relevant pages
+    -> fetch only relevant /markdown/*.md peers -> answer
+```
+
+Generated Skill tree (all generator-owned):
+
+- `skill/ciso-in-a-box/SKILL.md` — compact instructions; front matter
+  holds only `name` and `description`, where the description is the
+  trigger metadata.
+- `skill/ciso-in-a-box/agents/openai.yaml` — minimal UI metadata
+  (`interface.display_name`, `interface.short_description`).
+- `skill/ciso-in-a-box/references/endpoints.md` — canonical site,
+  discovery indexes, Markdown peer namespace, authoritative source
+  repository, and the exact source commit this package was generated
+  from (live material is still preferred when retrieving).
+- `skill/ciso-in-a-box/skill.zip` — deterministic archive of exactly
+  those three files under `ciso-in-a-box/`: fixed 1980 timestamps,
+  sorted members, stable 0644 permissions, produced by the Python
+  standard library (no platform `zip`).
+
+`/use-with-ai/` (generated as `use-with-ai.markdown`) offers the
+download link, the exact `SKILL.md` with a copy button, a generic AI
+bootstrap prompt, and a generic coding-agent installation prompt, plus
+small technical links. The homepage hero gained a fourth action,
+"Use with AI". Copy controls are site-owned vanilla JavaScript
+(`assets/js/copy-buttons.js`) using `navigator.clipboard` with an
+`execCommand` fallback.
+
+One generated string is the source of truth: the `SKILL.md` displayed
+on `/use-with-ai/`, the published `/skill/ciso-in-a-box/SKILL.md`,
+and the ZIP member are byte-equivalent by construction; same for
+`openai.yaml` and `endpoints.md`.
+
+Publishing mechanism: `SKILL.md` carries front matter, so Jekyll would
+normally convert it and strip the front matter. `markdown_ext` in
+`_config.yml` excludes `md` (kramdown conversion is reserved for
+`.markdown` pages), a `defaults` entry gives `SKILL.md` the
+`skill-raw` layout and a raw permalink, and `_layouts/skill-raw.md`
+reconstructs the front matter so the built file is byte-identical to
+the source. Raw Markdown peers are unaffected: they never carried
+front matter and stay static files. `sitemap: false` keeps the raw
+Skill artifacts out of sitemap.xml.
+
+`verify_site.py` additionally validates: the built Skill files, the
+`SKILL.md` front-matter shape and compactness, `openai.yaml` minimal
+metadata, `endpoints.md` endpoint and SHA facts, the ZIP inventory and
+byte-equality with published files, the `/use-with-ai/` page (links,
+display-block equality, prompt contents, homepage link), and HTTP
+checks for all five Skill paths plus `/use-with-ai/`.
+
 ## Site-owned tooling
 
 Generate (explicit roots; works from nested or independent checkouts):
@@ -166,12 +228,14 @@ hard-coded per-section metadata with general derivation:
   — artifacts of the old conversion pipeline, superseded by
   `assets/content/`.
 
-## Deferred work (PR3 candidates)
+## Retained content-repository gitlink (intentional)
 
-- Remove the `ciso-in-a-box-site` submodule gitlink and `.gitmodules`
-  from the content repository (deferred at review time; kept working
-  until the site-owned pipeline has run stably in production for a
-  while).
+The `ciso-in-a-box-site` submodule gitlink and `.gitmodules` remain in
+the content repository. This is an intentional retained condition, not
+pending work: the gitlink points at the publishing repository checkout
+and is harmless, and removing it would require a content-repository
+change with no publishing benefit. Do not treat submodule removal as a
+future PR.
 
 ## Curated editorial overrides (restored)
 

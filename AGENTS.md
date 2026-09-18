@@ -129,6 +129,34 @@ The old content-side converter scripts (`build.sh`,
 (`rebuild-site.yml`) regenerates and verifies on every relevant push
 using the scripts above; see `MIGRATION.md` for the architecture.
 
+### Generated Skill (PR4)
+
+The same generator invocation also produces a lightweight
+CISO-in-a-Box Skill and the `/use-with-ai/` page. The Skill is a
+control plane, not a knowledge copy: it contains no bundled content and
+teaches progressive retrieval from the published static interface
+(`llms.txt` / `manifest.json` -> relevant pages -> only the relevant
+`markdown/*.md` peers; `search-index.json` only when page selection is
+unclear).
+
+Generated, generator-owned outputs:
+
+```text
+skill/ciso-in-a-box/SKILL.md                  # compact instructions
+skill/ciso-in-a-box/agents/openai.yaml        # minimal UI metadata
+skill/ciso-in-a-box/references/endpoints.md   # publishing endpoints
+skill/ciso-in-a-box/skill.zip                 # deterministic archive
+use-with-ai.markdown                          # /use-with-ai/ page
+```
+
+In `SKILL.md` front matter, `name` is `ciso-in-a-box` and the
+`description` is the Skill trigger. `skill.zip` is deterministic (fixed
+timestamps, sorted members, stable permissions; standard library only).
+The `SKILL.md` displayed on `/use-with-ai/`, the published file, and
+the ZIP member are byte-equivalent by construction. `verify_site.py`
+validates the Skill files, the ZIP inventory and byte-equality, the
+`/use-with-ai/` page, and HTTP-serves all five Skill paths.
+
 ### Machine-Readable Layer (PR3)
 
 The same discovered page model also publishes static machine-readable

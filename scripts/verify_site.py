@@ -5,8 +5,10 @@ Inventories every built ``index.html`` under --build-root, validates
 every configured internal route (navbar, homepage pathways, modules)
 against that inventory, validates the built machine-readable layer
 (markdown peers, manifest.json, search-index.json, llms.txt, sitemap.xml,
-robots.txt, absence of noindex), then HTTP-checks each path against a
-server serving the site under its configured base URL.
+robots.txt, absence of noindex), validates the generated Skill artifacts
+(public Skill files, deterministic skill.zip, the /use-with-ai/ page),
+then HTTP-checks each path against a server serving the site under its
+configured base URL.
 
 The built manifest.json is the machine-readable declaration of expected
 pages and Markdown peers; no content-repository checkout is needed.
@@ -20,12 +22,14 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import html
 import http.client
 import json
 import re
 import sys
 import urllib.parse
 import xml.etree.ElementTree as ET
+import zipfile
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -36,6 +40,13 @@ from site_config import (
     NAVBAR_CONFIG,
     PATHWAY_CARDS,
     SITE_BASEURL,
+    SKILL_DIR,
+    SKILL_ENDPOINTS_PUBLIC_PATH,
+    SKILL_MD_PUBLIC_PATH,
+    SKILL_NAME,
+    SKILL_YAML_PUBLIC_PATH,
+    SKILL_ZIP_PUBLIC_PATH,
+    USE_WITH_AI_ROUTE,
     public_site_root,
     public_url,
 )
@@ -82,7 +93,16 @@ class Report:
             self.failures.append(message)
 
     def check_eq(self, actual, expected, message: str) -> None:
-        self.check(actual == expected, f"{message} (got {actual!r}, expected {expected!r})")
+        marker = "OK  " if actual == expected else "FAIL"
+        if not isinstance(actual, (int, tuple)) and len(repr(actual)) > 80:
+            print(f"{marker} {message}")
+            print(f"     (actual {repr(actual)[:60]}...)")
+            if actual != expected:
+                print(f"     (expected {repr(expected)[:60]}...)")
+        else:
+            print(f"{marker} {message} (got {actual!r}, expected {expected!r})")
+        if actual != expected:
+            self.failures.append(message)
 
 
 def load_json(build_root: Path, name: str, report: Report):
@@ -204,6 +224,9 @@ def verify_llms_txt(build_root: Path, manifest: dict, source_commit: str, report
     absent = []
     for target in local_targets:
         asset = build_root / target.lstrip("/")
+        # Route-style targets (/use-with-ai/) resolve to their index.html.
+        if asset.is_dir():
+            asset = asset / "index.html"
         if not asset.is_file():
             absent.append(target)
     report.check(not absent, f"llms.txt referenced targets all exist (missing: {absent})")
@@ -290,6 +313,169 @@ def verify_sitemap(build_root: Path, report: Report) -> None:
     sitemap_routes = {"/" + u.removeprefix(site_root) for u in locs}
     missing = sorted(r for r in expected_html if r not in sitemap_routes)
     report.check(not missing, f"expected built canonical HTML pages are in the sitemap (missing: {missing})")
+
+    skill_routes = [u for u in sitemap_routes if u.startswith("/skill/")]
+    report.check(
+        not skill_routes,
+        f"raw Skill artifacts are not listed in the sitemap (found: {skill_routes})",
+    )
+
+
+def verify_skill_files(build_root: Path, source_commit: str, report: Report) -> dict[str, str]:
+    """Validate the built public Skill files; returns their contents."""
+    paths = {
+        "SKILL.md": build_root / SKILL_DIR / "SKILL.md",
+        "agents/openai.yaml": build_root / SKILL_DIR / "agents" / "openai.yaml",
+        "references/endpoints.md": build_root / SKILL_DIR / "references" / "endpoints.md",
+    }
+    contents: dict[str, str] = {}
+    for rel, path in sorted(paths.items()):
+        report.check(path.is_file(), f"built skill file exists: {rel}")
+        if not path.is_file():
+            raise VerifyError(f"missing built skill file: {rel}")
+        contents[rel] = path.read_text(encoding="utf-8")
+
+    skill_md = contents["SKILL.md"]
+    lines = skill_md.splitlines()
+    report.check(lines and lines[0] == "---", "SKILL.md starts with YAML front matter")
+    if not (lines and lines[0] == "---"):
+        raise VerifyError("SKILL.md has no front matter")
+    try:
+        end = lines[1:].index("---") + 1
+    except ValueError:
+        end = -1
+    report.check(end > 0, "SKILL.md front matter closes")
+    fm_lines = lines[1:end] if end > 0 else []
+    fm_keys = [ln.split(":", 1)[0].strip() for ln in fm_lines if ln.strip()]
+    report.check_eq(fm_keys, ["name", "description"], "SKILL.md front matter keys are exactly name and description")
+    name = next(ln for ln in fm_lines if ln.startswith("name:"))
+    report.check_eq(name.removeprefix("name:").strip(), SKILL_NAME, "SKILL.md name")
+    description = next(ln for ln in fm_lines if ln.startswith("description:"))
+    report.check(bool(description.removeprefix("description:").strip()), "SKILL.md description is non-empty")
+    body = "\n".join(lines[end + 1 :]).strip()
+    report.check(bool(body), "SKILL.md body is non-empty")
+    report.check(
+        len(lines) <= 120,
+        f"SKILL.md stays compact ({len(lines)} lines, expected <= 120)",
+    )
+    # Live endpoints appear once as navigation facts, not duplicated.
+    for label, url in (
+        ("llms.txt", public_url("/llms.txt")),
+        ("manifest.json", public_url("/manifest.json")),
+        ("search-index.json", public_url("/search-index.json")),
+    ):
+        count = skill_md.count(url)
+        report.check(count == 1, f"SKILL.md references {label} exactly once (found {count})")
+    report.check(
+        public_url("/markdown/") in skill_md,
+        "SKILL.md points at the Markdown peer namespace",
+    )
+
+    yaml_text = contents["agents/openai.yaml"]
+    report.check("interface:" in yaml_text, "openai.yaml contains an interface mapping")
+    report.check("display_name:" in yaml_text, "openai.yaml contains display_name")
+    report.check("short_description:" in yaml_text, "openai.yaml contains short_description")
+
+    endpoints = contents["references/endpoints.md"]
+    for label, needle in (
+        ("canonical site URL", public_site_root() + "/"),
+        ("llms.txt URL", public_url("/llms.txt")),
+        ("manifest.json URL", public_url("/manifest.json")),
+        ("search-index.json URL", public_url("/search-index.json")),
+        ("markdown peer namespace", public_url("/markdown/")),
+        ("source repository", GITHUB_REPO_URL),
+        ("exact source SHA", source_commit),
+    ):
+        report.check(needle in endpoints, f"endpoints.md contains the {label}")
+    return contents
+
+
+def verify_skill_zip(build_root: Path, published: dict[str, str], report: Report) -> None:
+    """Validate the deterministic skill.zip against the published files."""
+    zip_path = build_root / SKILL_DIR / "skill.zip"
+    report.check(zip_path.is_file(), "built skill.zip exists")
+    if not zip_path.is_file():
+        raise VerifyError("missing built skill.zip")
+    try:
+        archive = zipfile.ZipFile(zip_path)
+    except zipfile.BadZipFile as exc:
+        raise VerifyError(f"skill.zip does not parse: {exc}") from exc
+
+    names = archive.namelist()
+    expected = [f"{SKILL_NAME}/{rel}" for rel in sorted(published)]
+    report.check_eq(sorted(names), expected, "skill.zip member inventory is exact")
+    report.check(
+        all(not n.startswith("/") and ".." not in Path(n).parts for n in names),
+        "skill.zip members have no absolute or traversal paths",
+    )
+    for rel, text in sorted(published.items()):
+        embedded = archive.read(f"{SKILL_NAME}/{rel}").decode("utf-8")
+        report.check_eq(embedded, text, f"skill.zip embeds {rel} byte-identically")
+    report.check(
+        f"{SKILL_NAME}/skill.zip" not in names,
+        "skill.zip does not embed itself",
+    )
+    for info in archive.infolist():
+        report.check_eq(
+            info.date_time,
+            (1980, 1, 1, 0, 0, 0),
+            f"skill.zip member {info.filename} has the fixed timestamp",
+        )
+
+
+def _extract_code_block(page_html: str, block_id: str) -> str | None:
+    """Decode the exact text of a rouge-rendered copy block."""
+    match = re.search(
+        rf'<div id="{re.escape(block_id)}"[^>]*>.*?<code>(.*?)</code></pre></div>',
+        page_html,
+        re.S,
+    )
+    return html.unescape(match.group(1)) if match else None
+
+
+def verify_use_with_ai_page(build_root: Path, skill_md: str, report: Report) -> None:
+    """Validate the built /use-with-ai/ page against the Skill artifacts."""
+    page_path = build_root / "use-with-ai" / "index.html"
+    report.check(page_path.is_file(), "built /use-with-ai/ page exists")
+    if not page_path.is_file():
+        raise VerifyError("missing built /use-with-ai/ page")
+    page = page_path.read_text(encoding="utf-8")
+
+    def href_exists(path: str) -> bool:
+        direct = f'href="{public_url(path)}"'
+        relative = f'href="{SITE_BASEURL.rstrip("/")}{path}"'
+        liquid = f"href=\"{{{{ '{path.lstrip('/')}' | relative_url }}}}\""
+        return direct in page or relative in page or liquid in page
+
+    report.check(href_exists(SKILL_ZIP_PUBLIC_PATH), "/use-with-ai/ links to skill.zip")
+    report.check(href_exists(SKILL_MD_PUBLIC_PATH), "/use-with-ai/ links to the published SKILL.md")
+
+    block = _extract_code_block(page, "skill-definition")
+    report.check(block is not None, "/use-with-ai/ contains the SKILL.md display block")
+    if block is not None:
+        report.check_eq(block, skill_md, "/use-with-ai/ SKILL.md display block equals the published SKILL.md")
+
+    bootstrap = _extract_code_block(page, "bootstrap-prompt")
+    report.check(bootstrap is not None, "/use-with-ai/ contains the bootstrap prompt block")
+    if bootstrap is not None:
+        for needle in (public_url("/llms.txt"), public_url("/manifest.json"), public_url("/search-index.json")):
+            report.check(needle in bootstrap, f"bootstrap prompt contains {needle}")
+
+    coding = _extract_code_block(page, "coding-agent-prompt")
+    report.check(coding is not None, "/use-with-ai/ contains the coding-agent prompt block")
+    if coding is not None:
+        report.check(public_url(SKILL_ZIP_PUBLIC_PATH) in coding, "coding-agent prompt contains the public skill.zip URL")
+
+    report.check(
+        'data-copy-target="skill-definition"' in page and "copy-btn" in page,
+        "/use-with-ai/ provides copy controls",
+    )
+
+    home = (build_root / "index.html").read_text(encoding="utf-8")
+    report.check(
+        "/use-with-ai/" in home and "Use with AI" in home,
+        "homepage links to /use-with-ai/",
+    )
 
 
 def verify_robots_and_noindex(build_root: Path, report: Report) -> None:
@@ -379,6 +565,9 @@ def main(build_root: Path, base_url: str, source_commit: str) -> int:
         verify_markdown_peers(build_root, manifest, source_commit, report)
         verify_sitemap(build_root, report)
         verify_robots_and_noindex(build_root, report)
+        skill_contents = verify_skill_files(build_root, source_commit, report)
+        verify_skill_zip(build_root, skill_contents, report)
+        verify_use_with_ai_page(build_root, skill_contents["SKILL.md"], report)
     except VerifyError as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
@@ -404,6 +593,11 @@ def main(build_root: Path, base_url: str, source_commit: str) -> int:
     add("search-index.json", "/search-index.json")
     add("sitemap.xml", "/sitemap.xml")
     add("robots.txt", "/robots.txt")
+    add("use-with-ai page", USE_WITH_AI_ROUTE)
+    add("skill SKILL.md", SKILL_MD_PUBLIC_PATH)
+    add("skill openai.yaml", SKILL_YAML_PUBLIC_PATH)
+    add("skill endpoints.md", SKILL_ENDPOINTS_PUBLIC_PATH)
+    add("skill.zip", SKILL_ZIP_PUBLIC_PATH)
     site_root = public_site_root() + "/"
     for entry in manifest["pages"]:
         add("markdown-peer", entry["markdown_url"].removeprefix(site_root))

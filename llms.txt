@@ -36,3 +36,4 @@ Source commit: 2882c6067c3aa748d66152fb90540d71d74349da
 
 - [Manifest](https://ciso-in-a-box.github.io/ciso-in-a-box-site/manifest.json)
 - [Search Index](https://ciso-in-a-box.github.io/ciso-in-a-box-site/search-index.json)
+- [Use with AI](https://ciso-in-a-box.github.io/ciso-in-a-box-site/use-with-ai/)

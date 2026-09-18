@@ -380,3 +380,43 @@ h3 {
   font-weight: 600;
   color: #289dff;
 }
+
+/* Use with AI: copy blocks and download action */
+
+.use-with-ai-actions {
+  margin: 30px 0;
+}
+
+.copy-block {
+  position: relative;
+  margin: 20px 0 30px;
+}
+
+.copy-block .copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 5;
+  border-radius: 50px;
+}
+
+.copy-block pre {
+  margin: 0;
+  padding: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  background: #f8f9fa;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.copy-btn.copy-ok {
+  color: #198754 !important;
+  border-color: #198754 !important;
+}
+
+.copy-btn.copy-fail {
+  color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
