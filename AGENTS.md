@@ -2,9 +2,9 @@
 
 ## Overview
 
-**PR1 of the publishing migration is complete.** The authoritative generation implementation now lives in this repository (the publishing repo), not the content repository. See `MIGRATION.md` for details.
+**PR1 and PR2 of the publishing migration are complete.** The authoritative generation implementation now lives in this repository (the publishing repo), not the content repository. See `MIGRATION.md` for details.
 
-This document outlines the original conversion of CISOinaBox from a repository-based documentation structure to a GitHub Pages-hosted Jekyll website. The **Legacy Build Process** section below describes the superseded conversion path and is retained for historical reference only.
+This document describes the original conversion of CISOinaBox from a repository-based documentation structure to a GitHub Pages-hosted Jekyll website. The current authoritative build workflow is the site-owned generator described under **Development Workflow**; earlier conversion history is retained below for reference.
 
 ## Project Structure Conversion
 
@@ -99,30 +99,23 @@ permalink: /section-slug
 
 ### Build Process
 
-**The site-owned generator is authoritative: use it.** The build below is a **legacy** path retained for reference; it regenerates from source using the old content-repository converter scripts and is superseded by `scripts/generate_site.py`. Do not run it for production workflows.
+**The site-owned generator is authoritative.** Regeneration is driven
+from this repository's scripts; the content repository is read-only
+input.
 
 ```bash
-# Build the site (regenerates docs/ from source directories)
-cd ciso-in-a-box-site
-./build.sh
+# Regenerate Jekyll source from the content repo
+python scripts/generate_site.py --source-root <content-checkout> --site-root .
 
-# Build and serve locally
-./build.sh serve        # serves on http://localhost:4000
-./build.sh serve 4001   # serves on custom port
+# Verify a built site (served under the configured base URL)
+python scripts/verify_site.py --build-root _site --base-url http://127.0.0.1:8765
 ```
 
-### What build.sh does
-1. Runs `convert_to_jekyll_improved.py` - regenerates pages from source `XX - Section/` directories, preserving existing hand-crafted pages by matching on `section_number`
-2. Checks for duplicate permalinks and removes auto-generated duplicates
-3. Runs `rebuild_navigation.py` to regenerate `_config.yml` navigation
-4. Optionally serves the static `_site/` directory
-
-### Legacy Scripts (do not run directly)
-- `fix_duplicates.py` - superseded by build.sh duplicate detection
-- `fix_titles_and_links.py` - superseded by convert_to_jekyll_improved.py
-- `generate_missing_sections.py` - superseded by convert_to_jekyll_improved.py
-- `rebuild_navigation.py` - called by build.sh, can be run standalone
-- `trigger-rebuild.sh` - triggers GitHub Pages rebuild (pushes to remote)
+The old content-side converter scripts (`build.sh`,
+`convert_to_jekyll_improved.py`, `rebuild_navigation.py`,
+`trigger-rebuild.sh`) were deleted in PR2. CI
+(`rebuild-site.yml`) regenerates and verifies on every relevant push
+using the scripts above; see `MIGRATION.md` for the architecture.
 
 ### Local Development (Jekyll - requires Ruby)
 ```bash
@@ -149,36 +142,33 @@ curl -w "%{http_code}" -o /dev/null -s http://localhost:4000  # HTTP status chec
 ## Asset Management Guidelines
 
 ### File Organization
-- **PDFs**: `/assets/pdf/` - Document resources, policy components
-- **Excel**: `/assets/excel/` - Mapping files, spreadsheets
-- **Images**: `/assets/img/` - Theme images and assets
-- **CSS/JS**: `/assets/css/`, `/assets/js/` - Theme resources
+- **Generated content assets**: `/assets/content/<source-relative-path>/` - copied from the content repository by the generator
+- **Site-owned static files**: `/assets/css/`, `/assets/img/` - theme resources
 
 ### Link Management
 - Internal links use Jekyll permalinks (`/section-name`)
-- Asset links reference absolute paths from site root
+- Content asset links reference `assets/content/`
 - External links maintain original targets
 - GitHub links preserved for repository access
 
 ## Content Update Process
 
+Content lives in the CroodSolutions/CISOinaBox repository (read-only
+input for this publishing repository).
+
 ### Adding New Sections
-1. Create new section directory: `XX - Section Name/`
-2. Add `Readme.md` with section content
-3. Run conversion script: `python3 convert_to_jekyll.py`
-4. Update _config.yml navigation if needed
+1. Create new section directory in the content repo: `XX - Section Name/`
+2. Add a `Readme.md` with section content
+3. The generator discovers it dynamically on the next CI rebuild - no Python or config changes needed
 
 ### Modifying Existing Content
-1. Edit source `.md` files in original repository
-2. Regenerate site with conversion script
-3. Verify changes locally with Jekyll serve
-4. Deploy updated site to GitHub Pages
+1. Edit source `.md` files in the content repository
+2. CI regenerates the site automatically (scheduled weekly or on push)
+3. Generated changes are committed to this repo and deployed to GitHub Pages
 
 ### Asset Updates
-1. Place new PDFs/Excel files in appropriate section directories
-2. Script automatically copies to assets during conversion
-3. Update markdown references if needed
-4. Test asset links in generated site
+1. Place new non-Markdown files in the appropriate content section directory
+2. The generator copies them to `assets/content/` on the next rebuild
 
 ## Quality Assurance
 

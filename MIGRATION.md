@@ -1,7 +1,11 @@
 # Publishing Migration — PR1
 
-Status: PR1 implemented. The publishing repository now owns site
-generation, publishing configuration, verification, and CI.
+Status: **PR1 and PR2 complete.** The publishing repository owns site
+generation, publishing configuration, verification, and CI. The
+content repository's publishing scripts are deleted; the content
+repository now contains content only (the `ciso-in-a-box-site`
+submodule gitlink and `.gitmodules` remain for now — see deferred
+work below).
 
 ## Ownership
 
@@ -26,7 +30,7 @@ generated publishing artifacts (`docs/`, `assets/content/`,
 `contributing.markdown`).
 
 The content-repository copies of `generate_site.py`, `site_config.py`,
-and `verify_site.py` are legacy. Do not run them; PR2 will delete them.
+and `verify_site.py` were deleted in PR2.
 
 ## Site-owned tooling
 
@@ -96,13 +100,20 @@ hard-coded per-section metadata with general derivation:
 - `sections.markdown` lists sections in one "All Sections" group
   instead of curated categories, with derived descriptions.
 
-## Transitional legacy files (delete in a later PR)
+## Transitional legacy files (deleted in PR2)
 
 - `convert_to_jekyll_improved.py`, `rebuild_navigation.py`,
   `build.sh`, `trigger-rebuild.sh` — old content-side conversion path.
-  Not used by the production workflow; do not extend them.
 - `assets/pdf/`, `assets/excel/`, `assets/xlsx/`, `assets/Resources.txt`
   — artifacts of the old conversion pipeline, superseded by
   `assets/content/`.
-- The content-repository `generate_site.py`, `site_config.py`,
-  `verify_site.py`, and the `ciso-in-a-box-site` submodule gitlink.
+
+## Deferred work (PR3 candidates)
+
+- Remove the `ciso-in-a-box-site` submodule gitlink and `.gitmodules`
+  from the content repository (deferred at review time; kept working
+  until the site-owned pipeline has run stably in production for a
+  while).
+- Optionally revisit the 8 re-derived page titles and 22 derived
+  section descriptions if curated wording is wanted (a content
+  decision, not a publishing one).
